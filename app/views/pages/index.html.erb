@@ -1,0 +1,30 @@
+<h1>Listing Pages</h1>
+
+<table class='table table-striped'>
+	<thead>
+  <tr>
+	    <th>Title</th>
+	    <th>Description</th>
+	    <th>Path</th>
+			<th>Blog?</th>
+	    <th>Actions</th>
+	  </tr>
+	</thead>
+	
+	<tbody>
+		<% @pages.each do |page| %>
+		  <tr>
+		    <td><%= link_to page.title, page %></td>
+		    <td><%= truncate page.description, length: 55, separator: ' ...' %></td>
+		    <td><%= page_path(page) %></td>
+				<td><%= page.for_blog? ? ✓ : X %></td>
+		    <td><%= link_to 'Edit', edit_page_path(page), class: 'btn btn-mini' %>
+					<%= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-mini btn-danger' %></td>
+		  </tr>
+		<% end %>
+	</tbody>
+</table>
+
+<%= link_to 'Create New Page', new_page_path, class: 'btn btn-primary' %>
+
+<%= render 'shared/admin_sidebar' %>
