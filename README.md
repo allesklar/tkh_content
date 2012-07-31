@@ -1,0 +1,64 @@
+# TKH Illustrations
+
+This is a Rails engine with provides the pages and the blog section to a CMS.
+
+Primarily developed for Ten Thousand Hours but we are happy to share if anybody finds it useful.
+
+It's still embryonic but many improvements to come.
+
+## Installation
+
+Add this line to your application's Gemfile:
+
+    gem 'tkh_content', '~> 0.0'
+
+Then execute:
+
+    $ bundle
+
+Import migration
+
+		$ rails g tkh_content:install
+
+Run the migration
+
+		$ rake db:migrate
+
+And then of course restart your server!
+
+		$ rails s
+
+
+## Pre-requisites
+
+
+The following things are needed:
+
+TODO
+
+
+## Usage
+
+
+The section is located at:
+
+    /pages
+
+or 
+
+		/blog
+
+... and it should work out of the box
+
+
+## Contributing
+
+Pull requests for new features and bug fixes are welcome.
+
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Create your failing tests based on the Test Unit framework.
+4. Create your code which makes the tests pass.
+5. Commit your changes (`git commit -am 'Added some feature'`)
+6. Push to the branch (`git push origin my-new-feature`)
+7. Create new Pull Request
