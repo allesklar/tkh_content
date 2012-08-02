@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   
   def index
     @pages = Page.by_recent
-    switch_layout_to_admin
+    render layout: 'admin'
   end
 
   def show
@@ -14,12 +14,12 @@ class PagesController < ApplicationController
 
   def new
     @page = Page.new
-    switch_layout_to_admin
+    render layout: 'admin'
   end
 
   def edit
     @page = Page.find(params[:id])
-    switch_layout_to_admin
+    render layout: 'admin'
   end
 
   def create
