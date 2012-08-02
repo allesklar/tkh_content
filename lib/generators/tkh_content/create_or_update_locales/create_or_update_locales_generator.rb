@@ -1,5 +1,3 @@
-require 'rails/generators/migration'
- 
 module TkhContent
   module Generators
     class CreateOrUpdateLocalesGenerator < ::Rails::Generators::Base
