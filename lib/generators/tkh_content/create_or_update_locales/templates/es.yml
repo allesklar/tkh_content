@@ -8,5 +8,15 @@ es:
           description: "descripción"
           body: "parte principal"
           para el blog: 'contraseña'
+
+  pages:
+    create:
+      notice: 'La página se ha creado correctamente'
+      warning: 'Hubo un problema al guardar la página'
+    update:
+      notice: 'La página se ha actualizado correctamente'
+      warning: 'Hubo un problema al guardar la página'
+    destroy:
+      notice: 'la página se ha eliminado'
           
   

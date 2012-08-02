@@ -188,3 +188,12 @@ fr:
           body: "texte principal"
           para el blog: 'pour le blog'
   
+  pages:
+    create:
+      notice: 'La page a été créée.'
+      warning: "Il y'a eu un problem et la page n'a pas été sauvegardée"
+    update:
+      notice: 'Les changements de cette page ont été sauvegardés'
+      warning: "Il y'a eu un problem et les changements de cette page n'ont pas été sauvegardés"
+    destroy:
+      notice: 'La page a été supprimée'

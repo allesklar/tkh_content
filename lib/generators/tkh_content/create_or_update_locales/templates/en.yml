@@ -14,3 +14,14 @@ en:
   # custom sections - the obove is provided by rails
   language_name: English
   
+  pages:
+    create:
+      notice: 'The page was successfully created.'
+      warning: 'There was a problem saving the page'
+    update:
+      notice: 'The page was successfully updated.'
+      warning: 'There was a problem saving the page'
+    destroy:
+      notice: 'The page was deleted'
+  
+  
