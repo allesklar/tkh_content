@@ -1,10 +1,10 @@
 # TKH Content
 
-This Rails engine puts the C in CMS. It provides the pages and the blog section.
+This Rails engine puts the C in CMS. It provides the pages and the blog section. 
 
 Primarily developed for Ten Thousand Hours but we are happy to share if anybody finds it useful.
 
-It's still embryonic but many improvements to come.
+It's still embryonic but many improvements to come. The blog is not in yet. 
 
 
 
@@ -13,7 +13,7 @@ It's still embryonic but many improvements to come.
 
 The following things are needed:
 
-TODO
+* Ruby 1.9.2 or later
 
 
 ## Installation
@@ -45,10 +45,6 @@ And then of course restart your server!
 The section is located at:
 
     /pages
-
-or 
-
-		/blog
 
 ... and it should work out of the box
 

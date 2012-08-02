@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = TkhContent::VERSION
   s.authors     = ["Swami Atma"]
   s.email       = ["swami@TenThousandHours.eu"]
-  s.homepage    = "http://TenThousandHours.eu"
+  s.homepage    = "https://github.com/allesklar/tkh_content"
   s.summary     = "Rails engine running pages and blog posts."
   s.description = "A Rails engine running pages and blog posts in a CMS."
 
