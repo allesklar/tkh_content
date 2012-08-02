@@ -1,6 +1,12 @@
 es:
   language_name: "Español"
   
+  are_you_sure: '¿estás seguro?'
+  delete: 'borrar'
+  edit: 'editar'
+  pages: 'paginas'
+  sections: 'secciones'
+  
   activerecord: 
       attributes:
         pages:
@@ -10,6 +16,7 @@ es:
           para el blog: 'contraseña'
 
   pages:
+    create_new: 'crear una nueva página'
     create:
       notice: 'La página se ha creado correctamente'
       warning: 'Hubo un problema al guardar la página'

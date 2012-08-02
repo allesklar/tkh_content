@@ -1,10 +1,20 @@
-# TKH Illustrations
+# TKH Content
 
-This is a Rails engine with provides the pages and the blog section to a CMS.
+This Rails engine puts the C in CMS. It provides the pages and the blog section.
 
 Primarily developed for Ten Thousand Hours but we are happy to share if anybody finds it useful.
 
 It's still embryonic but many improvements to come.
+
+
+
+## Pre-requisites
+
+
+The following things are needed:
+
+TODO
+
 
 ## Installation
 
@@ -18,7 +28,7 @@ Then execute:
 
 Import migration
 
-		$ rails g tkh_content:install
+		$ rake tkh_content:install
 
 Run the migration
 
@@ -27,14 +37,6 @@ Run the migration
 And then of course restart your server!
 
 		$ rails s
-
-
-## Pre-requisites
-
-
-The following things are needed:
-
-TODO
 
 
 ## Usage

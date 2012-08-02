@@ -14,7 +14,14 @@ en:
   # custom sections - the obove is provided by rails
   language_name: English
   
+  are_you_sure: 'are you sure?'
+  delete: 'delete'
+  edit: 'edit'
+  pages: 'pages'
+  sections: 'sections'
+  
   pages:
+    create_new: 'create new page'
     create:
       notice: 'The page was successfully created.'
       warning: 'There was a problem saving the page'

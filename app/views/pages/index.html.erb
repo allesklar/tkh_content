@@ -3,10 +3,9 @@
 <table class='table table-striped'>
 	<thead>
   <tr>
-	    <th>Title</th>
-	    <th>Description</th>
-	    <th>Path</th>
-			<th>Blog?</th>
+	    <th><%= t 'activerecord.attributes.pages.title' %></th>
+	    <th><%= t 'activerecord.attributes.pages.description' %></th>
+			<th><%= t 'activerecord.attributes.pages.for_blog' %>?</th>
 	    <th>Actions</th>
 	  </tr>
 	</thead>
@@ -16,15 +15,14 @@
 		  <tr>
 		    <td><%= link_to page.title, page %></td>
 		    <td><%= truncate page.description, length: 55, separator: ' ...' %></td>
-		    <td><%= page_path(page) %></td>
-				<td><%= page.for_blog? ? ✓ : X %></td>
-		    <td><%= link_to 'Edit', edit_page_path(page), class: 'btn btn-mini' %>
-					<%= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-mini btn-danger' %></td>
+				<td><%= page.for_blog? ? '✓' : 'X' %></td>
+		    <td><%= link_to t 'edit', edit_page_path(page), class: 'btn btn-mini' %>
+					<%= link_to t 'delete', page, method: :delete, data: { confirm: t 'are_you_sure' }, class: 'btn btn-mini btn-danger' %></td>
 		  </tr>
 		<% end %>
 	</tbody>
 </table>
 
-<%= link_to 'Create New Page', new_page_path, class: 'btn btn-primary' %>
+<%= link_to t('pages.create_new').capitalize, new_page_path, class: 'btn btn-primary' %>
 
 <%= render 'shared/admin_sidebar' %>

@@ -180,6 +180,12 @@ fr:
   # custom sections - the obove is provided by rails
   language_name: Français
   
+  are_you_sure: 'êtes vous sûr ?'
+  delete: 'supprimer'
+  edit: 'modifier'
+  pages: 'pages'
+  sections: 'sections'
+  
   activerecord: 
       attributes:
         pages:
@@ -189,6 +195,7 @@ fr:
           para el blog: 'pour le blog'
   
   pages:
+    create_new: 'créer une nouvelle page'
     create:
       notice: 'La page a été créée.'
       warning: "Il y'a eu un problem et la page n'a pas été sauvegardée"
