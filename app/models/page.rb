@@ -5,7 +5,7 @@ end
 
 class Page < ActiveRecord::Base
   
-  attr_accessible :body, :description, :title, :blog_post
+  attr_accessible :body, :description, :title, :blog_post, :for_blog
   
   validates_presence_of :title
   validates_presence_of :description
