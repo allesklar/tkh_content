@@ -10,6 +10,7 @@ class PagesController < ApplicationController
 
   def show
     @page = Page.find(params[:id])
+    render layout: 'blog' if @page.for_blog?
   end
 
   def new
