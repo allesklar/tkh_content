@@ -13,7 +13,7 @@
 	<tbody>
 		<% @pages.each do |page| %>
 		  <tr>
-		    <td><%= link_to page.title, page_path(page) %></td>
+		    <td><%= link_to page.title, page.to_param %></td>
 		    <td><%= truncate page.description, length: 55, separator: ' ...' %></td>
 				<td><%= page.for_blog? ? '✓' : 'X' %></td>
 		    <td><%= link_to t('edit'), edit_page_path(page), class: 'btn btn-mini' %>

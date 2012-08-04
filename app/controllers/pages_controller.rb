@@ -35,7 +35,7 @@ class PagesController < ApplicationController
   def update
     @page = Page.find(params[:id])
     if @page.update_attributes(params[:page])
-      redirect_to @page, notice: t('pages.update.notice')
+      redirect_to url_for(action: :show, id: @page), notice: t('pages.update.notice')
     else
       render action: "edit", warning: t('pages.update.warning'), layout: 'admin'
     end
