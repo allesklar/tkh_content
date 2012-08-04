@@ -33,6 +33,12 @@ Import migration
 Run the migration
 
 		$ rake db:migrate
+		
+Add these 3 lines to the bottom of your routes file, just before the final end statement
+
+		scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
+		  resources :pages, only: :show, path: ''
+		end
 
 And then of course restart your server!
 
