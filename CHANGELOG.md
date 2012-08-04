@@ -2,6 +2,11 @@
 
 
 
+## 0.0.3.1
+
+* Debugged the special page show route. It has to come last in order not to conflict with other routes
+
+
 ## 0.0.3
 
 * The blog layout file is being copied to the host app during install or update
