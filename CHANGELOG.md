@@ -2,6 +2,11 @@
 
 
 
+## 0.0.3
+
+* The blog layout file is being copied to the host app during install or update
+* The pages show route does not show controller name
+
 
 ## 0.0.2
 
