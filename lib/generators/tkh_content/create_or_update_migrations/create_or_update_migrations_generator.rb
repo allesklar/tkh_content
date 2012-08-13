@@ -2,10 +2,10 @@ require 'rails/generators/migration'
  
 module TkhContent
   module Generators
-    class CreateMigrationGenerator < ::Rails::Generators::Base
+    class CreateOrUpdateMigrationsGenerator < ::Rails::Generators::Base
       include Rails::Generators::Migration
       source_root File.expand_path('../templates', __FILE__)
-      desc "add the migration"
+      desc "create or update page migrations"
       def self.next_migration_number(path)
         unless @prev_migration_nr
           @prev_migration_nr = Time.now.utc.strftime("%Y%m%d%H%M%S").to_i
@@ -16,8 +16,9 @@ module TkhContent
       end
  
       def copy_migrations
-        puts 'creating user migration'
+        puts 'creating or updating page migrations'
         migration_template "create_pages.rb", "db/migrate/create_pages.rb"
+        migration_template "add_author_to_pages.rb", "db/migrate/add_author_to_pages.rb"
       end
  
     end

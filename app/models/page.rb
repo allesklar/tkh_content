@@ -5,6 +5,8 @@ end
 
 class Page < ActiveRecord::Base
   
+  belongs_to :author, class_name: 'User', foreign_key: 'author_id'
+  
   attr_accessible :body, :description, :title, :blog_post, :for_blog
   
   validates_presence_of :title
