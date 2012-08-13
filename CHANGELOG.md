@@ -2,6 +2,15 @@
 
 
 
+## 0.1
+
+* Reverted pages show route to that one of a normal resource
+* Added a belongs_to author association with migration and everything
+* Added a migration to add a parent_id page attribute in preparation to menu building
+* Improved pages index view with more info
+* Removed erroneous instruction from README file
+
+
 ## 0.0.3.1
 
 * Debugged the special page show route. It has to come last in order not to conflict with other routes

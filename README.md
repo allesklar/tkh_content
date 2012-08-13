@@ -26,21 +26,34 @@ Then execute:
 
     $ bundle
 
-Import migration
+Import migrations and needed files
 
 		$ rake tkh_content:install
 
-Run the migration
+Run the migrations
 
 		$ rake db:migrate
 		
-Add these 3 lines to the bottom of your routes file, just before the final end statement
-
-		scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
-		  resources :pages, only: :show, path: ''
-		end
-
 And then of course restart your server!
+
+		$ rails s
+
+
+## Upgrading
+
+Update the gem:
+
+    $ bundle update tkh_content
+
+Update files, migrations, etc. This is only needed with a new minor version number ( second level from left )
+
+		$ rake tkh_content:update
+		
+Run migrations if there are new ones
+
+		$ rake db:migrate
+
+Start your server!
 
 		$ rails s
 
