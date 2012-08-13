@@ -5,8 +5,9 @@
   <tr>
 	    <th><%= t 'activerecord.attributes.pages.title' %></th>
 	    <th><%= t 'activerecord.attributes.pages.description' %></th>
-			<th>Author</th>
+			<th><%= t 'pages.author'.capitalize %></th>
 			<th><%= t 'activerecord.attributes.pages.for_blog' %>?</th>
+			<th><%= t 'pages.published'.capitalize %></th>
 	    <th>Actions</th>
 	  </tr>
 	</thead>
@@ -18,6 +19,7 @@
 		    <td><%= truncate page.description, length: 55, separator: ' ...' %></td>
 				<td><%= page.author.name %></td>
 				<td><%= page.for_blog? ? '✓' : 'X' %></td>
+				<td><%= page.published_at ? '✓ ' + l( page.published_at.to_date, format: :long) : 'X' %></td>
 		    <td><%= link_to t('edit'), edit_page_path(page), class: 'btn btn-mini' %>
 					<%= link_to t('delete'), page, method: :delete, data: { confirm: t('are_you_sure') }, class: 'btn btn-mini btn-danger' %></td>
 		  </tr>

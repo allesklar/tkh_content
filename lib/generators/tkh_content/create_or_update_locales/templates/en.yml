@@ -21,7 +21,10 @@ en:
   sections: 'sections'
   
   pages:
+    author: 'author'
     create_new: 'create new page'
+    published: 'published?'
+    
     create:
       notice: 'The page was successfully created.'
       warning: 'There was a problem saving the page'

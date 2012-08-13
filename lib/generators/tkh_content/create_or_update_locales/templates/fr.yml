@@ -187,15 +187,18 @@ fr:
   sections: 'sections'
   
   activerecord: 
-      attributes:
-        pages:
-          title: "titre"
-          description: "description"
-          body: "texte principal"
-          para el blog: 'pour le blog'
+    attributes:
+      pages:
+        title: "titre"
+        description: "description"
+        body: "texte principal"
+        para el blog: 'pour le blog'
   
   pages:
+    author: 'auteur'
     create_new: 'créer une nouvelle page'
+    published: 'publiée ?'
+    
     create:
       notice: 'La page a été créée.'
       warning: "Il y'a eu un problem et la page n'a pas été sauvegardée"

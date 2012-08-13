@@ -8,15 +8,18 @@ es:
   sections: 'secciones'
   
   activerecord: 
-      attributes:
-        pages:
-          title: "título"
-          description: "descripción"
-          body: "parte principal"
-          para el blog: 'contraseña'
+    attributes:
+      pages:
+        title: "título"
+        description: "descripción"
+        body: "parte principal"
+        para el blog: 'contraseña'
 
   pages:
+    author: 'autor'
     create_new: 'crear una nueva página'
+    published: '¿publicado?'
+    
     create:
       notice: 'La página se ha creado correctamente'
       warning: 'Hubo un problema al guardar la página'
