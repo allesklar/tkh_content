@@ -25,6 +25,7 @@ class PagesController < ApplicationController
 
   def create
     @page = Page.new(params[:page])
+    @page.author_id = current_user.id
     if @page.save
       redirect_to @page, notice: t('pages.create.notice')
     else

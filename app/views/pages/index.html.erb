@@ -5,6 +5,7 @@
   <tr>
 	    <th><%= t 'activerecord.attributes.pages.title' %></th>
 	    <th><%= t 'activerecord.attributes.pages.description' %></th>
+			<th>Author</th>
 			<th><%= t 'activerecord.attributes.pages.for_blog' %>?</th>
 	    <th>Actions</th>
 	  </tr>
@@ -15,6 +16,7 @@
 		  <tr>
 		    <td><%= link_to page.title, page %></td>
 		    <td><%= truncate page.description, length: 55, separator: ' ...' %></td>
+				<td><%= page.author.name %></td>
 				<td><%= page.for_blog? ? '✓' : 'X' %></td>
 		    <td><%= link_to t('edit'), edit_page_path(page), class: 'btn btn-mini' %>
 					<%= link_to t('delete'), page, method: :delete, data: { confirm: t('are_you_sure') }, class: 'btn btn-mini btn-danger' %></td>

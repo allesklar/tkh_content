@@ -12,6 +12,7 @@ class Page < ActiveRecord::Base
   validates_presence_of :title
   validates_presence_of :description
   validates_presence_of :body
+  validates_presence_of :author_id
   
   translates :title, :description, :body
     
