@@ -1,6 +1,6 @@
 <% @meta_title = @page.title %>
 <% @meta_description = @page.description %>
 
-<h1><%= @page.title %></h1>
+<%= content_tag(:h1, @page.title) if @page.for_blog? %>
 
 <%= raw @page.body %>
