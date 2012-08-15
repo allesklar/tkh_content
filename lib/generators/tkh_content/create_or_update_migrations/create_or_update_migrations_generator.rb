@@ -20,6 +20,7 @@ module TkhContent
         migration_template "create_pages.rb", "db/migrate/create_pages.rb"
         migration_template "add_author_to_pages.rb", "db/migrate/add_author_to_pages.rb"
         migration_template "add_parent_id_to_pages.rb", "db/migrate/add_parent_id_to_pages.rb"
+        migration_template "add_short_title_to_pages.rb", "db/migrate/add_short_title_to_pages.rb"
       end
  
     end

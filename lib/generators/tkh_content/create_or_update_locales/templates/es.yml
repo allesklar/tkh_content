@@ -11,6 +11,7 @@ es:
     attributes:
       pages:
         title: "título"
+        short_title: 'título breve'
         description: "descripción"
         body: "parte principal"
         para el blog: 'contraseña'

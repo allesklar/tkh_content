@@ -190,6 +190,7 @@ fr:
     attributes:
       pages:
         title: "titre"
+        short_title: 'titre raccourci'
         description: "description"
         body: "texte principal"
         para el blog: 'pour le blog'
