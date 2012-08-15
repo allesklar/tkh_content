@@ -1,5 +1,5 @@
-<% @meta_title = @page.title %>
-<% @meta_description = @page.description %>
+<% content_for :meta_title, @page.title %>
+<% content_for :meta_description, @page.description %>
 
 <%= content_tag(:h1, @page.title) if @page.for_blog? %>
 
