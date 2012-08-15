@@ -48,4 +48,11 @@ class PagesController < ApplicationController
     redirect_to pages_url, notice: t('pages.destroy.notice')
   end
   
+  def publish
+    @page = Page.find(params[:id])
+    @page.published_at = Time.now
+    @page.save
+    redirect_to pages_path, notice: 'The page has been published'
+  end
+  
 end
