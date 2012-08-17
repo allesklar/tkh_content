@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     resources :pages do
       member do
         post :publish
+        post :unpublish
       end
     end
   end

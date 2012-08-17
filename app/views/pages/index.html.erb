@@ -18,12 +18,12 @@
 		    <td><%= link_to page.title, page %></td>
 		    <td><%= truncate page.description, length: 55, separator: ' ...' %></td>
 				<td><%= page.author.name %></td>
-				<td><%= page.for_blog? ? '✓' : 'X' %></td>
+				<td class="text-center"><%= page.for_blog? ? "<span class=\"label label-success\">✓</span>".html_safe : "<span class=\"label label-important\">X</span>".html_safe %></td>
 				<td>
 					<% if page.published_at %>
-						<%= l page.published_at.to_date, format: :long %>
+						<span class="label label-success">✓</span> <%= link_to 'unpublish', unpublish_page_path(page), class: 'btn btn-mini', method: :post %>
 					<% else %>
-					  X <%= link_to 'publish', publish_page_path(page), class: 'btn btn-mini btn-primary', method: :post %>
+					  <span class="label label-important">X</span> <%= link_to 'publish', publish_page_path(page), class: 'btn btn-mini btn-primary', method: :post %>
 					<% end -%>
 				</td>
 		    <td><%= link_to t('edit'), edit_page_path(page), class: 'btn btn-mini' %>

@@ -55,4 +55,11 @@ class PagesController < ApplicationController
     redirect_to pages_path, notice: 'The page has been published'
   end
   
+  def unpublish
+    @page = Page.find(params[:id])
+    @page.published_at = nil
+    @page.save
+    redirect_to pages_path, notice: "The page has been unpublished. It's a draft again."
+  end
+  
 end

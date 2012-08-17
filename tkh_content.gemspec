@@ -18,6 +18,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 3.2"
   s.add_dependency 'stringex', '~> 1.4'
+  s.add_dependency "bootstrap-sass", '~> 2.0'
   s.add_dependency "simple_form", "~> 2.0"
   s.add_dependency 'globalize3', '~> 0.2'
 
