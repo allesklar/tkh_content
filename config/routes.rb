@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       member do
         post :publish
         post :unpublish
+        post :toggle_for_blog
       end
     end
   end
