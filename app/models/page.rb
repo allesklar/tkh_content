@@ -57,8 +57,4 @@ class Page < ActiveRecord::Base
     Page.with_parent_id(parent_id)
   end
   
-  def self.self_and_siblings(id)
-    Page.with_parent_id(id)
-  end
-  
 end
