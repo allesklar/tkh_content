@@ -14,7 +14,7 @@ es:
         short_title: 'título breve'
         description: "descripción"
         body: "parte principal"
-        para el blog: 'contraseña'
+        for_the_blog: 'contraseña'
 
   pages:
     author: 'autor'

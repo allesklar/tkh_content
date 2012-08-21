@@ -193,7 +193,7 @@ fr:
         short_title: 'titre raccourci'
         description: "description"
         body: "texte principal"
-        para el blog: 'pour le blog'
+        for_the_blog: 'pour le blog'
   
   pages:
     author: 'auteur'
@@ -202,9 +202,9 @@ fr:
     
     create:
       notice: 'La page a été créée.'
-      warning: "Il y'a eu un problem et la page n'a pas été sauvegardée"
+      warning: "Il y'a eu un probleme et la page n'a pas été sauvegardée"
     update:
       notice: 'Les changements de cette page ont été sauvegardés'
-      warning: "Il y'a eu un problem et les changements de cette page n'ont pas été sauvegardés"
+      warning: "Il y'a eu un probleme et les changements de cette page n'ont pas été sauvegardés"
     destroy:
       notice: 'La page a été supprimée'
