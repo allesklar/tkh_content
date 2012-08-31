@@ -1,0 +1,16 @@
+<% content_for :meta_title, 'Blog' %>
+
+<% unless @posts.blank? %>
+  <% for post in @posts %>
+    <h1><%= link_to post.title, post %></h1>
+		<p><%= link_to 'edit post', edit_page_path(post) %></p>
+		<p>
+			by <%= post.author.name %> on <%= l post.published_at, format: :default %> | <%= link_to 'Permalink.', post %>
+		</p>
+		<%= raw post.body %>
+  <% end %>
+<% end %>
+
+
+
+
