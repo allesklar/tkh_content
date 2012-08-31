@@ -1,0 +1,30 @@
+de:
+  
+  are_you_sure: 'are you sure?'
+  delete: 'delete'
+  edit: 'edit'
+  pages: 'pages'
+  sections: 'sections'
+  
+  activerecord: 
+    attributes:
+      pages:
+        title: "titre"
+        short_title: 'titre raccourci'
+        description: "description"
+        body: "texte principal"
+        for_the_blog: 'pour le blog'
+  
+  pages:
+    author: 'author'
+    create_new: 'create new page'
+    published: 'published?'
+    
+    create:
+      notice: 'The page was successfully created.'
+      warning: 'There was a problem saving the page'
+    update:
+      notice: 'The page was successfully updated.'
+      warning: 'There was a problem saving the page'
+    destroy:
+      notice: 'The page was deleted'
