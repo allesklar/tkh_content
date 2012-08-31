@@ -1,18 +1,4 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-  date:
-    formats:
-      simple_date: "%B %d"
-  time:
-    formats:
-      informal: "at %H:%M"
-      default: "%a. %b. %d, '%y at %H:%M"
-      just_time: "%I:%M %p"
-      long: "%A %d %B %Y at %H:%M"
-  # custom sections - the obove is provided by rails
-  language_name: English
   
   are_you_sure: 'are you sure?'
   delete: 'delete'
@@ -33,5 +19,3 @@ en:
       warning: 'There was a problem saving the page'
     destroy:
       notice: 'The page was deleted'
-  
-  
