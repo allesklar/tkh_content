@@ -8,6 +8,11 @@ Rails.application.routes.draw do
       end
     end
     resources :comments do
+      collection do
+        get :pending
+        get :accepted
+        get :blocked
+      end
       member do
         post :accept
         post :block

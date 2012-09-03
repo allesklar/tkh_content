@@ -62,4 +62,20 @@ class CommentsController < ApplicationController
       redirect_to comments_path, warning: t('comments.moderation.block.warning')
     end
   end
+  
+  def pending
+    @comments = Comment.pending
+    switch_to_admin_layout
+  end
+  
+  def accepted
+    @comments = Comment.accepted.by_recent
+    switch_to_admin_layout
+  end
+
+  def blocked
+    @comments = Comment.blocked.by_recent
+    switch_to_admin_layout
+  end
+  
 end
