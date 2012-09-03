@@ -7,6 +7,7 @@ Rails.application.routes.draw do
         post :toggle_for_blog
       end
     end
+    resources :comments
     match 'blog' => 'blog#index'
   end
 end
