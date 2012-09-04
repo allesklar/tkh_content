@@ -2,6 +2,10 @@
 
 
 
+## 0.1.2
+
+* Refactored generation of short_title attribute. Moved it ot the create_pages migration to avoid conflict in globalize3.
+
 
 ## 0.1.1
 
