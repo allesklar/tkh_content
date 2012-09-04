@@ -1,10 +1,20 @@
 en:
   
   are_you_sure: 'are you sure?'
+  colon: ':'
   delete: 'delete'
   edit: 'edit'
   pages: 'pages'
   sections: 'sections'
+  
+  activerecord: 
+    attributes:
+      pages:
+        title: "title"
+        short_title: 'short title'
+        description: "description"
+        body: "body text"
+        for_the_blog: 'for the blog'
   
   pages:
     author: 'author'
@@ -19,3 +29,35 @@ en:
       warning: 'There was a problem saving the page'
     destroy:
       notice: 'The page was deleted'
+      
+  activerecord: 
+    attributes:
+      comments:
+        author: 'author'
+        body: "body text"
+        locale: 'language'
+        status: 'status'
+            
+  comments:
+    create:
+      notice: 'The comment was successfully created.'
+      warning: 'There was a problem saving the comment to the database'
+    update:
+      notice: 'The comment was successfully updated.'
+      warning: 'There was a problem saving this comment'
+    destroy:
+      notice: 'The comment was deleted'
+    moderation:
+      accept:
+        notice: "This comment has been accepted"
+        warning: "Some error occurred and the comment could not be moderated and accepted"
+      block:
+        notice: "This comment has been blocked"
+        warning: "Some error occurred and the comment could not be moderated and blocked"
+      actions:
+        accept: "accept!"
+        block: "block!"
+    status:
+      pending: 'pending'
+      accepted: 'accepted'
+      blocked: 'blocked'

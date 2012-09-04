@@ -1,0 +1,29 @@
+<h1>Listing Comments</h1>
+
+<table class='table table-striped'>
+	<thead>
+  <tr>
+	    <th><%= t 'activerecord.attributes.comments.author' %></th>
+	    <th><%= t 'activerecord.attributes.comments.page' %></th>
+			<th><%= t 'activerecord.attributes.comments.body' %></th>
+			<th><%= t 'activerecord.attributes.comments.status' %></th>
+			<th><%= t 'activerecord.attributes.comments.locale' %></th>
+	    <th>Actions</th>
+	  </tr>
+	</thead>
+	
+	<tbody>
+		<% @comments.each do |comment| %>h
+		  <tr>
+		    <td><%= comment.author.name %></td>
+				<td><%= link_to comment.page.title, comment.page %></td>
+		    <td><%= truncate comment.body, length: 75, separator: ' ...' %></td>
+				<td><%= comment.status %><%= t 'colon' %><%= render 'comments/status_buttons' %></td>
+				<td><%= comment.locale %></td>
+		    <td><%= link_to t('edit'), edit_comment_path(comment), class: 'btn btn-mini' %><%= link_to t('delete'), comment, method: :delete, data: { confirm: t('are_you_sure') }, class: 'btn btn-mini btn-danger' %></td>
+		  </tr>
+		<% end %>
+	</tbody>
+</table>
+
+<%= render 'shared/admin_sidebar' %>

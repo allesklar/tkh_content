@@ -11,9 +11,7 @@ class Comment < ActiveRecord::Base
   # non-accessible attributes: author_id, :status, :locale
   attr_accessible :body, :page_id
   
-  validates_presence_of :page_id
-  validates_presence_of :author_id
-  validates_presence_of :body
+  validates_presence_of :page_id, :body
   
   scope :printable, where('status = ? OR status = ?', 'pending', 'accepted')
   scope :pending, where('status = ?', 'pending')
