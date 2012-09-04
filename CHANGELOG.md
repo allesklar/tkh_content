@@ -2,6 +2,11 @@
 
 
 
+## 0.1.3
+
+* Debugged blog controller index method query. Now it's properly returning blog posts by most recently published and without offset. Still need to do the pagination.
+
+
 ## 0.1.2
 
 * Refactored generation of short_title attribute. Moved it ot the create_pages migration to avoid conflict in globalize3.
