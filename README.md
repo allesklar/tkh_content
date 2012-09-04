@@ -4,7 +4,7 @@ This Rails engine puts the C in CMS. It provides the pages and the blog section.
 
 Primarily developed for Ten Thousand Hours but we are happy to share if anybody finds it useful.
 
-It's still embryonic but many improvements to come. The blog is not in yet. 
+It's still embryonic but many improvements to come. The blog is now coming bit by bit.
 
 
 
@@ -14,6 +14,7 @@ It's still embryonic but many improvements to come. The blog is not in yet.
 The following things are needed:
 
 * Ruby 1.9.2 or later
+* A shared/menus view partial or the tkh_menus gem
 
 
 ## Installation
