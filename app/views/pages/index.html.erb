@@ -36,6 +36,8 @@
 	</tbody>
 </table>
 
+<%= will_paginate @pages %>
+
 <%= link_to t('pages.create_new').capitalize, new_page_path, class: 'btn btn-primary' %>
 
 <%= render 'shared/admin_sidebar' %>

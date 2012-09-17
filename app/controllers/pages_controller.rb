@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   before_filter :authenticate_with_admin, :except => 'show'
   
   def index
-    @pages = Page.by_recent
+    @pages = Page.by_recent.paginate(:page => params[:page], :per_page => 35)
     switch_to_admin_layout
   end
 
