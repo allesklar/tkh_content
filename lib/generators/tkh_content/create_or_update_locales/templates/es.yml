@@ -28,5 +28,6 @@ es:
       warning: 'Hubo un problema al guardar la página'
     destroy:
       notice: 'la página se ha eliminado'
+      root_warning: "No se puede eliminar la página, ya que es la bienvenida principal. Por favor, cámbialo."
           
   

@@ -28,3 +28,4 @@ fr:
       warning: "Il y'a eu un probleme et les changements de cette page n'ont pas été sauvegardés"
     destroy:
       notice: 'La page a été supprimée'
+      root_warning: "Vous ne pouvez pas supprimer cette page parce que c'est la page principale de bienvenue. Veuillez la modifier."

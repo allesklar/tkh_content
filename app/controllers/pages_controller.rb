@@ -43,9 +43,14 @@ class PagesController < ApplicationController
   end
 
   def destroy
-    @page = Page.find(params[:id])
-    @page.destroy
-    redirect_to pages_url, notice: t('pages.destroy.notice')
+    unless params[:id].to_i == 1
+      @page = Page.find(params[:id])
+      @page.destroy
+      redirect_to pages_url, notice: t('pages.destroy.notice')
+    else # one should not be able to destroy the page #1 which is the site's home page
+      flash[:warning] = t('pages.destroy.root_warning')
+      redirect_to ( :back || pages_url )
+    end
   end
   
   def publish
