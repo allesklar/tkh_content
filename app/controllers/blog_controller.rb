@@ -1,7 +1,7 @@
 class BlogController < ApplicationController
   
   def index
-    @posts = Page.for_blog.published.order('updated_at').offset(60).limit(30)
+    @posts = Page.for_blog.published.order('published_at desc')
     render :layout => 'blog'
   end
   

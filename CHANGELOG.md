@@ -2,6 +2,28 @@
 
 
 
+## 0.1.3
+
+* Debugged blog controller index method query. Now it's properly returning blog posts by most recently published and without offset. Still need to do the pagination.
+
+
+## 0.1.2
+
+* Refactored generation of short_title attribute. Moved it ot the create_pages migration to avoid conflict in globalize3.
+
+
+## 0.1.1
+
+* Creation of blog section
+* Page title in h1 in show view only for blog posts
+* Refactored meta_title generation
+* Added short title page attribute mostly used for menus
+* Pages act as a tree to build menu system
+* Pages are either published or draft according to published_at attribute
+* Needs a shared/menus partial or the tkh_menus gem
+* Cleaned up some locale files and added the German locale but it's not translated yet
+
+
 ## 0.1
 
 * Reverted pages show route to that one of a normal resource
