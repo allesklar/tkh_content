@@ -2,6 +2,7 @@ class BlogController < ApplicationController
   
   def index
     @posts = Page.for_blog.published.order('published_at desc').paginate(:page => params[:page], :per_page => 20)
+    # respond_to  
     render :layout => 'blog'
   end
   
