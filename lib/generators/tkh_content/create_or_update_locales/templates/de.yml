@@ -1,31 +1,31 @@
 de:
   
-  are_you_sure: 'are you sure?'
-  delete: 'delete'
-  edit: 'edit'
-  pages: 'pages'
-  sections: 'sections'
-  
+  are_you_sure: 'Bist Du sicher?'
+  delete: 'löschen'
+  edit: 'bearbeiten'
+  pages: 'Seiten'
+  sections: 'Abschnitte'
+
   activerecord: 
     attributes:
       pages:
-        title: "titre"
-        short_title: 'titre raccourci'
-        description: "description"
-        body: "texte principal"
-        for_the_blog: 'pour le blog'
-  
+        title: "Überschrift"
+        short_title: 'Kurzüberschrifti'
+        description: "Beschreibung"
+        body: "Haupttext"
+        for_the_blog: 'Für den Blog'
+
   pages:
-    author: 'author'
-    create_new: 'create new page'
-    published: 'published?'
-    
+    author: 'Autor'
+    create_new: 'Neue Seite anlegen'
+    published: 'veröffentlichen?'
+
     create:
-      notice: 'The page was successfully created.'
-      warning: 'There was a problem saving the page'
+      notice: 'Diese Seite wurde erfolgreich angelegt.'
+      warning: 'Beim Speichern dieser Seite ist ein Problem aufgetreten'
     update:
-      notice: 'The page was successfully updated.'
-      warning: 'There was a problem saving the page'
+      notice: 'Die Seite wurde erfolgreich aktualisiert.'
+      warning: 'Beim Speichern der Seite ist ein Problem aufgetreten'
     destroy:
-      notice: 'The page was deleted'
+      notice: 'Die Seite wurde gelöscht'
       root_warning: "You cannot delete this page as this is the root page of the site. You should only modify it."
