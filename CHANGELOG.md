@@ -2,6 +2,11 @@
 
 
 
+## 0.1.5
+
+* Added blog RSS feed
+
+
 ## 0.1.4
 
 * Added pagination to the pages index method.
