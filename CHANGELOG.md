@@ -2,6 +2,15 @@
 
 
 
+## 0.1.4
+
+* Added pagination to the pages index method.
+* Added pagination to blog home page.
+* The user CANNOT delete the home page. For any reason whatsoever.
+* Minor improvements to blog
+* Translated German strings.
+
+
 ## 0.1.3
 
 * Debugged blog controller index method query. Now it's properly returning blog posts by most recently published and without offset. Still need to do the pagination.
@@ -9,7 +18,7 @@
 
 ## 0.1.2
 
-* Refactored generation of short_title attribute. Moved it ot the create_pages migration to avoid conflict in globalize3.
+* Refactored generation of short_title attribute. Moved it to the create_pages migration to avoid conflict in globalize3.
 
 
 ## 0.1.1
