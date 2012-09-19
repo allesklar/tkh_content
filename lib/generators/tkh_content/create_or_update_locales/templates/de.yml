@@ -28,4 +28,4 @@ de:
       warning: 'Beim Speichern der Seite ist ein Problem aufgetreten'
     destroy:
       notice: 'Die Seite wurde gelöscht'
-      root_warning: "You cannot delete this page as this is the root page of the site. You should only modify it."
+      root_warning: "Du kannst diese Seite nicht löschen, da es die Root-Seite ist. Du kannst sie nur bearbeiten."
