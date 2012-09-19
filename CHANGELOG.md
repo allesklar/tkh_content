@@ -2,6 +2,11 @@
 
 
 
+## 0.1.6
+
+* Added inline HTML editor to the pages form
+
+
 ## 0.1.5
 
 * Added blog RSS feed
