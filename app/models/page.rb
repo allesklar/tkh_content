@@ -7,7 +7,10 @@ class Page < ActiveRecord::Base
   
   belongs_to :author, class_name: 'User', foreign_key: 'author_id'
   
-  attr_accessible :title, :short_title, :description, :body, :for_blog, :parent_id
+  attr_accessible :title, :short_title, :description, :body, :for_blog, :parent_id, :tag_list
+  
+  has_many :taggings
+  has_many :tags, through: :taggings
   
   validates_presence_of :title
   validates_presence_of :description
@@ -55,6 +58,25 @@ class Page < ActiveRecord::Base
   
   def siblings
     Page.with_parent_id(parent_id)
+  end
+  
+  def self.tagged_with(name)
+    Tag.find_by_name!(name).pages
+  end
+
+  def self.tag_counts
+    Tag.select("tags.*, count(taggings.tag_id) as count").
+      joins(:taggings).group("taggings.tag_id")
+  end
+
+  def tag_list
+    tags.map(&:name).join(" ")
+  end
+
+  def tag_list=(names)
+    self.tags = names.split(" ").map do |n|
+      Tag.where(name: n.strip).first_or_create!
+    end
   end
   
 end

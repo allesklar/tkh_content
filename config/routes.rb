@@ -7,6 +7,7 @@ Rails.application.routes.draw do
         post :toggle_for_blog
       end
     end
-    match 'blog' => 'blog#index'
+    get 'blog' => 'blog#index', as: :blog
+    get 'tags/:tag', to: 'blog#index', as: :tag
   end
 end

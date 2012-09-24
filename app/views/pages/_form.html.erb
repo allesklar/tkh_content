@@ -3,9 +3,10 @@
 	
   <div class="form-inputs">
 		<%= f.input :title, hint: 'nice and descriptive' %><br />
+		<%= f.input :for_blog %><br />
+		<%= f.input :tag_list, hint: 'space separated' %>
 		<%= f.input :short_title, hint: 'ideally one word only, used for the menu' %><br />
 		<%= f.input :parent_id %><br />
-		<%= f.input :for_blog %><br />
 	  <%= f.input :description, :input_html => { :rows => 3 } %>
 		<%= f.input :body, :input_html => { :rows => 25, :id => 'editable' } %>
 	</div>
