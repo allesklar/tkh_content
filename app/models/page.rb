@@ -91,7 +91,11 @@ class Page < ActiveRecord::Base
     end
 
   def parent_page_title=(title)
-    title.present? ? self.parent_id = Page.find_by_title(title).id : self.parent_id = nil
+    if title.present? && Page.find_by_title(title)
+      self.parent_id = Page.find_by_title(title).id
+    else
+      self.parent_id = nil
+    end
   end
   
 end
