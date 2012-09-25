@@ -37,16 +37,18 @@ class Page < ActiveRecord::Base
     short_title || title
   end
   
+  ### menu related instance methods
+  
   def orphan?
     parent_id == nil
   end
   
   def has_children?
-    Page.with_parent_id(id).count >= 1
+    Page.with_parent_id(id).published.count >= 1
   end
   
   def children
-    Page.with_parent_id(id)
+    Page.published.with_parent_id(id)
   end
   
   def parent
@@ -54,12 +56,14 @@ class Page < ActiveRecord::Base
   end
   
   def has_siblings?
-    Page.with_parent_id(parent_id).count >= 1
+    Page.with_parent_id(parent_id).published.count >= 1
   end
   
   def siblings
-    Page.with_parent_id(parent_id)
+    Page.published.with_parent_id(parent_id)
   end
+  
+  ### tagging related methods
   
   def self.tagged_with(name)
     Tag.find_by_name!(name).pages
@@ -79,6 +83,8 @@ class Page < ActiveRecord::Base
       Tag.where(name: n.strip).first_or_create!
     end
   end
+  
+  ### autocomplete related instance methods
   
   def parent_page_title
       parent.try(:title) unless self.orphan?
