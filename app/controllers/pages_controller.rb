@@ -15,13 +15,11 @@ class PagesController < ApplicationController
 
   def new
     @page = Page.new
-    page_autocomplete_items
     switch_to_admin_layout
   end
 
   def edit
     @page = Page.find(params[:id])
-    page_autocomplete_items
     switch_to_admin_layout
   end
 
@@ -74,12 +72,6 @@ class PagesController < ApplicationController
     page.for_blog? ? page.for_blog = false : page.for_blog = true
     page.save
     redirect_to pages_path notice: "The blog status of the page has been changed"
-  end
-  
-  private
-  
-  def page_autocomplete_items
-    @autocomplete_items = Page.published.not_for_blog.by_title.map(&:title)
   end
   
 end

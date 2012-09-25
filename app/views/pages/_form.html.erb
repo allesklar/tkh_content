@@ -2,18 +2,17 @@
 	<%= f.error_notification %>
 	
   <div class="form-inputs">
-		<%= f.input :title, hint: 'nice and descriptive' %><br />
-		<%= f.input :for_blog %><br />
+		<%= f.input :title, hint: 'nice and descriptive' %>
+		<%= f.input :for_blog %>
 		<%= f.input :tag_list, hint: 'space separated' %>
-		<%= f.input :short_title, hint: 'ideally one word only, used for the menu' %><br />
-		<%# = javascript_tag "var autocomplete_items = #{ @autocomplete_items.to_json };" %>
+		<%= f.input :short_title, hint: 'ideally one word only, used for the menu' %>
 		<%= f.input :parent_page_title,
 								as: :string,
 								label: 'parent page title',
 								:input_html => { class: 'typeahead',
 																:data => { 	provide: 'typeahead',
-																	 					source: @autocomplete_items.to_json } 
-																	} %><br />
+																	 					source: Page.not_for_blog.by_title.map(&:title).to_json } 
+																	} %>
 	  <%= f.input :description, :input_html => { :rows => 3 } %>
 		<%= f.input :body, :input_html => { :rows => 25, :id => 'editable' } %>
 	</div>
