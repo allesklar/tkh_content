@@ -2,6 +2,12 @@
 
 
 
+## 0.1.7
+
+* Added tags to blog
+* Added autocompletion of parent page field in page form
+
+
 ## 0.1.6
 
 * Added inline HTML editor to the pages form
