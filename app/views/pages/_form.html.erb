@@ -6,7 +6,14 @@
 		<%= f.input :for_blog %><br />
 		<%= f.input :tag_list, hint: 'space separated' %>
 		<%= f.input :short_title, hint: 'ideally one word only, used for the menu' %><br />
-		<%= f.input :parent_id %><br />
+		<%# = javascript_tag "var autocomplete_items = #{ @autocomplete_items.to_json };" %>
+		<%= f.input :parent_page_title,
+								as: :string,
+								label: 'parent page title',
+								:input_html => { class: 'typeahead',
+																:data => { 	provide: 'typeahead',
+																	 					source: @autocomplete_items.to_json } 
+																	} %><br />
 	  <%= f.input :description, :input_html => { :rows => 3 } %>
 		<%= f.input :body, :input_html => { :rows => 25, :id => 'editable' } %>
 	</div>

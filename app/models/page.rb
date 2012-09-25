@@ -7,7 +7,7 @@ class Page < ActiveRecord::Base
   
   belongs_to :author, class_name: 'User', foreign_key: 'author_id'
   
-  attr_accessible :title, :short_title, :description, :body, :for_blog, :parent_id, :tag_list
+  attr_accessible :title, :short_title, :description, :body, :for_blog, :parent_id, :tag_list, :parent_page_title
   
   has_many :taggings
   has_many :tags, through: :taggings
@@ -31,6 +31,7 @@ class Page < ActiveRecord::Base
   # tree scopes
   scope :orphans, where('parent_id IS ?', nil)
   scope :with_parent_id, lambda { |id| where('parent_id = ?', id) }
+  scope :by_title, order('title')
   
   def nickname
     short_title || title
@@ -77,6 +78,14 @@ class Page < ActiveRecord::Base
     self.tags = names.split(" ").map do |n|
       Tag.where(name: n.strip).first_or_create!
     end
+  end
+  
+  def parent_page_title
+      parent.try(:title) unless self.orphan?
+    end
+
+  def parent_page_title=(title)
+    self.parent_id = Page.find_by_title(title).id if title.present?
   end
   
 end

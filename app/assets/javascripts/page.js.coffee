@@ -1,0 +1,2 @@
+jQuery ->
+  $('.typeahead').typeahead()
