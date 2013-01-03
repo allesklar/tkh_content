@@ -14,6 +14,11 @@ fr:
         description: "description"
         body: "texte principal"
         for_the_blog: 'pour le blog'
+
+      contacts:
+        sender_name: "nom de l'auteur"
+        sender_email: "email de l'auteur"
+        body: 'contenu du message'
   
   pages:
     author: 'auteur'
@@ -22,10 +27,17 @@ fr:
     
     create:
       notice: 'La page a été créée.'
-      warning: "Il y'a eu un probleme et la page n'a pas été sauvegardée"
+      warning: "Il y'a eu un probleme et la page n'a pas été sauvegardée."
     update:
-      notice: 'Les changements de cette page ont été sauvegardés'
-      warning: "Il y'a eu un probleme et les changements de cette page n'ont pas été sauvegardés"
+      notice: 'Les changements de cette page ont été sauvegardés.'
+      warning: "Il y'a eu un probleme et les changements de cette page n'ont pas été sauvegardés."
     destroy:
-      notice: 'La page a été supprimée'
+      notice: 'La page a été supprimée.'
       root_warning: "Vous ne pouvez pas supprimer cette page parce que c'est la page principale de bienvenue. Veuillez la modifier."
+
+  contacts:
+    sent: 'Envoyé le'
+        
+    create:
+      notice: 'Votre message a bien été envoyé.'
+      warning: "Il y'a eu un probleme en envoyant votre message."

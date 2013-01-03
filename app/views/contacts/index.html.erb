@@ -1,0 +1,29 @@
+<h1><%= t 'contacts.index.title' %></h1>
+
+<table class='table table-striped'>
+	<thead>
+  <tr>
+	    <th><%= t 'activerecord.attributes.contacts.sender_name' %></th>
+	    <th><%= t 'activerecord.attributes.contacts.sender_email' %></th>
+			<th><%= t 'activerecord.attributes.contacts.body' %></th>
+			<th><%= t 'contacts.sent' %></th>
+	    <th>Actions</th>
+	  </tr>
+	</thead>
+	
+	<tbody>
+		<% @contacts.each do |contact| %>
+		  <tr>
+		    <td><%= contact.sender_name %></td>
+				<td><%= mail_to contact.sender_email, contact.sender_name, subject: 'Response to your message' %></td>
+		    <td><%= truncate contact.body, length: 55, separator: ' ...' %></td>
+				<td><%= l contact.created_at, :format => :default %></td>
+		    <td>Reply to email: <%= mail_to contact.sender_email, contact.sender_name, subject: 'Response to your message' %></td>
+		  </tr>
+		<% end %>
+	</tbody>
+</table>
+
+<%= will_paginate @contacts %>
+
+<%= render 'shared/admin_sidebar' %>

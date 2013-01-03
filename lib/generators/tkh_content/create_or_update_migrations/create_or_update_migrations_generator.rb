@@ -22,6 +22,7 @@ module TkhContent
         migration_template "add_parent_id_to_pages.rb", "db/migrate/add_parent_id_to_pages.rb"
         migration_template "create_tags.rb", "db/migrate/create_tags.rb"
         migration_template "create_taggings.rb", "db/migrate/create_taggings.rb"
+        migration_template "create_contacts.rb", "db/migrate/create_contacts.rb"
       end
  
     end

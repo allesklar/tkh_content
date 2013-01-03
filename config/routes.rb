@@ -9,5 +9,6 @@ Rails.application.routes.draw do
     end
     get 'blog' => 'blog#index', as: :blog
     get 'tags/:tag', to: 'blog#index', as: :tag
+    resources :contacts
   end
 end

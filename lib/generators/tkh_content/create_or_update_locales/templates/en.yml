@@ -1,5 +1,19 @@
 en:
   
+  activerecord: 
+    attributes:
+      pages:
+        title: "title"
+        short_title: 'short title'
+        description: "description"
+        body: "body text"
+        for_the_blog: 'for the blog'
+        
+      contacts:
+        sender_name: "sender name"
+        sender_email: 'sender email'
+        body: 'message'
+  
   are_you_sure: 'are you sure?'
   delete: 'delete'
   edit: 'edit'
@@ -20,3 +34,10 @@ en:
     destroy:
       notice: 'The page was deleted'
       root_warning: "You cannot delete this page as this is the root page of the site. You should only modify it."
+  
+  contacts:
+    sent: 'Sent at'
+      
+    create:
+      notice: 'Your message has been sent'
+      warning: 'There was a problem sending your message.'

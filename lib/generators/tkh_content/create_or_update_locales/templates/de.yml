@@ -14,6 +14,11 @@ de:
         description: "Beschreibung"
         body: "Haupttext"
         for_the_blog: 'Für den Blog'
+      
+      contacts:
+        sender_name: "sender name"
+        sender_email: 'sender email'
+        body: 'message'
 
   pages:
     author: 'Autor'
@@ -29,3 +34,10 @@ de:
     destroy:
       notice: 'Die Seite wurde gelöscht'
       root_warning: "Du kannst diese Seite nicht löschen, da es die Root-Seite ist. Du kannst sie nur bearbeiten."
+
+  contacts:
+    sent: 'Sent at'
+    
+    create:
+      notice: 'Your message has been sent'
+      warning: 'There was a problem sending your message.'

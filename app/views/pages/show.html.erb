@@ -5,5 +5,8 @@
 
 <%= raw @page.body %>
 
+<!-- remove this once DSL has been created -->
+<%= render 'contacts/form' if params[:id].to_i == 5 %>
+
 <%# partial in tkh_menus gem or has to be added in host app %>
 <%= render './shared/menus' %>
