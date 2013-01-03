@@ -2,6 +2,17 @@
 
 
 
+## 0.1.9
+
+* Removed inline editor. Will add another one soon
+* Created a contact form
+
+
+## 0.1.8
+
+* Some debugging
+
+
 ## 0.1.7
 
 * Added tags to blog

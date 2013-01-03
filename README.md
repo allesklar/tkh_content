@@ -62,7 +62,7 @@ Start your server!
 ## Usage
 
 
-The section is located at:
+The main section is located at:
 
     /pages
 
