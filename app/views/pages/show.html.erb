@@ -3,10 +3,10 @@
 
 <%= content_tag(:h1, @page.title) if @page.for_blog? %>
 
-<%= raw @page.body %>
+<%= raw tkhed(@page.body) %>
 
 <!-- remove this once DSL has been created -->
-<%= render 'contacts/form' if params[:id].to_i == 5 %>
+<%# = render 'contacts/form' if params[:id].to_i == 5 %>
 
 <%# partial in tkh_menus gem or has to be added in host app %>
 <%= render './shared/menus' %>
