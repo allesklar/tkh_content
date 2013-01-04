@@ -12,7 +12,10 @@ class ContactMailer < ActionMailer::Base
     # FIXME - only the email addresses show up. not the names :-(
     # TODO - what do to if contact_email is not set?
     recipient = "#{Setting.first.company_name} <#{Setting.first.contact_email}>"
-    from = "#{@contact.sender_name} <#{@contact.sender_email}>"
-    mail to: recipient,  from: from , subject: 'Message from the contact form'
+    reply_to = "#{@contact.sender_name} <#{@contact.sender_email}>"
+    mail  to: recipient,  
+          from: "#{Setting.first.site_name} <deploy@pragmaticyoga.org>",
+          reply_to: reply_to,
+          subject: "Message from #{@contact.sender_name} via #{Setting.first.site_name} web site"
   end
 end
