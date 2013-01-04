@@ -16,7 +16,7 @@ class ContactsController < ApplicationController
     if saved && sent_email == 'success'
       redirect_to root_path, notice: "Your message has been sent. Thank you very much!"
     elsif saved && sent_email == 'exception'
-      flash[:error] = 'There was a problem sending this message'
+      flash[:error] = "There was a problem sending this message<br />#{e}"
       redirect_to :back
     elsif saved && sent_email == 'invalid'
       flash[:error] = 'There was a problem sending this message. Your email address does not seem to be valid!'
@@ -42,7 +42,8 @@ class ContactsController < ApplicationController
         ContactMailer.message_from_contact_form(contact).deliver
         return 'success'
       rescue Exception => e
-        # AdminMailer.rescued_exceptions(e, "Some exception occurred while trying to send a student his confirmation for registering in a course. The email was never sent!").deliver
+        AdminMailer.rescued_exceptions(e, "Some exception occurred while trying to send a student his confirmation for registering in a course. The email was never sent!").deliver
+        @exception = e
         return 'exception'
       end
     else # for invalid or blank emails
