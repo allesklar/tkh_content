@@ -2,6 +2,12 @@
 
 
 
+## 0.1.9.1 & 0.1.9.2
+
+* Debugging
+* Enable admin user to embed contact form in any page using happy DSL
+
+
 ## 0.1.9
 
 * Removed inline editor. Will add another one soon
