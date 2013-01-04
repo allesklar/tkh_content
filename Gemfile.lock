@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    tkh_content (0.1.9)
+    tkh_content (0.1.9.1)
       bootstrap-sass (~> 2.0)
       bootstrap-will_paginate
       globalize3 (~> 0.2)
