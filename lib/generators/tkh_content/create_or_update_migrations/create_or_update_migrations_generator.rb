@@ -23,6 +23,7 @@ module TkhContent
         migration_template "create_tags.rb", "db/migrate/create_tags.rb"
         migration_template "create_taggings.rb", "db/migrate/create_taggings.rb"
         migration_template "create_contacts.rb", "db/migrate/create_contacts.rb"
+        migration_template "add_various_indices_to_pages.rb", "db/migrate/add_various_indices_to_pages.rb"
       end
  
     end
