@@ -1,12 +1,16 @@
 <% content_for :meta_title, @page.title %>
 <% content_for :meta_description, @page.description %>
 
-<%= content_tag(:h1, @page.title) if @page.for_blog? %>
+<% unless @page.for_blog? %>
 
-<%= raw tkhed(@page.body) %>
+	<%= raw tkhed(@page.body) %>
 
-<!-- remove this once DSL has been created -->
-<%# = render 'contacts/form' if params[:id].to_i == 5 %>
+<% else %>
+  
+	<%= content_tag(:h1, @page.title) %>
+	<%= raw tkhed(@page.body) %>
+	
+<% end -%>
 
 <%# partial in tkh_menus gem or has to be added in host app %>
 <%= render './shared/menus' %>
