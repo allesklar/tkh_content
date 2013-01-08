@@ -6,6 +6,9 @@ Rails.application.routes.draw do
         post :unpublish
         post :toggle_for_blog
       end
+      collection do 
+        post :sort
+      end
     end
     get 'blog' => 'blog#index', as: :blog
     get 'tags/:tag', to: 'blog#index', as: :tag

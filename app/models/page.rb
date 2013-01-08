@@ -32,6 +32,7 @@ class Page < ActiveRecord::Base
   scope :orphans, where('parent_id IS ?', nil)
   scope :with_parent_id, lambda { |id| where('parent_id = ?', id) }
   scope :by_title, order('title')
+  scope :by_menu_position, order('menu_position')
   
   def nickname
     short_title || title

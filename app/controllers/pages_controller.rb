@@ -74,4 +74,11 @@ class PagesController < ApplicationController
     redirect_to pages_path notice: "The blog status of the page has been changed"
   end
   
+  def sort
+    params[:page].each_with_index do |id, index|
+      Page.update_all({ menu_position: index+1 }, { id: id })
+    end
+    render nothing: true
+  end
+  
 end
