@@ -2,6 +2,16 @@
 
 
 
+## 0.1.9.3
+
+* Modified labels in contact_us form partial
+* Improved styling and display for the show view of content pages and blog posts
+* Added a new datetime locale format
+* Administrators get an 'edit' button in the meta info of blog posts
+* Added indices to page model
+* Pages have a menu_position attribute and can easily be reordered in combination with the tkh_menus gem
+
+
 ## 0.1.9.1 & 0.1.9.2
 
 * Debugging
