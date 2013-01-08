@@ -1,5 +1,11 @@
 de:
   
+  time:
+    formats:
+      # eventually this should be abstracted to a tkh_utilities gem together with all
+      # standard helpers and functionality
+      tkh_default: '%A, %d. %B %Y, %H:%M Uhr'
+  
   are_you_sure: 'Bist Du sicher?'
   delete: 'löschen'
   edit: 'bearbeiten'
