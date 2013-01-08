@@ -8,6 +8,7 @@
 <% else %>
   
 	<%= content_tag(:h1, @page.title) %>
+	<%= render '/pages/blog_post_meta', post: @page %>
 	<%= raw tkhed(@page.body) %>
 	
 <% end -%>

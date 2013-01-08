@@ -1,13 +1,10 @@
-<% content_for :meta_title, 'Home' %>
+<% content_for :meta_title, Setting.first.blog_name %>
+<%= content_for :meta_description, "#{Setting.first.blog_tagline} - #{Setting.first.company_name}: the official blog" %>
 
-<% unless @posts.blank? %>
-  <% for post in @posts %>
-		<div class="individual-post">
-	    <h1><%= link_to post.title, post %></h1>
-			<p class="meta-info">by <%= post.author.name %> on <%= l post.published_at, format: :default %> | <%= link_to 'Permalink.', post %></p>
-			<%= raw post.body %>
-		</div>
-  <% end %>
+
+<% for post in @posts %>
+	<%= render '/pages/individual_blog_post_in_list', post: post %>
 <% end %>
+
 
 <%= will_paginate @posts %>
