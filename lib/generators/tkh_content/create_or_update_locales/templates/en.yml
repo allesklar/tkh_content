@@ -4,7 +4,7 @@ en:
     formats:
       # eventually this should be abstracted to a tkh_utilities gem together with all
       # standard helpers and functionality
-      tkh_default: "%a. %b. %-d, '%y at %l:%M %P"
+      tkh_default: "%b. %-d, '%y at %l:%M %P"
   
   activerecord: 
     attributes:
