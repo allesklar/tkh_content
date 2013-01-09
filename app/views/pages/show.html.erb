@@ -4,6 +4,7 @@
 <% unless @page.for_blog? %>
 
 	<%= raw tkhed(@page.body) %>
+	<%= render( 'admin_context_menu', page: @page) if administrator? %>
 
 <% else %>
   

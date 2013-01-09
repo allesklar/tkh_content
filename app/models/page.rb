@@ -35,7 +35,7 @@ class Page < ActiveRecord::Base
   scope :by_menu_position, order('menu_position')
   
   def nickname
-    short_title || title
+    @nickname ||= short_title || title
   end
   
   ### menu related instance methods

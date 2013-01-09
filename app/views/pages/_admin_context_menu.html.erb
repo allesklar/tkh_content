@@ -1,0 +1,15 @@
+<% content_for :admin_context_menu do %>
+	<h2>Admin Section</h2>
+	<%= link_to 'edit this page', edit_page_path(page), class: 'btn' %>
+	<% if Page.not_for_blog.orphans.published.any? %>
+		<h4>Reorder Root Page Menu Items</h4>
+		<ul class="draggable" data-update-url="<%= sort_pages_path %>">
+		  <% for page in Page.not_for_blog.orphans.published.by_menu_position %>
+				<%= content_tag :li, page, class: 'page', id: "page_#{page.id}" do %>
+					<%= image_tag 'drag-handle.gif', :class => 'handle silhouette' %> <%= page.nickname -%>
+				<% end -%>
+		  <% end %>
+		</ul>
+	<% end %>
+	
+<% end -%>
