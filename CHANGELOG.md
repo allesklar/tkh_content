@@ -2,6 +2,11 @@
 
 
 
+## 0.1.10
+
+* Added an admin section in sidebar of non-blog pages
+
+
 ## 0.1.9.3
 
 * Modified labels in contact_us form partial
