@@ -2,6 +2,11 @@
 
 
 
+## 0.1.11
+
+* Added some translations to the contact form area
+
+
 ## 0.1.10
 
 * Added an admin section in sidebar of non-blog pages
