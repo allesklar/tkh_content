@@ -14,12 +14,12 @@ class ContactsController < ApplicationController
     sent_email = send_message_to_admin(@contact)
     
     if saved && sent_email == 'success'
-      redirect_to root_path, notice: "Your message has been sent. Thank you very much!"
+      redirect_to root_path, notice: t("contacts.create.notice")
     elsif saved && sent_email == 'exception'
-      flash[:error] = "There was a problem sending this message<br />#{e}"
+      flash[:error] = t("contacts.create.warning")
       redirect_to :back
     elsif saved && sent_email == 'invalid'
-      flash[:error] = 'There was a problem sending this message. Your email address does not seem to be valid!'
+      flash[:error] =  "#{t("contacts.create.warning")} Your email address does not seem to be valid!"
       redirect_to :back
     else
       flash[:error] = 'Something went wrong. Your message did not reach the intended recipient.'

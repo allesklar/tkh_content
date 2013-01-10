@@ -22,9 +22,9 @@ de:
         for_the_blog: 'Für den Blog'
       
       contacts:
-        sender_name: "sender name"
-        sender_email: 'sender email'
-        body: 'message'
+        sender_name: "Absender-Name"
+        sender_email: 'Absender-Email'
+        body: 'Nachricht'
 
   pages:
     author: 'Autor'
@@ -33,17 +33,17 @@ de:
 
     create:
       notice: 'Diese Seite wurde erfolgreich angelegt.'
-      warning: 'Beim Speichern dieser Seite ist ein Problem aufgetreten'
+      warning: 'Beim Speichern dieser Seite ist ein Problem aufgetreten.'
     update:
       notice: 'Die Seite wurde erfolgreich aktualisiert.'
-      warning: 'Beim Speichern der Seite ist ein Problem aufgetreten'
+      warning: 'Beim Speichern der Seite ist ein Problem aufgetreten.'
     destroy:
-      notice: 'Die Seite wurde gelöscht'
+      notice: 'Die Seite wurde gelöscht.'
       root_warning: "Du kannst diese Seite nicht löschen, da es die Root-Seite ist. Du kannst sie nur bearbeiten."
 
   contacts:
-    sent: 'Sent at'
+    sent: 'Gesendet am'
     
     create:
-      notice: 'Your message has been sent'
-      warning: 'There was a problem sending your message.'
+      notice: 'Die Nachricht wurde gesendet.'
+      warning: 'Beim Versenden der Nachricht gab es ein Problem.'
