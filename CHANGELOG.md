@@ -2,6 +2,11 @@
 
 
 
+## 0.1.12
+
+* Translated submit button of contact form
+
+
 ## 0.1.11
 
 * Added some translations to the contact form area
