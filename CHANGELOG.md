@@ -2,6 +2,11 @@
 
 
 
+## 0.1.13
+
+* Minor heading change in pages admin context menu
+
+
 ## 0.1.12
 
 * Translated submit button of contact form
