@@ -41,7 +41,8 @@ fr:
       notice: 'La page a été supprimée.'
       root_warning: "Vous ne pouvez pas supprimer cette page parce que c'est la page principale de bienvenue. Veuillez la modifier."
 
-  contacts:
+  contacts:    
+    send_message: 'envoyez le message'
     sent: 'Envoyé le'
         
     create:

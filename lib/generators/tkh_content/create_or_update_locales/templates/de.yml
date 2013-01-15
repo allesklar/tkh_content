@@ -41,7 +41,8 @@ de:
       notice: 'Die Seite wurde gelöscht.'
       root_warning: "Du kannst diese Seite nicht löschen, da es die Root-Seite ist. Du kannst sie nur bearbeiten."
 
-  contacts:
+  contacts:    
+    send_message: 'die Nachricht zu senden'
     sent: 'Gesendet am'
     
     create:
