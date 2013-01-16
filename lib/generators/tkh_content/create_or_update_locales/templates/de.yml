@@ -42,7 +42,7 @@ de:
       root_warning: "Du kannst diese Seite nicht löschen, da es die Root-Seite ist. Du kannst sie nur bearbeiten."
 
   contacts:    
-    send_message: 'die Nachricht zu senden'
+    send_message: 'Nachricht senden'
     sent: 'Gesendet am'
     
     create:
