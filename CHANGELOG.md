@@ -2,6 +2,11 @@
 
 
 
+## 0.1.14
+
+* Fixed typo. Bad German in the contact form submit button.
+
+
 ## 0.1.13
 
 * Minor heading change in pages admin context menu
