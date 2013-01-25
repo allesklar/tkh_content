@@ -3,7 +3,6 @@ class CreatePages < ActiveRecord::Migration
   def self.up
     create_table :pages do |t|
       t.string :title
-      t.string :short_title
       t.text :description
       t.text :body
       t.boolean :for_blog, default: false
