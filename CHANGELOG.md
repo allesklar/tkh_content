@@ -2,6 +2,13 @@
 
 
 
+## 0.1.15
+
+* Debugged pages migrations. short_title attribute was missing in pages table
+* Meta title for blog home page is company name instead of blog name
+* Fixed bug meta partial for when blog post is not yet published_at
+
+
 ## 0.1.14
 
 * Fixed typo. Bad German in the contact form submit button.
