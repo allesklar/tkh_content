@@ -1,4 +1,4 @@
 <p class="meta-info">
-	by <%= post.author.name %> on <%= l post.published_at, format: :tkh_default %> | <%= link_to 'Permalink', post %>
+	by <%= post.author.name %> <%= post.published_at ? "on #{l(post.published_at, format: :tkh_default)}" : "- not published yet" %> | <%= link_to 'Permalink', post %>
 	<%="| #{link_to 'edit', edit_page_path(post), class: 'btn btn-mini'}".html_safe if administrator? %>
 </p>
