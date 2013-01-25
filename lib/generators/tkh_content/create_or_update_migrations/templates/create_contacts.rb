@@ -13,7 +13,7 @@ class CreateContacts < ActiveRecord::Migration
   
   def self.down
     drop_table :contacts
-    remove_index :pages, :updated_at
+    remove_index :contacts, :updated_at
   end
   
 end

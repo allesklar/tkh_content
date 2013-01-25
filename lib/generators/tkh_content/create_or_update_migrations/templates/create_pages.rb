@@ -9,7 +9,7 @@ class CreatePages < ActiveRecord::Migration
       t.datetime  :published_at
       t.timestamps
     end
-    add_index :pages, :published_at 
+    add_index :pages, :published_at
     Page.create_translation_table! :title => :string, :short_title => :string, :description => :text, :body => :text
   end
   
