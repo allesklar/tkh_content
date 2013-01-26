@@ -1,6 +1,8 @@
 CKEDITOR.editorConfig = (config) ->
   # config.language = "fr"
   config.uiColor = "#AADC6E"
+  config.width = '575'
+  config.height = '450'
 
   config.toolbar_Pure = [
     { name: 'styles',      items: [ 'Format' ] },
