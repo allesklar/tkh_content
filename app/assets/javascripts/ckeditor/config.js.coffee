@@ -1,5 +1,5 @@
 CKEDITOR.editorConfig = (config) ->
-  # config.language = "fr"
+  config.language = tkh_locale
   config.uiColor = "#AADC6E"
   config.width = '575'
   config.height = '450'
