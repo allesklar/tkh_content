@@ -2,6 +2,13 @@
 
 
 
+## 0.2
+
+* Removed the tkh_inline_editor dependency
+* Customize with javascript which fields are seen in the pages form according to whether the page is of static content page or is a blog post
+* Implemented, customized, and internationalized the CKEditor html inline editor
+
+
 ## 0.1.15
 
 * Debugged pages migrations. short_title attribute was missing in pages table
