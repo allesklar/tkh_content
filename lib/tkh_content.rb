@@ -7,6 +7,7 @@ require 'will_paginate'
 require 'bootstrap-will_paginate'
 # require 'bootstrap-wysihtml5-rails'
 # require 'tkh_inline_editor'
+require 'ckeditor_rails'
 
 module TkhContent
   class Engine < ::Rails::Engine

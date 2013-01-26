@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
   # This gem does not support p tags until wysihtml5 0.4 is released and linked to gem below
   # s.add_dependency 'bootstrap-wysihtml5-rails'
   # s.add_dependency 'tkh_inline_editor'
+  s.add_dependency 'ckeditor_rails'
 
   s.add_development_dependency "sqlite3"
 end
