@@ -1,5 +1,7 @@
 <h1>Listing Pages</h1>
 
+<%= link_to t('pages.create_new').capitalize, new_page_path, class: 'btn btn-primary' if @pages.size >= 5 %>
+
 <table class='table table-striped'>
 	<thead>
   	<tr>
