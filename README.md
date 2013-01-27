@@ -2,7 +2,7 @@
 
 This Rails engine puts the C in CMS. It provides the pages and the blog section. 
 
-Primarily developed for Ten Thousand Hours but we are happy to share if anybody finds it useful.
+Primarily developed for Ten Thousand Hours but we are happy to share if anybody finds it useful. It's meant primarily to be used with the tkh_cms gem suite but over time we want it to be used individually as well. The latter implementation will be accelerated if some issues and pull requests come in, denoting some interest out there.
 
 It's still embryonic but many improvements to come. The blog is now coming bit by bit.
 
@@ -46,7 +46,7 @@ Update the gem:
 
     $ bundle update tkh_content
 
-Update files, migrations, etc. This is only needed with a new minor version number ( second level from left )
+Update files, migrations, etc. This is not always needed.
 
 		$ rake tkh_content:update
 		
@@ -62,7 +62,7 @@ Start your server!
 ## Usage
 
 
-The section is located at:
+The main section is located at:
 
     /pages
 

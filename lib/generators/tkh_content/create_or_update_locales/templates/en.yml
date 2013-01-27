@@ -1,11 +1,10 @@
 en:
   
-  are_you_sure: 'are you sure?'
-  colon: ':'
-  delete: 'delete'
-  edit: 'edit'
-  pages: 'pages'
-  sections: 'sections'
+  time:
+    formats:
+      # eventually this should be abstracted to a tkh_utilities gem together with all
+      # standard helpers and functionality
+      tkh_default: "%b. %-d, '%y at %l:%M %P"
   
   activerecord: 
     attributes:
@@ -15,6 +14,24 @@ en:
         description: "description"
         body: "body text"
         for_the_blog: 'for the blog'
+        
+      contacts:
+        sender_name: "sender name"
+        sender_email: 'sender email'
+        body: 'message'
+        
+      comments:
+        author: 'author'
+        body: "body text"
+        locale: 'language'
+        status: 'status'
+  
+  are_you_sure: 'are you sure?'
+  colon: ':'
+  delete: 'delete'
+  edit: 'edit'
+  pages: 'pages'
+  sections: 'sections'
   
   pages:
     author: 'author'
@@ -29,14 +46,15 @@ en:
       warning: 'There was a problem saving the page'
     destroy:
       notice: 'The page was deleted'
+      root_warning: "You cannot delete this page as this is the root page of the site. You should only modify it."
       
-  activerecord: 
-    attributes:
-      comments:
-        author: 'author'
-        body: "body text"
-        locale: 'language'
-        status: 'status'
+  contacts:
+    send_message: 'send message'
+    sent: 'Sent at'
+
+    create:
+      notice: 'Your message has been sent'
+      warning: 'There was a problem sending your message.'
             
   comments:
     create:

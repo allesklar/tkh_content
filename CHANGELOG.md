@@ -2,6 +2,104 @@
 
 
 
+## 0.2.1
+
+* Debugged, and therefore enabled, the autocomplete of the parent page title in pages form
+* Added a second 'create a new page' button to the top of the pages index view when there are at least 5 pages
+* Added H1 headings to page views
+
+
+## 0.2
+
+* Removed the tkh_inline_editor dependency
+* Customize with javascript which fields are seen in the pages form according to whether the page is of static content page or is a blog post
+* Implemented, customized, and internationalized the CKEditor html inline editor
+
+
+## 0.1.15
+
+* Debugged pages migrations. short_title attribute was missing in pages table
+* Meta title for blog home page is company name instead of blog name
+* Fixed bug meta partial for when blog post is not yet published_at
+
+
+## 0.1.14
+
+* Fixed typo. Bad German in the contact form submit button.
+
+
+## 0.1.13
+
+* Minor heading change in pages admin context menu
+
+
+## 0.1.12
+
+* Translated submit button of contact form
+
+
+## 0.1.11
+
+* Added some translations to the contact form area
+
+
+## 0.1.10
+
+* Added an admin section in sidebar of non-blog pages
+
+
+## 0.1.9.3
+
+* Modified labels in contact_us form partial
+* Improved styling and display for the show view of content pages and blog posts
+* Added a new datetime locale format
+* Administrators get an 'edit' button in the meta info of blog posts
+* Added indices to page model
+* Pages have a menu_position attribute and can easily be reordered in combination with the tkh_menus gem
+
+
+## 0.1.9.1 & 0.1.9.2
+
+* Debugging
+* Enable admin user to embed contact form in any page using happy DSL
+
+
+## 0.1.9
+
+* Removed inline editor. Will add another one soon
+* Created a contact form
+
+
+## 0.1.8
+
+* Some debugging
+
+
+## 0.1.7
+
+* Added tags to blog
+* Added autocompletion of parent page field in page form
+
+
+## 0.1.6
+
+* Added inline HTML editor to the pages form
+
+
+## 0.1.5
+
+* Added blog RSS feed
+
+
+## 0.1.4
+
+* Added pagination to the pages index method.
+* Added pagination to blog home page.
+* The user CANNOT delete the home page. For any reason whatsoever.
+* Minor improvements to blog
+* Translated German strings.
+
+
 ## 0.1.3
 
 * Debugged blog controller index method query. Now it's properly returning blog posts by most recently published and without offset. Still need to do the pagination.
@@ -9,7 +107,7 @@
 
 ## 0.1.2
 
-* Refactored generation of short_title attribute. Moved it ot the create_pages migration to avoid conflict in globalize3.
+* Refactored generation of short_title attribute. Moved it to the create_pages migration to avoid conflict in globalize3.
 
 
 ## 0.1.1

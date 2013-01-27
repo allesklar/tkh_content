@@ -6,7 +6,11 @@ Rails.application.routes.draw do
         post :unpublish
         post :toggle_for_blog
       end
+      collection do 
+        post :sort
+      end
     end
+    
     resources :comments do
       collection do
         get :pending
@@ -18,6 +22,10 @@ Rails.application.routes.draw do
         post :block
       end
     end
-    match 'blog' => 'blog#index'
+    get 'blog' => 'blog#index', as: :blog
+    get 'tags/:tag', to: 'blog#index', as: :tag
+    
+    resources :contacts
+    
   end
 end

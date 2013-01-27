@@ -1,5 +1,11 @@
 es:
   
+  time:
+    formats:
+      # eventually this should be abstracted to a tkh_utilities gem together with all
+      # standard helpers and functionality
+      tkh_default: "%d de %B de %Y %H:%M"
+  
   are_you_sure: '¿estás seguro?'
   colon: ':'
   delete: 'borrar'
@@ -15,6 +21,11 @@ es:
         description: "descripción"
         body: "parte principal"
         for_the_blog: 'contraseña'
+        
+      contacts:
+        sender_name: "nombre del remitente"
+        sender_email: 'correo electrónico del remitente'
+        body: 'mensaje'
 
   pages:
     author: 'autor'
@@ -29,5 +40,12 @@ es:
       warning: 'Hubo un problema al guardar la página'
     destroy:
       notice: 'la página se ha eliminado'
+      root_warning: "No se puede eliminar la página, ya que es la bienvenida principal. Por favor, cámbialo."
           
-  
+  contacts:    
+    send_message: 'enviar el mensaje'
+    sent: 'Enviado a las'
+    
+    create:
+      notice: 'Tu mensaje ha sido enviado.'
+      warning: 'Hubo un problema al enviar su mensaje.'

@@ -1,0 +1,14 @@
+<%= simple_form_for Contact.new, :html => { class: 'form-horizontal' } do |f| %>
+	<%= f.error_notification %>
+	
+  <div class="form-inputs">
+		<%= f.input :sender_name, label: t('activerecord.attributes.contacts.sender_name') %>
+		<%= f.input :sender_email, label: t('activerecord.attributes.contacts.sender_email') %>
+		<%= f.input :body, label: t('activerecord.attributes.contacts.body'), :input_html => { :rows => 10 } %>
+	</div>
+	
+  <div class="form-actions">
+    <%= f.button :submit, t('contacts.send_message'), :class => 'btn btn-primary' %>
+  </div>
+
+<% end %>

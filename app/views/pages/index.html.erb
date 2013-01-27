@@ -1,8 +1,10 @@
-<h1>Listing Pages</h1>
+<h1>List of Pages</h1>
+
+<%= link_to t('pages.create_new').capitalize, new_page_path, class: 'btn btn-primary' if @pages.size >= 5 %>
 
 <table class='table table-striped'>
 	<thead>
-  <tr>
+  	<tr>
 	    <th><%= t 'activerecord.attributes.pages.title' %></th>
 	    <th><%= t 'activerecord.attributes.pages.description' %></th>
 			<th><%= t 'pages.author'.capitalize %></th>
@@ -35,6 +37,8 @@
 		<% end %>
 	</tbody>
 </table>
+
+<%= will_paginate @pages %>
 
 <%= link_to t('pages.create_new').capitalize, new_page_path, class: 'btn btn-primary' %>
 

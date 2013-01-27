@@ -1,31 +1,57 @@
 de:
-  
-  are_you_sure: 'are you sure?'
+
+  are_you_sure: 'Bist Du sicher?'
   colon: ':'
-  delete: 'delete'
-  edit: 'edit'
-  pages: 'pages'
-  sections: 'sections'
+  delete: 'löschen'
+  edit: 'bearbeiten'
+  pages: 'Seiten'
+  sections: 'Abschnitte'
   
+  time:
+    formats:
+      # eventually this should be abstracted to a tkh_utilities gem together with all
+      # standard helpers and functionality
+      tkh_default: '%A, %d. %B %Y, %H:%M Uhr'
+  
+  are_you_sure: 'Bist Du sicher?'
+  delete: 'löschen'
+  edit: 'bearbeiten'
+  pages: 'Seiten'
+  sections: 'Abschnitte'
+
   activerecord: 
     attributes:
       pages:
-        title: "titre"
-        short_title: 'titre raccourci'
-        description: "description"
-        body: "texte principal"
-        for_the_blog: 'pour le blog'
-  
+        title: "Überschrift"
+        short_title: 'Kurzüberschrifti'
+        description: "Beschreibung"
+        body: "Haupttext"
+        for_the_blog: 'Für den Blog'
+      
+      contacts:
+        sender_name: "Absender-Name"
+        sender_email: 'Absender-Email'
+        body: 'Nachricht'
+
   pages:
-    author: 'author'
-    create_new: 'create new page'
-    published: 'published?'
+    author: 'Autor'
+    create_new: 'Neue Seite anlegen'
+    published: 'veröffentlichen?'
+
+    create:
+      notice: 'Diese Seite wurde erfolgreich angelegt.'
+      warning: 'Beim Speichern dieser Seite ist ein Problem aufgetreten.'
+    update:
+      notice: 'Die Seite wurde erfolgreich aktualisiert.'
+      warning: 'Beim Speichern der Seite ist ein Problem aufgetreten.'
+    destroy:
+      notice: 'Die Seite wurde gelöscht.'
+      root_warning: "Du kannst diese Seite nicht löschen, da es die Root-Seite ist. Du kannst sie nur bearbeiten."
+
+  contacts:    
+    send_message: 'Nachricht senden'
+    sent: 'Gesendet am'
     
     create:
-      notice: 'The page was successfully created.'
-      warning: 'There was a problem saving the page'
-    update:
-      notice: 'The page was successfully updated.'
-      warning: 'There was a problem saving the page'
-    destroy:
-      notice: 'The page was deleted'
+      notice: 'Die Nachricht wurde gesendet.'
+      warning: 'Beim Versenden der Nachricht gab es ein Problem.'

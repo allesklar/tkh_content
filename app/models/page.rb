@@ -8,7 +8,10 @@ class Page < ActiveRecord::Base
   belongs_to :author, class_name: 'User', foreign_key: 'author_id'
   has_many :comments, :dependent => :destroy
   
-  attr_accessible :title, :short_title, :description, :body, :for_blog, :parent_id
+  attr_accessible :title, :short_title, :description, :body, :for_blog, :parent_id, :tag_list, :parent_page_title
+  
+  has_many :taggings
+  has_many :tags, through: :taggings
   
   validates_presence_of :title
   validates_presence_of :description
@@ -29,21 +32,25 @@ class Page < ActiveRecord::Base
   # tree scopes
   scope :orphans, where('parent_id IS ?', nil)
   scope :with_parent_id, lambda { |id| where('parent_id = ?', id) }
+  scope :by_title, order('title')
+  scope :by_menu_position, order('menu_position')
   
   def nickname
-    short_title || title
+    @nickname ||= short_title || title
   end
+  
+  ### menu related instance methods
   
   def orphan?
     parent_id == nil
   end
   
   def has_children?
-    Page.with_parent_id(id).count >= 1
+    Page.with_parent_id(id).published.count >= 1
   end
   
   def children
-    Page.with_parent_id(id)
+    Page.published.with_parent_id(id)
   end
   
   def parent
@@ -51,11 +58,46 @@ class Page < ActiveRecord::Base
   end
   
   def has_siblings?
-    Page.with_parent_id(parent_id).count >= 1
+    Page.with_parent_id(parent_id).published.count >= 1
   end
   
   def siblings
-    Page.with_parent_id(parent_id)
+    Page.published.with_parent_id(parent_id)
+  end
+  
+  ### tagging related methods
+  
+  def self.tagged_with(name)
+    Tag.find_by_name!(name).pages
+  end
+
+  def self.tag_counts
+    Tag.select("tags.*, count(taggings.tag_id) as count").
+      joins(:taggings).group("taggings.tag_id")
+  end
+
+  def tag_list
+    tags.map(&:name).join(" ")
+  end
+
+  def tag_list=(names)
+    self.tags = names.split(" ").map do |n|
+      Tag.where(name: n.strip).first_or_create!
+    end
+  end
+  
+  ### autocomplete related instance methods
+  
+  def parent_page_title
+      parent.try(:title) unless self.orphan?
+    end
+
+  def parent_page_title=(title)
+    if title.present? && Page.find_by_title(title)
+      self.parent_id = Page.find_by_title(title).id
+    else
+      self.parent_id = nil
+    end
   end
   
 end
