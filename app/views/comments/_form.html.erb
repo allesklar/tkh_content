@@ -5,13 +5,7 @@
 		<%= @comment.author.name %><br />
 		<%= link_to @comment.page.title, @comment.page %><br />
 		<%= f.input :short_title, hint: 'ideally one word only, used for the menu' %><br />
-		<% if @comment.status == 'pending' %>
-			<%= link_to t('comments.moderation.actions.accept'), accept_comment_path(@comment), method: :post, class: 'btn btn-mini btn-primary' %><%= link_to t('comments.moderation.actions.block'), block_comment_path(@comment), method: :post, class: 'btn btn-mini btn-danger' %>
-		<% elsif @comment.status == 'accepted' %>
-			<%= link_to t('comments.moderation.actions.block'), block_comment_path(@comment), method: :post, class: 'btn btn-mini btn-danger' %>
-		<% elsif @comment.status == 'blocked' %>
-			<%= link_to t('comments.moderation.actions.accept'), accept_comment_path(@comment), method: :post, class: 'btn btn-mini btn-primary' %>
-		<% end -%><br />
+		<%= render 'comments/status_buttons' %><br />
 	  <%= f.input :body, :input_html => { :rows => 3 } %>
 	</div>
 	
