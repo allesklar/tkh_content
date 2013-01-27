@@ -10,7 +10,7 @@
 								as: :string,
 								:wrapper_html => { :id => 'parent-page-title' },
 								label: 'parent page title',
-								:input_html => { class: 'typeahead',
+								:input_html => { 
 																:data => { 	provide: 'typeahead',
 																	 					source: Page.not_for_blog.by_title.map(&:title).to_json } 
 																	} %>
