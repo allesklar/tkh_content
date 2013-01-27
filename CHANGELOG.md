@@ -2,6 +2,13 @@
 
 
 
+## 0.2.1
+
+* Debugged, and therefore enabled, the autocomplete of the parent page title in pages form
+* Added a second 'create a new page' button to the top of the pages index view when there are at least 5 pages
+* Added H1 headings to page views
+
+
 ## 0.2
 
 * Removed the tkh_inline_editor dependency
