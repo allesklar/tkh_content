@@ -1,0 +1,10 @@
+<%= simple_form_for Comment.new do |f| %>
+	<%= f.error_notification %>
+	
+  <div class="form-inputs">
+	  <%= f.input :body, label: false, :input_html => { :rows => 5, :cols => 100 } %>
+		<%= f.hidden_field :page_id, value: @page.id %>
+		<%= f.button :submit, :class => 'btn btn-primary' %>
+	</div>
+
+<% end %>

@@ -1,0 +1,8 @@
+<% if @page.comments.showable.for_locale(I18n.locale.to_s).any? %>
+  <% for comment in @page.comments.showable.for_locale(I18n.locale.to_s).by_created %>
+		<p><%= comment.author.name %></p>
+    <p><%= comment.body %></p>
+  <% end %>
+<% else %>
+	<p>There are no comments yet</p>
+<% end %>
