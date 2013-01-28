@@ -49,6 +49,7 @@ en:
       root_warning: "You cannot delete this page as this is the root page of the site. You should only modify it."
       
   contacts:
+    messages_from_forms: 'messages from contact form'
     send_message: 'send message'
     sent: 'Sent at'
 

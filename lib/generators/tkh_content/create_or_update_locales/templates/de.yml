@@ -48,7 +48,8 @@ de:
       notice: 'Die Seite wurde gelöscht.'
       root_warning: "Du kannst diese Seite nicht löschen, da es die Root-Seite ist. Du kannst sie nur bearbeiten."
 
-  contacts:    
+  contacts:
+    messages_from_forms: 'messages from contact form'
     send_message: 'Nachricht senden'
     sent: 'Gesendet am'
     

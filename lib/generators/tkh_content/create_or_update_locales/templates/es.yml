@@ -42,7 +42,8 @@ es:
       notice: 'la página se ha eliminado'
       root_warning: "No se puede eliminar la página, ya que es la bienvenida principal. Por favor, cámbialo."
           
-  contacts:    
+  contacts:
+    messages_from_forms: 'mensajes del formulario de contacto'
     send_message: 'enviar el mensaje'
     sent: 'Enviado a las'
     
