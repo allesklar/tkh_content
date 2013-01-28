@@ -1,0 +1,9 @@
+<div id="new-comment-section">
+	<h3>What do you think?</h3>
+	<% if current_user %>
+		<%= render 'comments/form_in_page' %>
+	<% else %>
+		<p><label class="label label-info">You need to be logged in to leave a comment</label></p>
+		<%= render 'shared/embedded_login_module' %>
+	<% end -%>
+</div>

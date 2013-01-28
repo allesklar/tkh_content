@@ -2,26 +2,14 @@
 <% content_for :meta_description, @page.description %>
 
 <% unless @page.for_blog? %>
-
 	<%= raw tkhed(@page.body) %>
-	<hr>
-	<h2>Comments</h2>
-	<%= render 'comments/list_of_comments' %>
-	<hr>
-	<h3>New</h3>
-	<% if current_user %>
-		<%= render 'comments/form_in_page' %>
-	<% else %>
-		<p>You need to be logged in to leave a comment</p>
-		<%= render 'shared/embedded_login_module' %>
-	<% end -%> 
-	<%= render( 'admin_context_menu', page: @page) if administrator? %>
-
+	<%= render 'comment_section' if Setting.first.enable_comments_in_pages? %>
 <% else %>
   
 	<%= content_tag(:h1, @page.title) %>
 	<%= render '/pages/blog_post_meta', post: @page %>
 	<%= raw tkhed(@page.body) %>
+	<%= render 'comment_section' if Setting.first.enable_comments_in_blog? %>
 	
 <% end -%>
 
