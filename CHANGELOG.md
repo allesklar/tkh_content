@@ -2,6 +2,12 @@
 
 
 
+## 0.3
+
+* Added a comment resource and integrated it with the page show views.
+* Added a few translations. Many more to do
+
+
 ## 0.2.1
 
 * Debugged, and therefore enabled, the autocomplete of the parent page title in pages form
