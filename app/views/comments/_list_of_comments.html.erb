@@ -1,14 +1,10 @@
-<% if @page.comments.showable.for_locale(I18n.locale.to_s).any? %>
-  <% @page.comments.showable.for_locale(I18n.locale.to_s).by_created.each_with_index do |comment, index| %>
-		<div id="comment-<%= comment.id %>" class="individual-comment">
-			<p>
-				<span class="comment-index"><%= index + 1 %></span>
-				<span class="comment-author-name"><%= comment.author.name %></span>
-				<span class="comment-created-date"><%= l comment.created_at, format: :tkh_default %></span>
-				<span class="comment-body"><%= sanitize comment.body.gsub(/\r\n?/, "<br>"), :tags => %w(br), :attributes => %w() %></span>
-			</p>
-		</div>
-  <% end %>
-<% else %>
-	<p>There are no comments yet</p>
+<% @page.comments.showable.for_locale(I18n.locale.to_s).by_created.each_with_index do |comment, index| %>
+<div id="comment-<%= comment.id %>" class="individual-comment">
+	<p>
+		<span class="comment-index"><%= index + 1 %></span>
+		<span class="comment-author-name"><%= comment.author.name %></span>
+		<span class="comment-created-date"><%= l comment.created_at, format: :tkh_default %></span>
+		<span class="comment-body"><%= sanitize comment.body.gsub(/\r\n?/, "<br>"), :tags => %w(br), :attributes => %w() %></span>
+	</p>
+</div>
 <% end %>
