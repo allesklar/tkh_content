@@ -3,6 +3,7 @@ CKEDITOR.editorConfig = (config) ->
   config.uiColor = "#AADC6E"
   config.width = '575'
   config.height = '450'
+  config.forcePasteAsPlainText = true
 
   config.toolbar_Pure = [
     { name: 'styles',      items: [ 'Format' ] },
