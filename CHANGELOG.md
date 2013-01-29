@@ -2,6 +2,11 @@
 
 
 
+## 0.3.1
+
+* CKEditor strips formatting from text during pasting
+
+
 ## 0.3
 
 * Added a comment resource and integrated it with the page show views.
