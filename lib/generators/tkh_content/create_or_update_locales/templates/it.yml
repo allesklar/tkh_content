@@ -1,4 +1,4 @@
-es:
+it:
   
   activerecord:
     models:
@@ -13,44 +13,44 @@ es:
     
     attributes:
       pages:
-        title: "título"
-        short_title: 'título breve'
-        description: "descripción"
-        body: "parte principal"
-        for_the_blog: 'contraseña'
+        title: "title"
+        short_title: 'short title'
+        description: "description"
+        body: "body text"
+        for_the_blog: 'for the blog'
         parent_title: 'page parent title'
         
       contacts:
-        sender_name: "nombre del remitente"
-        sender_email: 'correo electrónico del remitente'
-        body: 'mensaje'
+        sender_name: "sender name"
+        sender_email: 'sender email'
+        body: 'message'
         
       comments:
         author: 'author'
         body: "body text"
         locale: 'language'
         status: 'status'
-
+  
   pages:
-    author: 'autor'
-    create_new: 'crear una nueva página'
+    author: 'author'
+    create_new: 'create new page'
     edit_this: 'edit this page'
     home: 'home page'
     not_published_yet: 'Not published yet'
     publish: 'publish'
-    published: '¿publicado?'
+    published: 'published?'
     unpublish: 'unpublish'
     reorder_root_menus: 'reorder root menu items'
     
     create:
-      notice: 'La página se ha creado correctamente'
-      warning: 'Hubo un problema al guardar la página'
+      notice: 'The page was successfully created.'
+      warning: 'There was a problem saving the page'
     update:
-      notice: 'La página se ha actualizado correctamente'
-      warning: 'Hubo un problema al guardar la página'
+      notice: 'The page was successfully updated.'
+      warning: 'There was a problem saving the page'
     destroy:
-      notice: 'la página se ha eliminado'
-      root_warning: "No se puede eliminar la página, ya que es la bienvenida principal. Por favor, cámbialo."
+      notice: 'The page was deleted'
+      root_warning: "You cannot delete this page as this is the root page of the site. You should only modify it."
     hint:
       title: 'nice and descriptive'
       short_title: 'ideally one word only, used for the menu'
@@ -59,22 +59,22 @@ es:
         published: 'The page has been published'
         unpublished: "The page has been unpublished. It's a draft again."
         toggled: "The blog status of the page has been changed"
-          
+      
   contacts:
-    messages_from_forms: 'mensajes del formulario de contacto'
-    send_message: 'enviar el mensaje'
-    sent: 'Enviado a las'
+    messages_from_forms: 'messages from contact form'
+    send_message: 'send message'
+    sent: 'Sent at'
     create:
       did_not_reach: 'Something went wrong. Your message did not reach the intended recipient.'
       invalid_email: 'Your email address does not seem to be valid!'
-      notice: 'Tu mensaje ha sido enviado.'
-      warning: 'Hubo un problema al enviar su mensaje.'
+      notice: 'Your message has been sent'
+      warning: 'There was a problem sending your message.'
     mailer:
       intro: 'Here is the message sent via the contact form on the web site:'
       sender_name: "Sender's name:"
       sender_email: "Sender's email:"
       message: 'Message:'
-
+            
   comments:
     login_needed: 'You need to be logged in to leave a comment'
     what_do_you_think: 'What do you think?'

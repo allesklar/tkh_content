@@ -1,4 +1,6 @@
 <p class="meta-info">
-	by <%= post.author.name %> <%= post.published_at ? "on #{l(post.published_at, format: :tkh_default)}" : "- not published yet" %> | <%= link_to 'Permalink', post %> | <%= pluralize post.comments.showable.for_locale(I18n.locale.to_s).count, 'comments' %>
-	<%="| #{link_to 'edit', edit_page_path(post), class: 'btn btn-mini'}".html_safe if administrator? %>
+	<%= post.author.name %> | 
+	<%= post.published_at ? link_to(l(post.published_at, format: :tkh_default), post) :  t('pages.not_published_yet') %> |
+	<%= pluralize @page.comments.showable.for_locale(I18n.locale.to_s).count, t('activerecord.models.comment') %>
+	<%= link_to t('edit'), edit_page_path(post), class: 'btn btn-mini' if administrator? %>
 </p>

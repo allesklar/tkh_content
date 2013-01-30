@@ -1,5 +1,5 @@
-<% content_for :meta_title, Setting.first.company_name %>
-<%= content_for :meta_description, "#{Setting.first.blog_tagline} - #{Setting.first.company_name}: the official blog" %>
+<% content_for :meta_title, Setting.first.try(:company_name) %>
+<%= content_for :meta_description, "#{Setting.first.try(:blog_tagline)} - #{Setting.first.try(:company_name)}#{t('colon')} #{t('blog.official')}" %>
 
 
 <% for post in @posts %>

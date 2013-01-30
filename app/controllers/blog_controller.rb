@@ -10,6 +10,7 @@ class BlogController < ApplicationController
     render :layout => 'blog'
   end
   
+  # This is temporary and only to complete the import to SA's site.
   def update_data
     
     @count = 0

@@ -2,20 +2,20 @@
 	<%= f.error_notification %>
 	
   <div class="form-inputs">
-		<%= f.input :title, hint: 'nice and descriptive' %>
-		<%= f.input :for_blog %>
+		<%= f.input :title, label: t('activerecord.attributes.pages.title'), hint: t('pages.hint.title') %>
+		<%= f.input :for_blog, label: t('activerecord.attributes.pages.for_the_blog') %>
 		<%= f.input :tag_list, hint: 'space separated', :wrapper_html => { :id => 'page-tag-list' } %>
-		<%= f.input :short_title, hint: 'ideally one word only, used for the menu', :wrapper_html => { :id => 'page-short-title' } %>
+		<%= f.input :short_title, label: t('activerecord.attributes.pages.short_title'), hint: t('pages.hint.short_title'), :wrapper_html => { :id => 'page-short-title' } %>
 		<%= f.input :parent_page_title,
 								as: :string,
 								:wrapper_html => { :id => 'parent-page-title' },
-								label: 'parent page title',
+								label: t('activerecord.attributes.pages.parent_title'),
 								:input_html => { 
 																:data => { 	provide: 'typeahead',
 																	 					source: Page.not_for_blog.by_title.map(&:title).to_json } 
 																	} %>
-	  <%= f.input :description, :input_html => { :rows => 3 } %>
-		<%= f.input :body, :input_html => { :rows => 35, :class => 'ckeditor' } %>
+	  <%= f.input :description, label: t('activerecord.attributes.pages.description'), :input_html => { :rows => 3 } %>
+		<%= f.input :body, label: t('activerecord.attributes.pages.body'), :input_html => { :rows => 35, :class => 'ckeditor' } %>
 	</div>
 	
   <div class="form-actions">

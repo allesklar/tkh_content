@@ -7,6 +7,11 @@ class ContactsController < ApplicationController
     @contacts = Contact.by_recent.paginate(:page => params[:page], :per_page => 35)
     switch_to_admin_layout
   end
+  
+  def show
+    @contact = Contact.find(params[:id])
+    switch_to_admin_layout
+  end
 
   def create
     @contact = Contact.new(params[:contact])
@@ -19,10 +24,10 @@ class ContactsController < ApplicationController
       flash[:error] = t("contacts.create.warning")
       redirect_to :back
     elsif saved && sent_email == 'invalid'
-      flash[:error] =  "#{t("contacts.create.warning")} Your email address does not seem to be valid!"
+      flash[:error] =  "#{t("contacts.create.warning")} #{t('contacts.create.invalid_email')}"
       redirect_to :back
     else
-      flash[:error] = 'Something went wrong. Your message did not reach the intended recipient.'
+      flash[:error] = t('contacts.create.did_not_reach')
       redirect_to :back
     end
   end

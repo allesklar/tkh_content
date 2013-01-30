@@ -1,16 +1,16 @@
-<h1>List of Pages</h1>
+<h1><%= t 'activerecord.models.pages' %></h1>
 
-<%= link_to t('pages.create_new').capitalize, new_page_path, class: 'btn btn-primary' if @pages.size >= 5 %>
+
 
 <table class='table table-striped'>
 	<thead>
   	<tr>
 	    <th><%= t 'activerecord.attributes.pages.title' %></th>
 	    <th><%= t 'activerecord.attributes.pages.description' %></th>
-			<th><%= t 'pages.author'.capitalize %></th>
-			<th><%= t 'activerecord.attributes.pages.for_blog' %>?</th>
-			<th><%= t 'pages.published'.capitalize %></th>
-	    <th>Actions</th>
+			<th><%= t 'pages.author' %></th>
+			<th><%= t 'activerecord.attributes.pages.for_the_blog' %>?</th>
+			<th><%= t 'pages.published' %></th>
+	    <th><%= t('actions') %></th>
 	  </tr>
 	</thead>
 	
@@ -22,13 +22,13 @@
 				<td><%= page.author.name %></td>
 				<td>
 					<%= page.for_blog? ? "<span class=\"label label-success\">✓</span>".html_safe : "<span class=\"label label-important\">X</span>".html_safe %>
-					<%= link_to 'toggle', toggle_for_blog_page_path(page), class: 'btn btn-mini', method: :post %>
+					<%= link_to t('toggle'), toggle_for_blog_page_path(page), class: 'btn btn-mini', method: :post %>
 				</td>
 				<td>
 					<% if page.published_at %>
-						<span class="label label-success">✓</span> <%= link_to 'unpublish', unpublish_page_path(page), class: 'btn btn-mini', method: :post %>
+						<span class="label label-success">✓</span> <%= link_to t('pages.unpublish'), unpublish_page_path(page), class: 'btn btn-mini', method: :post %>
 					<% else %>
-					  <span class="label label-important">X</span> <%= link_to 'publish', publish_page_path(page), class: 'btn btn-mini btn-primary', method: :post %>
+					  <span class="label label-important">X</span> <%= link_to t('pages.publish'), publish_page_path(page), class: 'btn btn-mini btn-primary', method: :post %>
 					<% end -%>
 				</td>
 		    <td><%= link_to t('edit'), edit_page_path(page), class: 'btn btn-mini' %>

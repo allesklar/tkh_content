@@ -57,21 +57,21 @@ class PagesController < ApplicationController
     page = Page.find(params[:id])
     page.published_at = Time.now
     page.save
-    redirect_to pages_path, notice: 'The page has been published'
+    redirect_to pages_path, notice: t('pages.status.changed.published')
   end
   
   def unpublish
     page = Page.find(params[:id])
     page.published_at = nil
     page.save
-    redirect_to pages_path, notice: "The page has been unpublished. It's a draft again."
+    redirect_to pages_path, notice: t('pages.status.changed.unpublished')
   end
   
   def toggle_for_blog
     page = Page.find(params[:id])
     page.for_blog? ? page.for_blog = false : page.for_blog = true
     page.save
-    redirect_to pages_path notice: "The blog status of the page has been changed"
+    redirect_to pages_path notice: t('pages.status.changed.toggled')
   end
   
   def sort

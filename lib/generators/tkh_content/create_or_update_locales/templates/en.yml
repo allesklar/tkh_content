@@ -1,12 +1,16 @@
 en:
   
-  time:
-    formats:
-      # eventually this should be abstracted to a tkh_utilities gem together with all
-      # standard helpers and functionality
-      tkh_default: "%b. %-d, '%y at %l:%M %P"
-  
-  activerecord: 
+  activerecord:
+    models:
+      comment: 'comment'
+      comments: 'comments'
+      contact: 'contact'
+      contacts: 'contacts'
+      page: 'page'
+      pages: 'pages'
+      tag: 'tag'
+      tags: 'tags'
+    
     attributes:
       pages:
         title: "title"
@@ -14,6 +18,7 @@ en:
         description: "description"
         body: "body text"
         for_the_blog: 'for the blog'
+        parent_title: 'page parent title'
         
       contacts:
         sender_name: "sender name"
@@ -26,17 +31,16 @@ en:
         locale: 'language'
         status: 'status'
   
-  are_you_sure: 'are you sure?'
-  colon: ':'
-  delete: 'delete'
-  edit: 'edit'
-  pages: 'pages'
-  sections: 'sections'
-  
   pages:
     author: 'author'
     create_new: 'create new page'
+    edit_this: 'edit this page'
+    home: 'home page'
+    not_published_yet: 'Not published yet'
+    publish: 'publish'
     published: 'published?'
+    unpublish: 'unpublish'
+    reorder_root_menus: 'reorder root menu items'
     
     create:
       notice: 'The page was successfully created.'
@@ -47,17 +51,34 @@ en:
     destroy:
       notice: 'The page was deleted'
       root_warning: "You cannot delete this page as this is the root page of the site. You should only modify it."
+    hint:
+      title: 'nice and descriptive'
+      short_title: 'ideally one word only, used for the menu'
+    status:
+      changed:
+        published: 'The page has been published'
+        unpublished: "The page has been unpublished. It's a draft again."
+        toggled: "The blog status of the page has been changed"
       
   contacts:
     messages_from_forms: 'messages from contact form'
     send_message: 'send message'
     sent: 'Sent at'
-
     create:
+      did_not_reach: 'Something went wrong. Your message did not reach the intended recipient.'
+      invalid_email: 'Your email address does not seem to be valid!'
       notice: 'Your message has been sent'
       warning: 'There was a problem sending your message.'
+    mailer:
+      intro: 'Here is the message sent via the contact form on the web site:'
+      sender_name: "Sender's name:"
+      sender_email: "Sender's email:"
+      message: 'Message:'
             
   comments:
+    login_needed: 'You need to be logged in to leave a comment'
+    what_do_you_think: 'What do you think?'
+    
     create:
       notice: 'The comment was successfully created.'
       warning: 'There was a problem saving the comment to the database'
@@ -80,3 +101,8 @@ en:
       pending: 'pending'
       accepted: 'accepted'
       blocked: 'blocked'
+      
+  blog:
+    itself: 'blog'
+    home: 'home blog'
+    official: 'the official blog'

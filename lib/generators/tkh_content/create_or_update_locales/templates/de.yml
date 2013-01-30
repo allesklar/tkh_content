@@ -1,25 +1,16 @@
 de:
 
-  are_you_sure: 'Bist Du sicher?'
-  colon: ':'
-  delete: 'löschen'
-  edit: 'bearbeiten'
-  pages: 'Seiten'
-  sections: 'Abschnitte'
-  
-  time:
-    formats:
-      # eventually this should be abstracted to a tkh_utilities gem together with all
-      # standard helpers and functionality
-      tkh_default: '%A, %d. %B %Y, %H:%M Uhr'
-  
-  are_you_sure: 'Bist Du sicher?'
-  delete: 'löschen'
-  edit: 'bearbeiten'
-  pages: 'Seiten'
-  sections: 'Abschnitte'
-
-  activerecord: 
+  activerecord:
+    models:
+      comment: 'comment'
+      comments: 'comments'
+      contact: 'contact'
+      contacts: 'contacts'
+      page: 'page'
+      pages: 'pages'
+      tag: 'tag'
+      tags: 'tags'
+    
     attributes:
       pages:
         title: "Überschrift"
@@ -27,17 +18,30 @@ de:
         description: "Beschreibung"
         body: "Haupttext"
         for_the_blog: 'Für den Blog'
-      
+        parent_title: 'page parent title'
+        
       contacts:
         sender_name: "Absender-Name"
         sender_email: 'Absender-Email'
         body: 'Nachricht'
+        
+      comments:
+        author: 'author'
+        body: "body text"
+        locale: 'language'
+        status: 'status'
 
   pages:
     author: 'Autor'
     create_new: 'Neue Seite anlegen'
+    edit_this: 'edit this page'
+    home: 'home page'
+    not_published_yet: 'Not published yet'
+    publish: 'publish'
     published: 'veröffentlichen?'
-
+    unpublish: 'unpublish'
+    reorder_root_menus: 'reorder root menu items'
+    
     create:
       notice: 'Diese Seite wurde erfolgreich angelegt.'
       warning: 'Beim Speichern dieser Seite ist ein Problem aufgetreten.'
@@ -47,12 +51,58 @@ de:
     destroy:
       notice: 'Die Seite wurde gelöscht.'
       root_warning: "Du kannst diese Seite nicht löschen, da es die Root-Seite ist. Du kannst sie nur bearbeiten."
+    hint:
+      title: 'nice and descriptive'
+      short_title: 'ideally one word only, used for the menu'
+    status:
+      changed:
+        published: 'The page has been published'
+        unpublished: "The page has been unpublished. It's a draft again."
+        toggled: "The blog status of the page has been changed"
 
   contacts:
     messages_from_forms: 'messages from contact form'
     send_message: 'Nachricht senden'
-    sent: 'Gesendet am'
-    
+    sent: 'Gesendet am'   
     create:
+      did_not_reach: 'Something went wrong. Your message did not reach the intended recipient.'
+      invalid_email: 'Your email address does not seem to be valid!'
       notice: 'Die Nachricht wurde gesendet.'
       warning: 'Beim Versenden der Nachricht gab es ein Problem.'
+    mailer:
+      intro: 'Here is the message sent via the contact form on the web site:'
+      sender_name: "Sender's name:"
+      sender_email: "Sender's email:"
+      message: 'Message:'
+            
+  comments:
+    login_needed: 'You need to be logged in to leave a comment'
+    what_do_you_think: 'What do you think?'
+    
+    create:
+      notice: 'The comment was successfully created.'
+      warning: 'There was a problem saving the comment to the database'
+    update:
+      notice: 'The comment was successfully updated.'
+      warning: 'There was a problem saving this comment'
+    destroy:
+      notice: 'The comment was deleted'
+    moderation:
+      accept:
+        notice: "This comment has been accepted"
+        warning: "Some error occurred and the comment could not be moderated and accepted"
+      block:
+        notice: "This comment has been blocked"
+        warning: "Some error occurred and the comment could not be moderated and blocked"
+      actions:
+        accept: "accept!"
+        block: "block!"
+    status:
+      pending: 'pending'
+      accepted: 'accepted'
+      blocked: 'blocked'
+      
+  blog:
+    itself: 'Blog'
+    home: 'home blog'
+    official: 'the official blog'

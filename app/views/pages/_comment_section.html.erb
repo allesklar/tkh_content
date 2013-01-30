@@ -1,5 +1,5 @@
 <div id="comment-section">
-	<h2><%= pluralize @page.comments.showable.for_locale(I18n.locale.to_s).count, 'Comment' %></h2>
+	<h2><%= pluralize @page.comments.showable.for_locale(I18n.locale.to_s).count, t('activerecord.models.comment') %></h2>
 	<%= render 'comments/list_of_comments' %>
 	<%= render 'new_comment_section' %>
 </div>

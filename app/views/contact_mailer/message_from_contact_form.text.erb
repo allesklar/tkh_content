@@ -1,13 +1,12 @@
-Here is the message sent via the contact form on the web site:
+<%= t('contacts.mailer.intro') %>
 
-- Sender's name: <%= @contact.sender_name %>
-- Sender's email: <%= @contact.sender_email %>
+- <%= t('contacts.mailer.sender_name') %> <%= @contact.sender_name %>
+- <%= t('contacts.mailer.sender_email') %> <%= @contact.sender_email %>
 
-Message:
+<%= t('contacts.mailer.message') %>
 
 -----------------------------------
 
 <%= @contact.body %>
 
 -----------------------------------
-

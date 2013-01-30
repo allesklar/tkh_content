@@ -87,7 +87,6 @@ class Page < ActiveRecord::Base
   end
   
   ### autocomplete related instance methods
-  
   def parent_page_title
       parent.try(:title) unless self.orphan?
     end
