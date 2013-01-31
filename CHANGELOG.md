@@ -2,6 +2,13 @@
 
 
 
+## 0.4
+
+* Added tab admin menu navigation in all sections
+* Set up many, many translations
+* Refactored contact mailer
+
+
 ## 0.3.1
 
 * CKEditor strips formatting from text during pasting
