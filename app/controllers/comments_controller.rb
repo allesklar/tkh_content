@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
   before_filter :authenticate_with_admin, :except => 'create'
   
   def index
-    @comments = Comment.by_recent
+    @comments = Comment.by_recent.paginate(:page => params[:page], :per_page => 50)
     switch_to_admin_layout
   end
   
@@ -64,17 +64,17 @@ class CommentsController < ApplicationController
   end
   
   def pending
-    @comments = Comment.pending
+    @comments = Comment.pending.by_created.paginate(:page => params[:page], :per_page => 50)
     switch_to_admin_layout
   end
   
   def accepted
-    @comments = Comment.accepted.by_recent
+    @comments = Comment.accepted.by_recent.paginate(:page => params[:page], :per_page => 50)
     switch_to_admin_layout
   end
 
   def blocked
-    @comments = Comment.blocked.by_recent
+    @comments = Comment.blocked.by_recent.paginate(:page => params[:page], :per_page => 50)
     switch_to_admin_layout
   end
   

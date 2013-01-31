@@ -1,6 +1,6 @@
 <h1><%= t('activerecord.models.contacts') %></h1>
 
-
+<%= render 'tab_admin_menu' %>
 
 <h2><%= "#{t('contacts.sent')}#{t('colon')} #{ l(@contact.created_at, :format => :tkh_default) }" %></h2>
 

@@ -1,0 +1,4 @@
+<ul class="nav nav-tabs" id="admin-menu-tab">
+	<%= content_tag :li, link_to(t('list'), contacts_path), ({ class: 'active' } if controller.action_name.to_s == 'index' ) %>
+	<%= content_tag :li, link_to(t('view'), contacts_path), ({ class: 'active' }) if controller.action_name.to_s == 'show' %>
+</ul>
