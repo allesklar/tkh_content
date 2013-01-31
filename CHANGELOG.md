@@ -2,6 +2,11 @@
 
 
 
+## 0.4.1
+
+* Debugged blog post meta partial
+
+
 ## 0.4
 
 * Added tab admin menu navigation in all sections

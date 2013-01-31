@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    tkh_content (0.4)
+    tkh_content (0.4.1)
       bootstrap-sass (~> 2.0)
       bootstrap-will_paginate
       ckeditor_rails
