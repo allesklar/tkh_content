@@ -5,8 +5,8 @@
 		<h2><%= t('admin_section') %></h2>
 		<ul>
 			<li><%= link_to t('admin_panel'), pages_path %></li>
-			<%= content_tag :li, link_to("#{t('activerecord.models.comments')} #{"(#{Comment.pending.count})"}", pending_comments_path) if Comment.pending.count > 0 %>
-			<li><%= link_to t('pages.edit_this'), edit_page_path(page) %></li>	
+			<%= content_tag :li, link_to("#{t('activerecord.models.comments').capitalize} #{"(#{Comment.pending.count})"}", pending_comments_path) if Comment.pending.count > 0 %>
+			<li><%= link_to t('pages.edit_this').capitalize, edit_page_path(page) %></li>	
 		</ul>
 	
 		<% if Page.not_for_blog.orphans.published.any? %>
