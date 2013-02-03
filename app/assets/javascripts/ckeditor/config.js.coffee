@@ -8,7 +8,7 @@ CKEDITOR.editorConfig = (config) ->
   config.toolbar_Pure = [
     { name: 'styles',      items: [ 'Format' ] },
     { name: 'basicstyles', items: [ 'Bold','Italic','Strike','-','RemoveFormat' ] },
-    { name: 'paragraph',   items: [ 'BulletedList','NumberedList','-','Outdent','Indent','-','Blockquote','-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock' ] },
+    { name: 'paragraph',   items: [ 'BulletedList','NumberedList','-','Outdent','Indent','-','Blockquote','-','JustifyLeft','JustifyCenter','JustifyRight' ] },
     '/',
     { name: 'clipboard',   items: [ 'Undo','Redo' ] },
     { name: 'links',       items: [ 'Link','Unlink' ] },
