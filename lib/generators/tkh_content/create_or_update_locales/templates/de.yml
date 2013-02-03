@@ -2,23 +2,23 @@ de:
 
   activerecord:
     models:
-      comment: 'comment'
-      comments: 'comments'
-      contact: 'contact'
-      contacts: 'contacts'
-      page: 'page'
-      pages: 'pages'
-      tag: 'tag'
-      tags: 'tags'
+      comment: 'Kommentar'
+      comments: 'Kommentare'
+      contact: 'Kontakt'
+      contacts: 'Kontakte'
+      page: 'Seite'
+      pages: 'Seiten'
+      tag: 'Tag'
+      tags: 'Tags'
     
     attributes:
       pages:
         title: "Überschrift"
-        short_title: 'Kurzüberschrifti'
+        short_title: 'Kurzüberschrift'
         description: "Beschreibung"
         body: "Haupttext"
         for_the_blog: 'Für den Blog'
-        parent_title: 'page parent title'
+        parent_title: 'Seitenüberschrift'
         
       contacts:
         sender_name: "Absender-Name"
@@ -26,21 +26,21 @@ de:
         body: 'Nachricht'
         
       comments:
-        author: 'author'
-        body: "body text"
-        locale: 'language'
-        status: 'status'
+        author: 'Verfasser'
+        body: "Haupttext"
+        locale: 'Sprache'
+        status: 'Status'
 
   pages:
     author: 'Autor'
     create_new: 'Neue Seite anlegen'
-    edit_this: 'edit this page'
-    home: 'home page'
-    not_published_yet: 'Not published yet'
-    publish: 'publish'
-    published: 'veröffentlichen?'
-    unpublish: 'unpublish'
-    reorder_root_menus: 'reorder root menu items'
+    edit_this: 'Diese Seite bearbeiten'
+    home: 'Hauptseite'
+    not_published_yet: 'Noch nicht veröffentlicht'
+    publish: 'veröffentlichen'
+    published: 'veröffentlicht'
+    unpublish: 'veröffentlichen zurücknehmen'
+    reorder_root_menus: 'Neuanfordern der Root-Menü-Items'
     
     create:
       notice: 'Diese Seite wurde erfolgreich angelegt.'
@@ -52,58 +52,58 @@ de:
       notice: 'Die Seite wurde gelöscht.'
       root_warning: "Du kannst diese Seite nicht löschen, da es die Root-Seite ist. Du kannst sie nur bearbeiten."
     hint:
-      title: 'nice and descriptive'
-      short_title: 'ideally one word only, used for the menu'
+      title: 'Schön und beschreibend'
+      short_title: 'Idealerweise nur ein Wort, wird für das Menü verwendet'
     status:
       changed:
-        published: 'The page has been published'
-        unpublished: "The page has been unpublished. It's a draft again."
-        toggled: "The blog status of the page has been changed"
+        published: 'Die Seite wurde veröffentlicht'
+        unpublished: "Die Veröffentlichung der Seite wurde aufgehoben. Sie ist wieder Entwurf."
+        toggled: "Der Blog-Status der Seite wurde geändert"
 
   contacts:
-    messages_from_forms: 'messages from contact form'
+    messages_from_forms: 'Nachrichten vom Kontaktformular'
     send_message: 'Nachricht senden'
     sent: 'Gesendet am'   
     create:
-      did_not_reach: 'Something went wrong. Your message did not reach the intended recipient.'
-      invalid_email: 'Your email address does not seem to be valid!'
+      did_not_reach: 'Etwas ist schief gegangen. Deine Nachricht hat den gewünschten Adressaten nicht erreicht.'
+      invalid_email: 'Deine Emai-Adresse scheint ungültig zu sein!'
       notice: 'Die Nachricht wurde gesendet.'
       warning: 'Beim Versenden der Nachricht gab es ein Problem.'
     mailer:
-      intro: 'Here is the message sent via the contact form on the web site:'
-      sender_name: "Sender's name:"
-      sender_email: "Sender's email:"
-      message: 'Message:'
+      intro: 'Hier ist die Nachricht vom Kontaktformular der Webseite:'
+      sender_name: "Absendername:"
+      sender_email: "Absender-Email:"
+      message: 'Nachricht'
             
   comments:
-    login_needed: 'You need to be logged in to leave a comment'
-    sorted_by_oldest: 'This section is sorted by oldest comment first so that they can be moderated from top to bottom.'
-    what_do_you_think: 'What do you think?'
+    login_needed: 'Du must angemeldet sein, um einen Kommentar zu verfassen'
+    sorted_by_oldest: 'Dieser Abschnitt ist nach Datum sortiert, der älteste Kommentar zuerst, sodass sie von oben nach untern bearbeitet werden können.'
+    what_do_you_think: 'Was denkst Du?'
     
     create:
-      notice: 'The comment was successfully created.'
-      warning: 'There was a problem saving the comment to the database'
+      notice: 'Der Kommentar wurde erfolgreich erstellt.'
+      warning: 'Beim Speichern des Kommentars in der Database ist ein Problem aufgetreten'
     update:
-      notice: 'The comment was successfully updated.'
-      warning: 'There was a problem saving this comment'
+      notice: 'Der Kommentar wurde erfolgreich aktualisiert.'
+      warning: 'Beim Speichern des Kommentars ist ein Problem aufgetreten'
     destroy:
-      notice: 'The comment was deleted'
+      notice: 'Der Kommentar wurde gelöscht'
     moderation:
       accept:
-        notice: "This comment has been accepted"
-        warning: "Some error occurred and the comment could not be moderated and accepted"
+        notice: "Dieser Kommentar wurde angenommen"
+        warning: "Ein Fehler ist aufgetreten und der Kommentar konnte nicht bearbeitet und angenommen werden"
       block:
-        notice: "This comment has been blocked"
-        warning: "Some error occurred and the comment could not be moderated and blocked"
+        notice: "Dieser Kommentar wurde abgelehnt"
+        warning: "Ein Fehler ist aufgetreten und der Kommentar konnte nicht bearbeitet und abgelehnt werden"
       actions:
-        accept: "accept!"
-        block: "block!"
+        accept: "Akzeptieren!"
+        block: "Ablehnen!"
     status:
-      pending: 'pending'
-      accepted: 'accepted'
-      blocked: 'blocked'
+      pending: 'In Bearbeitung'
+      accepted: 'Akzeptiert'
+      blocked: 'Abgelehnt'
       
   blog:
     itself: 'Blog'
-    home: 'home blog'
-    official: 'the official blog'
+    home: 'Home-Blog'
+    official: 'Der offizielle Blog'
