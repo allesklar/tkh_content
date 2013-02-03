@@ -1,8 +1,8 @@
 <ul class="nav nav-tabs" id="admin-menu-tab">
 	<%= content_tag :li, link_to(t('all'), comments_path), ({ class: 'active' } if controller.action_name.to_s == 'index' ) %>
-	<%= content_tag :li, link_to(t('comments.pending'), pending_comments_path), ({ class: 'active' } if controller.action_name.to_s == 'pending' ) %>
-	<%= content_tag :li, link_to(t('comments.accepted'), accepted_comments_path), ({ class: 'active' } if controller.action_name.to_s == 'accepted' ) %>
-	<%= content_tag :li, link_to(t('comments.blocked'), blocked_comments_path), ({ class: 'active' } if controller.action_name.to_s == 'blocked' ) %>
+	<%= content_tag :li, link_to(t('comments.status.pending'), pending_comments_path), ({ class: 'active' } if controller.action_name.to_s == 'pending' ) %>
+	<%= content_tag :li, link_to(t('comments.status.accepted'), accepted_comments_path), ({ class: 'active' } if controller.action_name.to_s == 'accepted' ) %>
+	<%= content_tag :li, link_to(t('comments.status.blocked'), blocked_comments_path), ({ class: 'active' } if controller.action_name.to_s == 'blocked' ) %>
 	<%= content_tag :li, link_to(t('view'), comments_path), ({ class: 'active' }) if controller.action_name.to_s == 'show' %>
 	<%= content_tag :li, link_to(t('edit'), comments_path), ({ class: 'active' }) if controller.action_name.to_s == 'edit' %>	
 </ul>
