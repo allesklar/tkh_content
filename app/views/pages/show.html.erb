@@ -1,5 +1,6 @@
 <% content_for :meta_title, @page.title %>
 <% content_for :meta_description, @page.description %>
+<% content_for :canonical_link, link_to('', @page, rel: 'canonical') %>
 
 <% unless @page.for_blog? %>
 	<%= raw tkhed(@page.body) %>

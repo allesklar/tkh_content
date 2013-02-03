@@ -1,5 +1,6 @@
 <% content_for :meta_title, Setting.first.try(:company_name) %>
-<%= content_for :meta_description, "#{Setting.first.try(:blog_tagline)} - #{Setting.first.try(:company_name)}#{t('colon')} #{t('blog.official')}" %>
+<% content_for :meta_description, "#{Setting.first.try(:blog_tagline)} - #{Setting.first.try(:company_name)}#{t('colon')} #{t('blog.official')}" %>
+<% content_for :canonical_link, link_to('', blog_path, rel: 'canonical') %>
 
 
 <% for post in @posts %>
