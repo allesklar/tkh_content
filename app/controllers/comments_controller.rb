@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
   
-  before_filter :authenticate
-  before_filter :authenticate_with_admin, :except => 'create'
+  before_filter :authenticate, :except => ['for_feed']
+  before_filter :authenticate_with_admin, :except => ['create', 'for_feed']
   
   def index
     @comments = Comment.by_recent.paginate(:page => params[:page], :per_page => 50)
@@ -76,6 +76,14 @@ class CommentsController < ApplicationController
   def blocked
     @comments = Comment.blocked.by_recent.paginate(:page => params[:page], :per_page => 50)
     switch_to_admin_layout
+  end
+  
+  def for_feed
+    @comments = Comment.showable.for_locale(I18n.locale).by_recently_created.limit(50)
+    respond_to do |format|
+      format.html { redirect_to root_path }
+      format.atom
+    end
   end
   
 end

@@ -18,6 +18,7 @@ Rails.application.routes.draw do
         get :pending
         get :accepted
         get :blocked
+        get :for_feed
       end
       member do
         post :accept

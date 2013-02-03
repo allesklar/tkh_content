@@ -6,8 +6,10 @@ class BlogController < ApplicationController
     else
       @posts = Page.for_blog.published.tagged_with(params[:tag]).order('published_at desc').paginate(:page => params[:page], :per_page => 20)
     end
-    # respond_to  
-    render :layout => 'blog'
+    respond_to do |format|
+      format.html { render :layout => 'blog' }
+      format.atom
+    end
   end
   
   # This is temporary and only to complete the import to SA's site.
