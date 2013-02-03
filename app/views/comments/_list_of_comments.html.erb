@@ -1,10 +1,10 @@
 <% @page.comments.showable.for_locale(I18n.locale.to_s).by_created.each_with_index do |comment, index| %>
-<div id="comment-<%= comment.id %>" class="individual-comment">
-	<p>
-		<span class="comment-index"><%= index + 1 %></span>
-		<span class="comment-author-name"><%= comment.author.name %></span>
-		<span class="comment-created-date"><%= l comment.created_at, format: :tkh_default %></span>
-		<span class="comment-body"><%= sanitize comment.body.gsub(/\r\n?/, "<br>"), :tags => %w(br), :attributes => %w() %></span>
-	</p>
-</div>
+	<div id="comment-<%= comment.id %>" class="individual-comment<%= " by-page-author" if comment.author_id == comment.page.author_id %>">
+		<p>
+			<span class="comment-index"><%= index + 1 %></span>
+			<span class="comment-author-name"><%= comment.author.name %></span>
+			<span class="comment-created-date"><%= l comment.created_at, format: :tkh_default %></span>
+			<span class="comment-body"><%= sanitize comment.body.gsub(/\r\n?/, "<br>"), :tags => %w(br), :attributes => %w() %></span>
+		</p>
+	</div>
 <% end %>
