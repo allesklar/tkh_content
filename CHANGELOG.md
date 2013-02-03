@@ -2,6 +2,19 @@
 
 
 
+## 0.4.2
+
+* In the admin section of the pages' sidebar, added links to admin panel and to the unmoderated comments when any
+* Pages sidebar admin section title is now capitalized to fit with the other sidebar sections
+* Fixed translations of comments section admin tabs
+* Removed justify button from CKEditor toolbar
+* Special CSS class for a comment by the page's author
+* Added generation of canonical link in pages show and in blog index views
+* Modified display of comments and their count in the blog meta info partial
+* Created a comments atom feed
+* Converted blog feed from RSS to atom
+
+
 ## 0.4.1
 
 * Debugged blog post meta partial
