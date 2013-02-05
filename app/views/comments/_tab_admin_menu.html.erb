@@ -4,5 +4,5 @@
 	<%= content_tag :li, link_to(t('comments.status.accepted'), accepted_comments_path), ({ class: 'active' } if controller.action_name.to_s == 'accepted' ) %>
 	<%= content_tag :li, link_to(t('comments.status.blocked'), blocked_comments_path), ({ class: 'active' } if controller.action_name.to_s == 'blocked' ) %>
 	<%= content_tag :li, link_to(t('view'), comments_path), ({ class: 'active' }) if controller.action_name.to_s == 'show' %>
-	<%= content_tag :li, link_to(t('edit'), comments_path), ({ class: 'active' }) if controller.action_name.to_s == 'edit' %>	
+	<%= content_tag :li, link_to(t('edit'), '#'), ({ class: 'active' }) if controller.action_name.to_s == 'edit' %>	
 </ul>
