@@ -2,6 +2,14 @@
 
 
 
+## 0.4.3
+
+* Turned off browser autocomplete for pages form parent page field
+* Changed neutral links in tab admin menus
+* Added the dropin class schedule partial to the happy DSL
+* Removed label from pending comments view. The span tag wouldn't wrap
+
+
 ## 0.4.2
 
 * In the admin section of the pages' sidebar, added links to admin panel and to the unmoderated comments when any
