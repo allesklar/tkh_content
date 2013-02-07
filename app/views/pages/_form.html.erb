@@ -17,6 +17,18 @@
 																	} %>
 	  <%= f.input :description, label: t('activerecord.attributes.pages.description'), :input_html => { :rows => 3 } %>
 		<%= f.input :body, label: t('activerecord.attributes.pages.body'), :input_html => { :rows => 35, :class => 'ckeditor' } %>
+		
+		<% if controller.action_name == 'edit' # the current_user is the page creator in create method %>
+			<%= f.input :author_name,
+									as: :string,
+									:wrapper_html => { :id => 'author-name' },
+									label: "author name",
+									:input_html => { 
+																	:autocomplete => 'off',
+																	:data => { 	provide: 'typeahead',
+																		 					source: User.administrators.alphabetically.map(&:formal_name).to_json } 
+																		} %>
+		<% end -%>
 	</div>
 	
   <div class="form-actions">

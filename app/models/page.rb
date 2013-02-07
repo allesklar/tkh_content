@@ -8,7 +8,7 @@ class Page < ActiveRecord::Base
   belongs_to :author, class_name: 'User', foreign_key: 'author_id'
   has_many :comments, :dependent => :destroy
   
-  attr_accessible :title, :short_title, :description, :body, :for_blog, :parent_id, :tag_list, :parent_page_title
+  attr_accessible :title, :short_title, :description, :body, :for_blog, :parent_id, :tag_list, :parent_page_title, :author_name
   
   has_many :taggings
   has_many :tags, through: :taggings
@@ -90,13 +90,22 @@ class Page < ActiveRecord::Base
   def parent_page_title
       parent.try(:title) unless self.orphan?
     end
-
   def parent_page_title=(title)
     if title.present? && Page.find_by_title(title)
       self.parent_id = Page.find_by_title(title).id
     else
       self.parent_id = nil
     end
+  end
+  
+  def author_name
+    author.try(:formal_name)
+  end
+  def author_name=(formal_name)
+    name_as_array = formal_name.split(',')
+    last_name = name_as_array[0].strip
+    first_name = name_as_array[1].strip
+    self.author_id = User.where("last_name = ? AND first_name = ?", last_name, first_name).first.id
   end
   
 end

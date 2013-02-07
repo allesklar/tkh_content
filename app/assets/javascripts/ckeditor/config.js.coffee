@@ -9,6 +9,7 @@ CKEDITOR.editorConfig = (config) ->
     { name: 'styles',      items: [ 'Format' ] },
     { name: 'basicstyles', items: [ 'Bold','Italic','Strike','-','RemoveFormat' ] },
     { name: 'paragraph',   items: [ 'BulletedList','NumberedList','-','Outdent','Indent','-','Blockquote','-','JustifyLeft','JustifyCenter','JustifyRight' ] },
+    # { name: 'quoteauthor', items: [ element: 'p', attributes : { 'class' : 'author'} ] }, # tried but it did not work
     '/',
     { name: 'clipboard',   items: [ 'Undo','Redo' ] },
     { name: 'links',       items: [ 'Link','Unlink' ] },
