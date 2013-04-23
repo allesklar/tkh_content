@@ -23,10 +23,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'globalize3', '~> 0.2'
   s.add_dependency 'will_paginate', '~> 3.0'
   s.add_dependency 'bootstrap-will_paginate'
-  # This gem does not support p tags until wysihtml5 0.4 is released and linked to gem below
-  # s.add_dependency 'bootstrap-wysihtml5-rails'
-  # s.add_dependency 'tkh_inline_editor'
-  s.add_dependency 'ckeditor_rails'
+  s.add_dependency 'ckeditor_rails' # after several tries, I settled happily on this one
 
   s.add_development_dependency "sqlite3"
 end
