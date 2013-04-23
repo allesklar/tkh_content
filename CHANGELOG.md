@@ -2,6 +2,11 @@
 
 
 
+## 0.4.4
+
+* Admin can change page author
+* Changed a couple translation strings for flash notice of new contact message creation
+
 ## 0.4.3
 
 * Turned off browser autocomplete for pages form parent page field
