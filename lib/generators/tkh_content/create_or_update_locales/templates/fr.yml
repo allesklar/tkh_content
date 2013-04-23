@@ -67,7 +67,7 @@ fr:
     create:
       did_not_reach: "Il y a eu un problem. Le message n'a pas été acheminé a sa destination."
       invalid_email: 'Votre adresse courriel ne semble pas bonne !'
-      notice: 'Votre message a bien été envoyé.'
+      notice: 'Merci. Nous avons bien reçu votre message.'
       warning: "Il y'a eu un probleme en envoyant votre message."
     mailer:
       intro: 'Voici le message envoyé par un visiteur avec le formulaire de contact sur le site web :'
