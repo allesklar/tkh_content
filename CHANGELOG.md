@@ -2,10 +2,16 @@
 
 
 
+## 0.4.5
+
+* Configured CKEditor so that it does not override classes and other bits of HTML code created by the user in the source.
+
+
 ## 0.4.4
 
 * Admin can change page author
 * Changed a couple translation strings for flash notice of new contact message creation
+
 
 ## 0.4.3
 

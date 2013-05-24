@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    tkh_content (0.4.4)
+    tkh_content (0.4.5)
       bootstrap-sass (~> 2.0)
       bootstrap-will_paginate
       ckeditor_rails
@@ -61,8 +61,7 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.0)
-    mail (2.5.3)
-      i18n (>= 0.4.0)
+    mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.23)
