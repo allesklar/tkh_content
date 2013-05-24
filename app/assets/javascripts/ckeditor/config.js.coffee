@@ -1,9 +1,11 @@
 CKEDITOR.editorConfig = (config) ->
   config.language = tkh_locale
   config.uiColor = "#AADC6E"
-  config.width = '575'
+  config.width = '650'
   config.height = '450'
   config.forcePasteAsPlainText = true
+  config.allowedContent = true
+  # config.extraAllowedContent = true
 
   config.toolbar_Pure = [
     { name: 'styles',      items: [ 'Format' ] },
