@@ -62,10 +62,11 @@ GIT
 PATH
   remote: .
   specs:
-    tkh_content (0.9)
+    tkh_content (0.9.1)
       bootstrap-sass (~> 2.3.2)
       bootstrap-will_paginate
       ckeditor_rails
+      globalize3
       rails (~> 4.0.0)
       simple_form (~> 3.0.0.rc)
       stringex (~> 2.0.5)
