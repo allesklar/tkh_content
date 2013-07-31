@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", "~> 4.0.0"
   s.add_dependency 'stringex', '~> 2.0.5'
   s.add_dependency "bootstrap-sass", '~> 2.3.2'
-  s.add_dependency "simple_form", "~> 2.1"
+  s.add_dependency "simple_form", "~> 3.0.0.rc"
   s.add_dependency 'globalize3', '~> 0.3'
   s.add_dependency 'will_paginate', '~> 3.0.0'
   s.add_dependency 'bootstrap-will_paginate'
