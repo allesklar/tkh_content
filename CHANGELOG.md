@@ -2,6 +2,11 @@
 
 
 
+## 0.4.6
+
+* Added a dynamic content variable for upcoming events list
+
+
 ## 0.4.5
 
 * Configured CKEditor so that it does not override classes and other bits of HTML code created by the user in the source.
