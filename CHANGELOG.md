@@ -1,6 +1,10 @@
 # TKH Content
 
 
+## 0.4.7
+
+* Modified the access control module access in the new comment area
+
 
 ## 0.4.6
 
