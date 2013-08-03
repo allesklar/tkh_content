@@ -3,6 +3,7 @@
 	<% if current_user %>
 		<%= render 'comments/form_in_page' %>
 	<% else %>
+    <p><label class="label label-info"><%= t('comments.login_needed') %></label></p>
     <%= render 'shared/embedded_access_control' %>
 	<% end -%>
 </div>
