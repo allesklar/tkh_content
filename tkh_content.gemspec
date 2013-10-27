@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'stringex', '~> 2.0.5'
   s.add_dependency "bootstrap-sass", '~> 2.3.2'
   s.add_dependency "simple_form", "~> 3.0.0.rc"
-  s.add_dependency 'globalize3'
+  s.add_dependency 'globalize', '~> 4.0.0.alpha.2'
   s.add_dependency 'will_paginate', '~> 3.0.0'
   s.add_dependency 'bootstrap-will_paginate'
   s.add_dependency 'ckeditor_rails' # after several tries, I settled happily on this one
