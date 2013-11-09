@@ -1,11 +1,11 @@
 # this is needed for now to make mass assignment security compatible with the translation of globalize3
-Globalize::ActiveRecord::Translation.class_eval do
-  attr_accessible :locale
-end
+# Globalize::ActiveRecord::Translation.class_eval do
+#   attr_accessible :locale
+# end
 
 class Tag < ActiveRecord::Base
 
-  attr_accessible :name
+  # attr_accessible :name
 
   has_many :taggings
   has_many :pages, through: :taggings

@@ -1,14 +1,14 @@
 # this is needed for now to make mass assignment security compatible with the translation of globalize3
-Globalize::ActiveRecord::Translation.class_eval do
-  attr_accessible :locale
-end
+# Globalize::ActiveRecord::Translation.class_eval do
+#   attr_accessible :locale
+# end
 
 class Page < ActiveRecord::Base
 
   belongs_to :author, class_name: 'User'
   has_many :comments, :dependent => :destroy
 
-  attr_accessible :title, :short_title, :description, :body, :for_blog, :parent_id, :tag_list, :parent_page_title, :author_name
+  # attr_accessible :title, :short_title, :description, :body, :for_blog, :parent_id, :tag_list, :parent_page_title, :author_name
 
   has_many :taggings
   has_many :tags, through: :taggings
