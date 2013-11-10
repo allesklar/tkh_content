@@ -1,4 +1,5 @@
 require "tkh_content/version"
+require 'rails'
 require 'bootstrap-sass'
 require 'bootstrap-will_paginate'
 require 'simple_form'

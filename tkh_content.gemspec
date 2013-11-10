@@ -21,9 +21,9 @@ Gem::Specification.new do |s|
   s.add_dependency "bootstrap-sass"
   s.add_dependency 'bootstrap-will_paginate'
   s.add_dependency "simple_form", "~> 3.0.0.rc"
-  s.add_dependency 'globalize'
-  s.add_dependency 'will_paginate', '~> 3.0.0'
-  s.add_dependency 'ckeditor_rails' # after several tries, I settled happily on this one
+  s.add_dependency 'globalize', '~> 4.0.0.alpha.2'
+  s.add_dependency 'will_paginate'
+  s.add_dependency 'ckeditor_rails', "~> 4.2.2" # after several tries, I settled happily on this one
 
   s.add_development_dependency "sqlite3"
 end
