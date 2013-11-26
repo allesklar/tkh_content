@@ -25,13 +25,13 @@ class Page < ActiveRecord::Base
   scope :by_recent, -> { order('updated_at desc') }
   scope :for_blog, -> { where('for_blog = ?', true) }
   scope :not_for_blog, -> { where('for_blog = ?', false) }
-  scope :published,  -> { where('published_at IS NOT ?', nil) }
-  scope :by_recently_published,  -> { order('published_at desc') }
+  scope :published, -> { where('published_at IS NOT ?', nil) }
+  scope :by_recently_published, -> { order('published_at desc') }
   # tree scopes
-  scope :orphans,  -> { where('parent_id IS ?', nil) }
+  scope :orphans, -> { where('parent_id IS ?', nil) }
   scope :with_parent_id, lambda { |id| where('parent_id = ?', id) }
-  scope :by_title,  -> { order('title') }
-  scope :by_menu_position,  -> { order('menu_position') }
+  scope :by_title, -> { order('title') }
+  scope :by_menu_position, -> { order('menu_position') }
 
   def nickname
     @nickname ||= short_title || title

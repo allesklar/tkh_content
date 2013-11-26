@@ -10,13 +10,13 @@ class Comment < ActiveRecord::Base
 
   validates_presence_of :page_id, :body
 
-  scope :showable, where('status = ? OR status = ?', 'pending', 'accepted')
-  scope :pending, where('status = ?', 'pending')
-  scope :accepted, where('status = ?', 'accepted')
-  scope :blocked, where('status = ?', 'blocked')
+  scope :showable, -> { where('status = ? OR status = ?', 'pending', 'accepted') }
+  scope :pending, -> { where('status = ?', 'pending') }
+  scope :accepted, -> { where('status = ?', 'accepted') }
+  scope :blocked, -> { where('status = ?', 'blocked') }
   scope :for_locale, lambda { |locale| where('locale = ?', locale) }
-  scope :by_recent, order('updated_at desc')
-  scope :by_created, order('created_at')
-  scope :by_recently_created, order('created_at desc')
+  scope :by_recent, -> { order('updated_at desc') }
+  scope :by_created, -> { order('created_at') }
+  scope :by_recently_created, -> { order('created_at desc') }
 
 end

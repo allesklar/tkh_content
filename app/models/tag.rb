@@ -12,7 +12,7 @@ class Tag < ActiveRecord::Base
 
   translates :name
 
-  scope :alphabetically,  -> { order('name') }
+  scope :alphabetically, -> { order('name') }
 
   def to_param
     name ? "#{id}-#{name.to_url}" : id
