@@ -5,8 +5,6 @@
 
 class Contact < ActiveRecord::Base
 
-  # attr_accessible :sender_name, :sender_email, :body
-
   validates_presence_of :sender_name
   validates :sender_email, :presence => true, :format => { :with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i, :on => :create }
   validates_presence_of :body
