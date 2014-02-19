@@ -29,7 +29,7 @@
 				</td>
 				<td>
 					<% if page.published_at %>
-						<span class="label label-success"><span class="glyphicon glyphicon-ok"></span></span><%= link_to t('pages.unpublish'), unpublish_page_path(page), class: 'btn btn-xs', method: :post %>
+						<span class="label label-success"><span class="glyphicon glyphicon-ok"></span></span><%= link_to t('pages.unpublish'), unpublish_page_path(page), class: 'btn btn-xs btn-default', method: :post %>
 					<% else %>
 					  <span class="label label-info"><span class="glyphicon glyphicon-remove"></span></span><%= link_to t('pages.publish'), publish_page_path(page), class: 'btn btn-xs btn-default', method: :post %>
 					<% end -%>
