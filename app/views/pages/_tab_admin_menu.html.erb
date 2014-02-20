@@ -1,5 +1,7 @@
-<ul class="nav nav-tabs" id="admin-menu-tab">	
+<h1><%= t 'activerecord.models.pages' %></h1>
+
+<ul class="nav nav-tabs" id="admin-menu-tab">
 	<%= content_tag :li, link_to(t('new'), new_page_path), ({ class: 'active' } if controller.action_name.to_s == 'new' ) %>
 	<%= content_tag :li, link_to(t('list'), pages_path), ({ class: 'active' } if controller.action_name.to_s == 'index' ) %>
-	<%= content_tag :li, link_to(t('edit'), '#'), ({ class: 'active' }) if controller.action_name.to_s == 'edit' %>	
+	<%= content_tag :li, link_to(t('edit'), '#'), ({ class: 'active' }) if controller.action_name.to_s == 'edit' %>
 </ul>
