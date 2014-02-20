@@ -6,7 +6,6 @@
 	<thead>
   	<tr>
 	    <th><%= t 'activerecord.attributes.pages.title' %></th>
-	    <th><%= t 'activerecord.attributes.pages.description' %></th>
 			<th><%= t 'pages.author' %></th>
 			<th><%= t 'activerecord.attributes.pages.for_the_blog' %>?</th>
 			<th><%= t 'pages.published' %></th>
@@ -18,7 +17,6 @@
 		<% @pages.each do |page| %>
 		  <tr>
 		    <td><%= link_to page.title, page %></td>
-		    <td><%= truncate page.description, length: 55, separator: ' ...' %></td>
 				<td><%= page.author.name %></td>
 				<td>
 					<% if page.for_blog? %>
