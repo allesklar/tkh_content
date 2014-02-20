@@ -56,15 +56,21 @@ class PagesController < ApplicationController
   def publish
     page = Page.find(params[:id])
     page.published_at = Time.now
-    page.save
-    redirect_to pages_path, notice: t('pages.status.changed.published')
+    if page.save
+      redirect_to pages_path, notice: t('pages.status.changed.published')
+    else
+      redirect_to :back, :flash => { :error => 'There was a problem while publishing this page.' }
+    end
   end
 
   def unpublish
     page = Page.find(params[:id])
     page.published_at = nil
-    page.save
-    redirect_to pages_path, notice: t('pages.status.changed.unpublished')
+    if page.save
+      redirect_to pages_path, notice: t('pages.status.changed.unpublished')
+    else
+      redirect_to :back, :flash => { :error => 'There was a problem while unpublishing this page.' }
+    end
   end
 
   def toggle_for_blog
