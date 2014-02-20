@@ -29,7 +29,7 @@ class PagesController < ApplicationController
     if @page.save
       redirect_to @page, notice: t('pages.create.notice')
     else
-      render action: "new", warning: t('pages.create.warning'), layout: 'admin'
+      render action: "new", flash: { error: t('pages.create.warning') }, layout: 'admin'
     end
   end
 
