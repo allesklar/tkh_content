@@ -2,6 +2,10 @@
 
 
 
+## 0.9.3
+
+* Fixed the contact email validation format regex
+
 
 ## 0.9.2
 
