@@ -1,5 +1,7 @@
 source "http://rubygems.org"
 
+# gem 'paper_trail', github: 'airblade/paper_trail', branch: 'rails4'
+
 # Declare your gem's dependencies in tkh_content.gemspec.
 # Bundler will treat runtime dependencies like base dependencies, and
 # development dependencies will be added by default to the :development group.

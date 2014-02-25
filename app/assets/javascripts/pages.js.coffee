@@ -16,3 +16,5 @@ jQuery ->
       $('#page-tag-list').hide(450)
       $('#page-short-title').show(450)
       $('#parent-page-title').show(450)
+
+

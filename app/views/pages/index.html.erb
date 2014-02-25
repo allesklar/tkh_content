@@ -1,44 +1,46 @@
-<h1><%= t 'activerecord.models.pages' %></h1>
-
 <%= render 'tab_admin_menu' %>
+
+<%= will_paginate @pages, inner_window: 2 %>
 
 <table class='table table-striped'>
 	<thead>
   	<tr>
 	    <th><%= t 'activerecord.attributes.pages.title' %></th>
-	    <th><%= t 'activerecord.attributes.pages.description' %></th>
 			<th><%= t 'pages.author' %></th>
 			<th><%= t 'activerecord.attributes.pages.for_the_blog' %>?</th>
 			<th><%= t 'pages.published' %></th>
 	    <th><%= t('actions') %></th>
 	  </tr>
 	</thead>
-	
+
 	<tbody>
 		<% @pages.each do |page| %>
 		  <tr>
 		    <td><%= link_to page.title, page %></td>
-		    <td><%= truncate page.description, length: 55, separator: ' ...' %></td>
 				<td><%= page.author.name %></td>
 				<td>
-					<%= page.for_blog? ? "<span class=\"label label-success\">✓</span>".html_safe : "<span class=\"label label-important\">X</span>".html_safe %>
-					<%= link_to t('toggle'), toggle_for_blog_page_path(page), class: 'btn btn-mini', method: :post %>
+					<% if page.for_blog? %>
+						<span class="label label-success"><span class="glyphicon glyphicon-ok"></span></span>
+					<% else %>
+						<span class="label label-info"><span class="glyphicon glyphicon-remove"></span></span>
+					<% end %>
 				</td>
 				<td>
 					<% if page.published_at %>
-						<span class="label label-success">✓</span> <%= link_to t('pages.unpublish'), unpublish_page_path(page), class: 'btn btn-mini', method: :post %>
+						<span class="label label-success"><span class="glyphicon glyphicon-ok"></span></span><%= link_to t('pages.unpublish'), unpublish_page_path(page), class: 'btn btn-xs btn-default', method: :post %>
 					<% else %>
-					  <span class="label label-important">X</span> <%= link_to t('pages.publish'), publish_page_path(page), class: 'btn btn-mini btn-primary', method: :post %>
+					  <span class="label label-info"><span class="glyphicon glyphicon-remove"></span></span><%= link_to t('pages.publish'), publish_page_path(page), class: 'btn btn-xs btn-default', method: :post %>
 					<% end -%>
 				</td>
-		    <td><%= link_to t('edit'), edit_page_path(page), class: 'btn btn-mini' %>
-					<%= link_to t('delete'), page, method: :delete, data: { confirm: t('are_you_sure') }, class: 'btn btn-mini btn-danger' %></td>
+		    <td>
+		    	<%= link_to t('edit'), edit_page_path(page), class: 'btn btn-xs btn-default' %><%= link_to t('delete'), page, method: :delete, data: { confirm: t('are_you_sure') }, class: 'btn btn-xs btn-danger' %>
+		    </td>
 		  </tr>
 		<% end %>
 	</tbody>
 </table>
 
-<%= will_paginate @pages %>
+<%= will_paginate @pages, inner_window: 2 %>
 
 <%= link_to t('pages.create_new').capitalize, new_page_path, class: 'btn btn-primary' %>
 

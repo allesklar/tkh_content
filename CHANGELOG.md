@@ -1,6 +1,10 @@
 # TKH Content
 
 
+## 0.9
+
+* Upgraded to Ruby 2.0 and Rails 4
+
 
 ## 0.4.6
 
