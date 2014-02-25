@@ -1,6 +1,15 @@
 # TKH Content
 
 
+
+
+## 0.9.2
+
+* Fixes and tweaks related to the update to Rails 4
+* Connected gem to tkh_authentication partial in comment area
+* Updated many gems/dependencies
+
+
 ## 0.9
 
 * Upgraded to Ruby 2.0 and Rails 4
