@@ -2,6 +2,8 @@
 
 <%= render 'tab_admin_menu' %>
 
+<%= will_paginate @comments %>
+
 <table class='table table-striped'>
 	<thead>
   	<tr>
@@ -11,15 +13,15 @@
 	    <th><%= t('actions') %></th>
 	  </tr>
 	</thead>
-	
+
 	<tbody>
 		<% @comments.each do |comment| %>
 		  <tr>
 		    <td><%= comment.author.name %> - <%= link_to comment.page.title, comment.page %> | <%= comment.locale %><br /><br />
-						<%= sanitize comment.body.gsub(/\r\n?/, "<br>"), :tags => %w(br), :attributes => %w() %></td>
-						
+            <%= sanitize comment.body.gsub(/\r\n?/, "<br>"), :tags => %w(br), :attributes => %w() %></td>
+
 				<td><%= t("comments.status.#{comment.status}") %><%= t 'colon' %><%= render 'comments/status_buttons', comment: comment %></td>
-		    <td><%= link_to t('edit'), edit_comment_path(comment), class: 'btn btn-mini' %><%= link_to t('delete'), comment, method: :delete, data: { confirm: t('are_you_sure') }, class: 'btn btn-mini btn-danger' %></td>
+		    <td><%= link_to t('edit'), edit_comment_path(comment), class: 'btn btn-xs btn-default' %><%= link_to t('delete'), comment, method: :delete, data: { confirm: t('are_you_sure') }, class: 'btn btn-xs btn-danger' %></td>
 		  </tr>
 		<% end %>
 	</tbody>
