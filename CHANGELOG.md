@@ -2,6 +2,11 @@
 
 
 
+## 0.9.4
+
+* Aesthetic changes to the commend index view
+
+
 ## 0.9.3
 
 * Fixed the contact email validation format regex
