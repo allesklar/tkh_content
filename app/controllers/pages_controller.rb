@@ -82,7 +82,7 @@ class PagesController < ApplicationController
 
   def sort
     params[:page].each_with_index do |id, index|
-      Page.update_all({ menu_position: index+1 }, { id: id })
+      Page.update(id, menu_position: index+1)
     end
     render nothing: true
   end
