@@ -2,9 +2,16 @@
 
 
 
+
+
+## 0.9.5
+
+* Debugged the drag and drop reordering of the pages in the page admin sidebar
+
+
 ## 0.9.4
 
-* Aesthetic changes to the commend index view
+* Fixed up buttons in the comments section of admin panel
 
 
 ## 0.9.3
