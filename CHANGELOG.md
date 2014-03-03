@@ -2,6 +2,9 @@
 
 
 
+## 0.9.6
+
+* Removed the pages js coffee file and moved code to tkh_admin_panel gem under admin folder
 
 
 ## 0.9.5
