@@ -5,7 +5,7 @@
 		<h2><%= t('admin_section') %></h2>
 		<ul class="list-group">
 			<li class="list-group-item"><%= link_to t('admin_panel'), pages_path %></li>
-			<%= content_tag :li, link_to("#{t('activerecord.models.comments').capitalize} #{"(#{Comment.pending.count})"}", pending_comments_path) if Comment.pending.count > 0 %>
+			<%= content_tag :li, link_to( "#{t('activerecord.models.comments').capitalize} <span class='badge'>#{Comment.pending.count}</span>".html_safe, pending_comments_path ), class: 'list-group-item' if Comment.pending.count > 0 %>
 			<li class="list-group-item"><%= link_to t('pages.edit_this').capitalize, edit_page_path(page) %></li>
 		</ul>
 
