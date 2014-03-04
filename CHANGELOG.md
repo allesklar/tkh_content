@@ -2,6 +2,11 @@
 
 
 
+## 0.9.7
+
+* Aesthetic changes to play better with Bootstrap 3 and Rails 4
+
+
 ## 0.9.6
 
 * Removed the pages js coffee file and moved code to tkh_admin_panel gem under admin folder
