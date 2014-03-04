@@ -3,18 +3,18 @@
 	<% content_for :admin_context_menu do %>
 
 		<h2><%= t('admin_section') %></h2>
-		<ul>
-			<li><%= link_to t('admin_panel'), pages_path %></li>
+		<ul class="list-group">
+			<li class="list-group-item"><%= link_to t('admin_panel'), pages_path %></li>
 			<%= content_tag :li, link_to("#{t('activerecord.models.comments').capitalize} #{"(#{Comment.pending.count})"}", pending_comments_path) if Comment.pending.count > 0 %>
 			<li><%= link_to t('pages.edit_this').capitalize, edit_page_path(page) %></li>
 		</ul>
 
 		<% if Page.not_for_blog.orphans.published.any? %>
 			<h3><%= t('pages.reorder_root_menus') %></h3>
-			<ul class="draggable" data-update-url="<%= sort_pages_path %>">
+			<ul class="draggable list-group" data-update-url="<%= sort_pages_path %>">
 			  <% for page in Page.not_for_blog.orphans.published.by_menu_position %>
-					<%= content_tag :li, page, class: 'page', id: "page_#{page.id}" do %>
-						<%= image_tag 'admin/drag-handle.gif', :class => 'handle silhouette' %> <%= page.nickname -%>
+					<%= content_tag :li, page, class: 'page', id: "page_#{page.id}", class: 'handle' do %>
+						<%= image_tag 'admin/drag-handle.gif', :class => 'list-group-item' %> <%= page.nickname -%>
 					<% end -%>
 			  <% end %>
 			</ul>
