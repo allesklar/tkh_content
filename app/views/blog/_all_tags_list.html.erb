@@ -1,0 +1,10 @@
+<% content_for :all_tags_list do %>
+  <h2>étiquettes</h2>
+  <% if Tag.count > 0 %>
+    <p class="all-tags-list">
+      <%= render :partial => 'blog/individual_tag', collection: Tag.with_taggings, as: :tag %>
+    </p>
+  <% else %>
+    <p>There are currently no tags to display</p>
+  <% end %>
+<% end %>

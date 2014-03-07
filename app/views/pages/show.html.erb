@@ -13,9 +13,11 @@
 	<%= render '/pages/blog_post_meta', post: @page %>
 	<%= raw tkhed(@page.body) %>
 	<%= render 'comment_section' if Setting.first.enable_comments_in_blog? %>
+  <%= render 'blog/all_tags_list' %>
 
 <% end -%>
 
 <%= render( 'admin_context_menu', page: @page) %>
 <%# partial in tkh_menus gem or has to be added in host app %>
 <%= render './shared/menus' %>
+

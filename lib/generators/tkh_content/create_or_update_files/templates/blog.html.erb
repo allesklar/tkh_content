@@ -3,11 +3,11 @@
 	<head>
 	  <title>
 			<% if defined?(SETTINGS) && SETTINGS['site_name'] %>
-				<%= @meta_title ? "#{@meta_title} | #{SETTINGS['site_name']}" : SETTINGS['site_name'] %>	
+				<%= @meta_title ? "#{@meta_title} | #{SETTINGS['site_name']}" : SETTINGS['site_name'] %>
 			<% else %>
 				<%= @meta_title ? @meta_tile : 'A web site powered by tkh_cms' %>
 			<% end -%>
-		- The blog</title>	
+		- The blog</title>
 	  <meta name="description" content="<%= @meta_description -%>">
 	  <%= stylesheet_link_tag    "application", :media => "all" %>
 		<%= favicon_link_tag '/favicon.ico' %>
@@ -16,23 +16,23 @@
 	<body>
 
 		<div id="content">
-			
-			<article>				
+
+			<article>
 				<% flash.each do |name, msg| %>
 				  <%= content_tag :div, msg, :id => "flash_#{name}" %>
 				<% end %>
-				
+
 				<h1>The blog</h1>
-					
+
 				<%= yield %>
 			</article>
-			
+
 			<aside>
 				<%# = render 'shared/sidebar' %>
 			</aside>
-			
+
 		</div>
-		
+
 	  <%= javascript_include_tag "application" %>
 	</body>
 </html>

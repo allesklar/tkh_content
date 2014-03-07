@@ -18,4 +18,10 @@ class Tag < ActiveRecord::Base
     name ? "#{id}-#{name.to_url}" : id
   end
 
+  def self.with_taggings
+    taggings = Tagging.select("DISTINCT tag_id")
+    ids = taggings.map { |tagging| tagging.tag_id }
+    tags = Tag.order('name').find(ids)
+  end
+
 end

@@ -1,10 +1,18 @@
 <% content_for :meta_title, Setting.first.try(:company_name) %>
-<% content_for :meta_description, "#{Setting.first.try(:blog_tagline)} - #{Setting.first.try(:company_name)}#{t('colon')} #{t('blog.official')}" %>
+<% content_for :meta_description, "Blog posts with the '#{@tag.name}' tag." %>
 <% content_for :canonical_link, link_to('', blog_path, rel: 'canonical') %>
 
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= @tag.name %></h3>
+  </div>
+  <div class="panel-body">
+    Liste des articles avec cette étiquette
+  </div>
+</div>
 
 <% for post in @posts %>
-	<%= render '/pages/individual_blog_post_in_list', post: post %>
+  <%= render '/pages/individual_blog_post_in_list', post: post %>
 <% end %>
 
 <%= will_paginate @posts %>

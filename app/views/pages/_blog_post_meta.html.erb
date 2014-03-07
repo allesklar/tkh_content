@@ -1,9 +1,15 @@
-<p class="meta-info">
-	<%= post.author.name %> |
-	<%= post.published_at ? link_to(l(post.published_at, format: :tkh_default), post) :  t('pages.not_published_yet') %> |
-	<%= "#{t('activerecord.models.comments')}#{t('colon')} #{post.comments.showable.for_locale(I18n.locale.to_s).count}" %>
-	<% if administrator? %>
-    <br />
-    <%= link_to t('edit'), edit_page_path(post), class: 'btn btn-xs btn-primary' %>
+<p class="post-meta-info">
+	<%= content_tag :span, post.author.name, class: 'author-name' %>
+	<%= content_tag :span, (post.published_at ? link_to(l(post.published_at, format: :tkh_default), post) :  t('pages.not_published_yet')), class: 'published-date' %>
+	<%= content_tag :span, "#{t('activerecord.models.comments')}#{t('colon')} #{post.comments.showable.for_locale(I18n.locale.to_s).count}", class: 'comment-count' %>
+
+  <% if post.tags.count > 0 %>
+    <span class="tag-list">
+      <%= render :partial => 'blog/individual_tag', collection: post.tags.alphabetically, as: :tag %>
+    </span>
+  <% end %>
+
+  <% if administrator? %>
+    <%= content_tag :span, (link_to t('edit'), edit_page_path(post), class: 'btn btn-xs btn-primary'), class: 'edit-button' %>
   <% end %>
 </p>

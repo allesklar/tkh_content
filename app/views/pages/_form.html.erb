@@ -1,10 +1,12 @@
 <%= simple_form_for @page, :html => { class: 'form-horizontal', role: 'form' } do |f| %>
 	<%= f.error_notification %>
 
-  <div class="form-inputs">
-		<%= f.input :title, label: t('activerecord.attributes.pages.title'), hint: t('pages.hint.title') %>
+		<%= f.input :title,
+								label: t('activerecord.attributes.pages.title'),
+								hint: t('pages.hint.title'),
+								input_html: { size: 45 } %>
 		<%= f.input :for_blog, label: t('activerecord.attributes.pages.for_the_blog') %>
-		<%= f.input :tag_list, hint: 'space separated', :wrapper_html => { :id => 'page-tag-list' } %>
+		<%= f.input :tag_list, hint: 'space separated', :wrapper_html => { :id => 'page-tag-list' }, input_html: { size: 45 } %>
 		<%= f.input :short_title, label: t('activerecord.attributes.pages.short_title'), hint: t('pages.hint.short_title'), :wrapper_html => { :id => 'page-short-title' } %>
 		<%= f.input :parent_page_title,
 								as: :string,
@@ -15,7 +17,7 @@
 																:data => { 	provide: 'typeahead',
 																	 					source: Page.not_for_blog.by_title.map(&:title).to_json }
 																	} %>
-	  <%= f.input :description, label: t('activerecord.attributes.pages.description'), :input_html => { :rows => 3 } %>
+	  <%= f.input :description, label: t('activerecord.attributes.pages.description'), :input_html => { cols: 45, rows: 3 } %>
 		<%= f.input :body, label: t('activerecord.attributes.pages.body'), :input_html => { :rows => 35, :class => 'ckeditor' } %>
 
 		<% if controller.action_name == 'edit' # the current_user is the page creator in create method %>
@@ -24,14 +26,13 @@
 									:wrapper_html => { :id => 'author-name' },
 									label: "author name",
 									:input_html => {
+																	size: 45,
 																	:autocomplete => 'off',
 																	:data => { 	source: User.administrators.alphabetically.map(&:formal_name).to_json }
 																		} %>
 		<% end -%>
-	</div>
 
-  <div class="form-actions">
+		<br />
     <%= f.button :submit, :class => 'btn btn-primary' %>
-  </div>
 
 <% end %>
