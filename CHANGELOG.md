@@ -2,6 +2,11 @@
 
 
 
+## 0.9.8
+
+* Full implementation of blog tags
+
+
 ## 0.9.7
 
 * Aesthetic changes to play better with Bootstrap 3 and Rails 4
