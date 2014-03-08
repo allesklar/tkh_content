@@ -1,5 +1,5 @@
 es:
-  
+
   activerecord:
     models:
       comment: 'comment'
@@ -10,7 +10,7 @@ es:
       pages: 'pages'
       tag: 'tag'
       tags: 'tags'
-    
+
     attributes:
       pages:
         title: "título"
@@ -19,12 +19,15 @@ es:
         body: "parte principal"
         for_the_blog: 'contraseña'
         parent_title: 'page parent title'
-        
+
+      tags:
+        name: "name"
+
       contacts:
         sender_name: "nombre del remitente"
         sender_email: 'correo electrónico del remitente'
         body: 'mensaje'
-        
+
       comments:
         author: 'author'
         body: "body text"
@@ -41,7 +44,7 @@ es:
     published: '¿publicado?'
     unpublish: 'unpublish'
     reorder_root_menus: 'reorder root menu items'
-    
+
     create:
       notice: 'La página se ha creado correctamente'
       warning: 'Hubo un problema al guardar la página'
@@ -59,7 +62,17 @@ es:
         published: 'The page has been published'
         unpublished: "The page has been unpublished. It's a draft again."
         toggled: "The blog status of the page has been changed"
-          
+
+  tags:
+    edit_this: 'edit this tag'
+    tag_list: 'tag list'
+
+    update:
+      notice: 'The tag was successfully updated.'
+      warning: 'There was a problem saving the tag'
+    hint:
+      name: 'Lower case only. Multiple words should be joined by a dash (-) and NOT spaces'
+
   contacts:
     messages_from_forms: 'mensajes del formulario de contacto'
     send_message: 'enviar el mensaje'
@@ -79,7 +92,7 @@ es:
     login_needed: 'You need to be logged in to leave a comment'
     sorted_by_oldest: 'This section is sorted by oldest comment first so that they can be moderated from top to bottom.'
     what_do_you_think: 'What do you think?'
-    
+
     create:
       notice: 'The comment was successfully created.'
       warning: 'There was a problem saving the comment to the database'
@@ -102,7 +115,7 @@ es:
       pending: 'pending'
       accepted: 'accepted'
       blocked: 'blocked'
-      
+
   blog:
     itself: 'blog'
     home: 'home blog'

@@ -1,0 +1,12 @@
+<%= simple_form_for @tag, :html => { class: 'form-horizontal', role: 'form' } do |f| %>
+	<%= f.error_notification %>
+
+		<%= f.input :name,
+								label: t('activerecord.attributes.tags.name'),
+								hint: t('tags.hint.name'),
+								input_html: { size: 45 } %>
+
+		<br />
+    <%= f.button :submit, :class => 'btn btn-primary' %>
+
+<% end %>

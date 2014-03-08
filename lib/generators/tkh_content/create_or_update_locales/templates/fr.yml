@@ -1,5 +1,5 @@
 fr:
-  
+
   activerecord:
     models:
       comment: 'commentaire'
@@ -10,7 +10,7 @@ fr:
       pages: 'les pages'
       tag: 'étiquette'
       tags: 'les étiquettes'
-    
+
     attributes:
       pages:
         title: "titre"
@@ -20,17 +20,20 @@ fr:
         for_the_blog: 'pour le blog'
         parent_title: 'titre de la page maternelle'
 
+      tags:
+        name: "nom"
+
       contacts:
         sender_name: "nom de l'auteur"
         sender_email: "email de l'auteur"
         body: 'contenu du message'
-        
+
       comments:
         author: 'auteur'
         body: "texte"
         locale: 'langue'
         status: 'état'
-  
+
   pages:
     author: 'auteur'
     create_new: 'créer une nouvelle page'
@@ -41,7 +44,7 @@ fr:
     published: 'publiée ?'
     unpublish: 'la depublier'
     reorder_root_menus: 'réorganiser les menus racines'
-    
+
     create:
       notice: 'La page a été créée.'
       warning: "Il y'a eu un probleme et la page n'a pas été sauvegardée."
@@ -60,10 +63,20 @@ fr:
         unpublished: "La publication de la page a été annulée. Elle est a nouveau en mode brouillon."
         toggled: "Le status de blog ou non-blog a été modifié."
 
+  tags:
+    edit_this: 'modifier cette étiquette'
+    tag_list: 'liste des étiquettes'
+
+    update:
+      notice: 'Les changements de cette étiquette ont été sauvegardés.'
+      warning: "Il y'a eu un probleme et les changements de cette étiquette n'ont pas été sauvegardés."
+    hint:
+      name: 'Pas de majuscules, que des minuscules. Entre les mots multiples, utilisez un tiret ( - ), pas avec un espace.'
+
   contacts:
     messages_from_forms: 'messages du formulaire de contact'
     send_message: 'envoyez le message'
-    sent: 'Envoyé le'  
+    sent: 'Envoyé le'
     create:
       did_not_reach: "Il y a eu un problem. Le message n'a pas été acheminé a sa destination."
       invalid_email: 'Votre adresse courriel ne semble pas bonne !'
@@ -74,12 +87,12 @@ fr:
       sender_name: "Nom de l'auteur :"
       sender_email: "Adresse courriel de l'auteur :"
       message: 'Message :'
-      
+
   comments:
     login_needed: 'Vous devez être identifié pour fournir un commentaire'
     sorted_by_oldest: 'Cette section va du plus vieux au plus recent pour vous permettre de modérer les commentaires du haut en bas.'
     what_do_you_think: "Qu'en pensez vous ?"
-    
+
     create:
       notice: 'Le commentaire a bien été créé.'
       warning: "Il y a eu un problem et le commentaire n'a pas été sauvegardé"

@@ -10,7 +10,7 @@ de:
       pages: 'Seiten'
       tag: 'Tag'
       tags: 'Tags'
-    
+
     attributes:
       pages:
         title: "Überschrift"
@@ -19,12 +19,15 @@ de:
         body: "Haupttext"
         for_the_blog: 'Für den Blog'
         parent_title: 'Seitenüberschrift'
-        
+
+      tags:
+        name: "name"
+
       contacts:
         sender_name: "Absender-Name"
         sender_email: 'Absender-Email'
         body: 'Nachricht'
-        
+
       comments:
         author: 'Verfasser'
         body: "Haupttext"
@@ -41,7 +44,7 @@ de:
     published: 'veröffentlicht'
     unpublish: 'veröffentlichen zurücknehmen'
     reorder_root_menus: 'Neuanfordern der Root-Menü-Items'
-    
+
     create:
       notice: 'Diese Seite wurde erfolgreich angelegt.'
       warning: 'Beim Speichern dieser Seite ist ein Problem aufgetreten.'
@@ -60,10 +63,20 @@ de:
         unpublished: "Die Veröffentlichung der Seite wurde aufgehoben. Sie ist wieder Entwurf."
         toggled: "Der Blog-Status der Seite wurde geändert"
 
+  tags:
+    edit_this: 'edit this tag'
+    tag_list: 'tag list'
+
+    update:
+      notice: 'The tag was successfully updated.'
+      warning: 'There was a problem saving the tag'
+    hint:
+      name: 'Lower case only. Multiple words should be joined by a dash (-) and NOT spaces'
+
   contacts:
     messages_from_forms: 'Nachrichten vom Kontaktformular'
     send_message: 'Nachricht senden'
-    sent: 'Gesendet am'   
+    sent: 'Gesendet am'
     create:
       did_not_reach: 'Etwas ist schief gegangen. Deine Nachricht hat den gewünschten Adressaten nicht erreicht.'
       invalid_email: 'Deine Emai-Adresse scheint ungültig zu sein!'
@@ -74,12 +87,12 @@ de:
       sender_name: "Absendername:"
       sender_email: "Absender-Email:"
       message: 'Nachricht'
-            
+
   comments:
     login_needed: 'Du must angemeldet sein, um einen Kommentar zu verfassen'
     sorted_by_oldest: 'Dieser Abschnitt ist nach Datum sortiert, der älteste Kommentar zuerst, sodass sie von oben nach untern bearbeitet werden können.'
     what_do_you_think: 'Was denkst Du?'
-    
+
     create:
       notice: 'Der Kommentar wurde erfolgreich erstellt.'
       warning: 'Beim Speichern des Kommentars in der Database ist ein Problem aufgetreten'
@@ -102,7 +115,7 @@ de:
       pending: 'In Bearbeitung'
       accepted: 'Akzeptiert'
       blocked: 'Abgelehnt'
-      
+
   blog:
     itself: 'Blog'
     home: 'Home-Blog'

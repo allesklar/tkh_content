@@ -6,7 +6,11 @@
 								hint: t('pages.hint.title'),
 								input_html: { size: 45 } %>
 		<%= f.input :for_blog, label: t('activerecord.attributes.pages.for_the_blog') %>
-		<%= f.input :tag_list, hint: 'space separated', :wrapper_html => { :id => 'page-tag-list' }, input_html: { size: 45 } %>
+		<%= f.input :tag_list,
+								label: t('tags.tag_list'),
+								hint: t('tags.hint.name'),
+								:wrapper_html => { :id => 'page-tag-list' },
+								input_html: { size: 45 } %>
 		<%= f.input :short_title, label: t('activerecord.attributes.pages.short_title'), hint: t('pages.hint.short_title'), :wrapper_html => { :id => 'page-short-title' } %>
 		<%= f.input :parent_page_title,
 								as: :string,

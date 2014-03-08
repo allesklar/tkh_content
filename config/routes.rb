@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
+
     resources :pages do
       member do
         post :publish
@@ -25,6 +26,9 @@ Rails.application.routes.draw do
         post :block
       end
     end
+
+    resources :tags
+
     get 'blog' => 'blog#index', as: :blog
     get 'blog_by_tag/:id', :to => 'blog#by_tag', :as => 'blog_by_tag'
 

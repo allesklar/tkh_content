@@ -1,0 +1,21 @@
+<%= render 'tab_admin_menu' %>
+
+<table class='table table-striped'>
+	<thead>
+  	<tr>
+	    <th><%= t 'activerecord.attributes.tags.name' %></th>
+	    <th><%= t('actions') %></th>
+	  </tr>
+	</thead>
+
+	<tbody>
+		<% @tags.each do |tag| %>
+		  <tr>
+		    <td><%= link_to ("#{tag.name} (#{tag.taggings.count})"), blog_by_tag_path(tag.name) %></td>
+		    <td><%= link_to t('edit'), edit_tag_path(tag), class: 'btn btn-xs btn-primary' %></td>
+		  </tr>
+		<% end %>
+	</tbody>
+</table>
+
+<%= render 'shared/admin_sidebar' %>

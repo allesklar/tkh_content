@@ -1,5 +1,5 @@
 en:
-  
+
   activerecord:
     models:
       comment: 'comment'
@@ -10,7 +10,7 @@ en:
       pages: 'pages'
       tag: 'tag'
       tags: 'tags'
-    
+
     attributes:
       pages:
         title: "title"
@@ -19,18 +19,21 @@ en:
         body: "body text"
         for_the_blog: 'for the blog'
         parent_title: 'page parent title'
-        
+
+      tags:
+        name: "name"
+
       contacts:
         sender_name: "sender name"
         sender_email: 'sender email'
         body: 'message'
-        
+
       comments:
         author: 'author'
         body: "body text"
         locale: 'language'
         status: 'status'
-  
+
   pages:
     author: 'author'
     create_new: 'create new page'
@@ -41,7 +44,7 @@ en:
     published: 'published?'
     unpublish: 'unpublish'
     reorder_root_menus: 'reorder root menu items'
-    
+
     create:
       notice: 'The page was successfully created.'
       warning: 'There was a problem saving the page'
@@ -59,7 +62,17 @@ en:
         published: 'The page has been published'
         unpublished: "The page has been unpublished. It's a draft again."
         toggled: "The blog status of the page has been changed"
-      
+
+  tags:
+    edit_this: 'edit this tag'
+    tag_list: 'tag list'
+
+    update:
+      notice: 'The tag was successfully updated.'
+      warning: 'There was a problem saving the tag'
+    hint:
+      name: 'Lower case only. Multiple words should be joined by a dash (-) and NOT spaces'
+
   contacts:
     messages_from_forms: 'messages from contact form'
     send_message: 'send message'
@@ -74,12 +87,12 @@ en:
       sender_name: "Sender's name:"
       sender_email: "Sender's email:"
       message: 'Message:'
-            
+
   comments:
     login_needed: 'You need to be logged in to leave a comment'
     sorted_by_oldest: 'This section is sorted by oldest comment first so that they can be moderated from top to bottom.'
     what_do_you_think: 'What do you think?'
-    
+
     create:
       notice: 'The comment was successfully created.'
       warning: 'There was a problem saving the comment to the database'
@@ -102,7 +115,7 @@ en:
       pending: 'pending'
       accepted: 'accepted'
       blocked: 'blocked'
-      
+
   blog:
     itself: 'blog'
     home: 'home blog'
