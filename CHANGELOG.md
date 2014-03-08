@@ -2,6 +2,12 @@
 
 
 
+
+## 0.9.9
+
+* Added tag resource and tag section in admin panel
+
+
 ## 0.9.8
 
 * Full implementation of blog tags
