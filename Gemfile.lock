@@ -1,9 +1,8 @@
 PATH
   remote: .
   specs:
-    tkh_content (0.9.9)
+    tkh_content (0.9.10)
       bootstrap-sass
-      bootstrap-will_paginate
       ckeditor_rails (~> 4.2.2)
       globalize (~> 4.0.0)
       rails (> 4.0)
@@ -42,8 +41,6 @@ GEM
     atomic (1.1.14)
     bootstrap-sass (3.1.1.0)
       sass (~> 3.2)
-    bootstrap-will_paginate (0.0.10)
-      will_paginate
     builder (3.1.4)
     ckeditor_rails (4.2.2)
       railties (>= 3.0)
@@ -80,7 +77,7 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.1.1)
-    sass (3.2.14)
+    sass (3.3.1)
     simple_form (3.0.1)
       actionpack (>= 4.0.0, < 4.1)
       activemodel (>= 4.0.0, < 4.1)

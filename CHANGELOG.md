@@ -2,6 +2,12 @@
 
 
 
+## 0.9.10
+
+* Fixed up paginators
+* Replaced div with article tag for individual post partial. Semantically correct AND easier to style first_of_type
+* Fixed up controllers code for flash warnings
+
 
 ## 0.9.9
 
