@@ -24,7 +24,8 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to @comment.page, notice: t('comments.create.notice')
     else
-      redirect_to @comment.page, warning: t('comments.create.warning')
+      flash[:warning] = t('comments.create.warning')
+      redirect_to @comment.page
     end
   end
 
@@ -33,6 +34,7 @@ class CommentsController < ApplicationController
     if @comment.update_attributes(comment_params)
       redirect_to comments_path, notice: t('comments.update.notice')
     else
+      flash[:warning] = t('comments.update.warning')
       render action: "edit", warning: t('comments.update.warning'), layout: 'admin'
     end
   end
@@ -49,7 +51,8 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to :back, notice: t('comments.moderation.accept.notice')
     else
-      redirect_to comments_path, warning: t('comments.moderation.accept.warning')
+      flash[:warning] = t('comments.moderation.accept.warning')
+      redirect_to comments_path
     end
   end
 
@@ -59,7 +62,8 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to :back, notice: t('comments.moderation.block.notice')
     else
-      redirect_to comments_path, warning: t('comments.moderation.block.warning')
+      flash[:warning] = t('commentns.moderation.block.warning')
+      redirect_to comments_path
     end
   end
 

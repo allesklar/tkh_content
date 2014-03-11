@@ -29,7 +29,8 @@ class PagesController < ApplicationController
     if @page.save
       redirect_to @page, notice: t('pages.create.notice')
     else
-      render action: "new", flash: { error: t('pages.create.warning') }, layout: 'admin'
+      flash[:warning] = t('pages.create.warning')
+      render action: "new", layout: 'admin'
     end
   end
 
@@ -38,7 +39,8 @@ class PagesController < ApplicationController
     if @page.update_attributes(page_params)
       redirect_to @page, notice: t('pages.update.notice')
     else
-      render action: "edit", warning: t('pages.update.warning'), layout: 'admin'
+      flash[:warning] = t('pages.update.warning')
+      render action: "edit", layout: 'admin'
     end
   end
 

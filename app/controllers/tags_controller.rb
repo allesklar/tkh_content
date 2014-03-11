@@ -18,7 +18,8 @@ class TagsController < ApplicationController
     if @tag.update_attributes(tag_params)
       redirect_to tags_path, notice: t('tags.update.notice')
     else
-      render action: "edit", warning: t('tags.update.warning'), layout: 'admin'
+      flash[:warning] = t('tags.update.warning')
+      render action: "edit", layout: 'admin'
     end
   end
 
