@@ -11,11 +11,13 @@
   </div>
 </div>
 
+<%= will_paginate @posts, inner_window: 2 %>
+
 <% for post in @posts %>
   <%= render '/pages/individual_blog_post_in_list', post: post %>
 <% end %>
 
-<%= will_paginate @posts %>
+<%= will_paginate @posts, inner_window: 2 %>
 
 <%= render 'all_tags_list' %>
 <%= render( 'admin_context_menu', page: @page) %>
