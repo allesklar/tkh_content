@@ -2,7 +2,7 @@
 
 <%= render 'tab_admin_menu' %>
 
-<%= will_paginate @comments %>
+<%= will_paginate @comments, inner_window: 2 %>
 
 <table class='table table-striped'>
 	<thead>
@@ -27,6 +27,6 @@
 	</tbody>
 </table>
 
-<%= will_paginate @comments %>
+<%= will_paginate @comments, inner_window: 2 %>
 
 <%= render 'shared/admin_sidebar' %>
