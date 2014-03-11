@@ -2,12 +2,13 @@
 <% content_for :meta_description, "#{Setting.first.try(:blog_tagline)} - #{Setting.first.try(:company_name)}#{t('colon')} #{t('blog.official')}" %>
 <% content_for :canonical_link, link_to('', blog_path, rel: 'canonical') %>
 
+<%= will_paginate @posts, inner_window: 2 %>
 
 <% for post in @posts %>
 	<%= render '/pages/individual_blog_post_in_list', post: post %>
 <% end %>
 
-<%= will_paginate @posts %>
+<%= will_paginate @posts, inner_window: 2 %>
 
 <%= render 'all_tags_list' %>
 <%= render( 'admin_context_menu', page: @page) %>
