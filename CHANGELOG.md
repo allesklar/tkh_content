@@ -2,6 +2,11 @@
 
 
 
+## 0.9.12
+
+* Debugged tag destroying
+
+
 ## 0.9.11
 
 * Admins can delete tags which have no taggings
