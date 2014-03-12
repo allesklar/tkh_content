@@ -2,6 +2,12 @@
 
 
 
+## 0.9.11
+
+* Admins can delete tags which have no taggings
+* Fixed up the whole contact form routine.
+
+
 ## 0.9.10
 
 * Fixed up paginators
