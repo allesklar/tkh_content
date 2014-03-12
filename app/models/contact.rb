@@ -6,7 +6,8 @@
 class Contact < ActiveRecord::Base
 
   validates_presence_of :sender_name
-  validates :sender_email, :presence => true, :format => { :with => /\A([\A@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, :on => :create }
+  validates_presence_of :sender_email
+  # validates :sender_email, :presence => true, :format => { :with => /\A([\A@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, :on => :create }
   validates_presence_of :body
 
   scope :by_recent, -> { order('updated_at desc') }

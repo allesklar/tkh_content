@@ -47,7 +47,7 @@ class ContactsController < ApplicationController
         ContactMailer.message_from_contact_form(contact).deliver
         return 'success'
       rescue Exception => e
-        AdminMailer.rescued_exceptions(e, "Some exception occurred while trying to send a student his confirmation for registering in a course. The email was never sent!").deliver
+        AdminMailer.rescued_exceptions(e, "Some exception occurred while trying to send to site admin a message from contact form").deliver
         @exception = e
         return 'exception'
       end

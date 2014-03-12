@@ -24,8 +24,8 @@ fr:
         name: "nom"
 
       contacts:
-        sender_name: "nom de l'auteur"
-        sender_email: "email de l'auteur"
+        sender_name: "votre nom"
+        sender_email: "votre adresse email"
         body: 'contenu du message'
 
       comments:
