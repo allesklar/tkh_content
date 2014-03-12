@@ -23,6 +23,12 @@ class TagsController < ApplicationController
     end
   end
 
+  def destroy
+    @tag = Tag.find(params[:id])
+    @tag.destroy
+    redirect_to tags_url, notice: 'The tag has been removed'
+  end
+
   private
 
   # Never trust parameters from the scary internet, only allow the white list through.
