@@ -2,6 +2,11 @@
 
 
 
+## 0.9.13
+
+* Added dependent destroy to the page-tagging and tag-tagging associations.
+
+
 ## 0.9.12
 
 * Debugged tag destroying
