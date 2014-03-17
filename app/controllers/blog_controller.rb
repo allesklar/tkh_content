@@ -10,7 +10,7 @@ class BlogController < ApplicationController
 
   def by_tag
     @tag = Tag.where('name = ?', params[:id]).first
-    @posts = @tag.pages.order('published_at desc').paginate(:page => params[:page], :per_page => 20)
+    @posts = @tag.pages.published.order('published_at desc').paginate(:page => params[:page], :per_page => 20)
     render :layout => 'blog'
   end
 

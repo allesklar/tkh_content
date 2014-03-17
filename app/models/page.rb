@@ -8,7 +8,7 @@ class Page < ActiveRecord::Base
   belongs_to :author, class_name: 'User'
   has_many :comments, :dependent => :destroy
 
-  has_many :taggings
+  has_many :taggings, :dependent => :destroy
   has_many :tags, through: :taggings
 
   validates_presence_of :title
