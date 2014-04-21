@@ -1,6 +1,10 @@
 # TKH Content
 
 
+## 0.9.14
+
+* Upgraded Rails and simple_form dependencies.
+
 
 ## 0.9.13
 
