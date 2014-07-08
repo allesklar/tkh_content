@@ -8,7 +8,7 @@ class Comment < ActiveRecord::Base
   belongs_to :author, class_name: 'User', foreign_key: 'author_id'
   belongs_to :commentable, polymorphic: true
 
-  validates_presence_of :page_id, :body
+  validates_presence_of :commentable_type, :commentable_id, :author_id, :body
 
   scope :showable, -> { where('status = ? OR status = ?', 'pending', 'accepted') }
   scope :pending, -> { where('status = ?', 'pending') }

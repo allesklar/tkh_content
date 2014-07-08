@@ -22,10 +22,10 @@ class CommentsController < ApplicationController
     @comment.locale = I18n.locale.to_s
     @comment.status = 'pending' # translation not done with globalize3 but with locale files upon showing status to user
     if @comment.save
-      redirect_to @comment.page, notice: t('comments.create.notice')
+      redirect_to @comment.commentable, notice: t('comments.create.notice')
     else
       flash[:warning] = t('comments.create.warning')
-      redirect_to @comment.page
+      redirect_to @comment.commentable
     end
   end
 
@@ -94,7 +94,7 @@ class CommentsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def comment_params
-    params.require(:comment).permit(:body, :page_id)
+    params.require(:comment).permit(:body, :commentable_type, :commentable_id)
     # non-accessible attributes: author_id, :status, :locale
   end
 

@@ -3,7 +3,8 @@
 
   <div class="form-inputs">
 	  <%= f.input :body, label: false, :input_html => { :rows => 8 } %>
-		<%= f.hidden_field :page_id, value: @page.id %>
+		<%= f.hidden_field :commentable_type, value: controller_name.classify %>
+    <%= f.hidden_field :commentable_id, value: params[:id] %>
 		<%= f.button :submit, :class => 'btn btn-primary' %>
 	</div>
 

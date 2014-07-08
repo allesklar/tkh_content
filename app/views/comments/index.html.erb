@@ -17,7 +17,7 @@
 	<tbody>
 		<% @comments.each do |comment| %>
 		  <tr>
-		    <td><%= comment.author.name %> - <%= link_to comment.page.title, comment.page %> | <%= comment.locale %><br /><br />
+		    <td><%= comment.author.name %> - <%= link_to (comment.commentable.title || comment.commentable.name), comment.commentable %> | <%= comment.locale %><br /><br />
             <%= sanitize comment.body.gsub(/\r\n?/, "<br>"), :tags => %w(br), :attributes => %w() %></td>
 
 				<td><%= t("comments.status.#{comment.status}") %><%= t 'colon' %><%= render 'comments/status_buttons', comment: comment %></td>

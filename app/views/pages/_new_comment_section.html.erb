@@ -1,7 +1,7 @@
 <div id="new-comment-section">
 	<h3><%= t('comments.what_do_you_think') %></h3>
 	<% if current_user %>
-		<%= render 'comments/form_in_page' %>
+		<%= render 'comments/form_in_commentable' %>
 	<% else %>
     <p><label class="label label-info"><%= t('comments.login_needed') %></label></p>
     <%= render 'shared/embedded_access_control' %>
