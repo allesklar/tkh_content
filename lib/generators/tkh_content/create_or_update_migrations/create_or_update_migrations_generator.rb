@@ -1,5 +1,5 @@
 require 'rails/generators/migration'
- 
+
 module TkhContent
   module Generators
     class CreateOrUpdateMigrationsGenerator < ::Rails::Generators::Base
@@ -14,7 +14,7 @@ module TkhContent
         end
         @prev_migration_nr.to_s
       end
- 
+
       def copy_migrations
         puts 'creating or updating page migrations'
         migration_template "create_pages.rb", "db/migrate/create_pages.rb"
@@ -26,8 +26,9 @@ module TkhContent
         migration_template "create_contacts.rb", "db/migrate/create_contacts.rb"
         migration_template "add_various_indices_to_pages.rb", "db/migrate/add_various_indices_to_pages.rb"
         migration_template "create_comments.rb", "db/migrate/create_comments.rb"
+        migration_template "make_comments_polymorphic.rb", "db/migrate/make_comments_polymorphic.rb"
       end
- 
+
     end
   end
 end

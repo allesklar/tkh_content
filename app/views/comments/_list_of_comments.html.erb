@@ -1,5 +1,5 @@
 <% @page.comments.showable.for_locale(I18n.locale.to_s).by_created.each_with_index do |comment, index| %>
-	<div id="comment-<%= comment.id %>" class="individual-comment<%= " by-page-author" if comment.author_id == comment.page.author_id %>">
+	<div id="comment-<%= comment.id %>" class="individual-comment<%= " by-page-author" if comment.author_id == comment.commentable.try(:author_id) %>">
 		<p>
 			<span class="comment-index"><%= index + 1 %></span>
 			<span class="comment-author-name"><%= comment.author.name %></span>
