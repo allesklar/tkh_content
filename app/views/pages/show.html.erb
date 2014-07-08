@@ -5,14 +5,14 @@
 <% unless @page.for_blog? %>
 
 	<%= raw tkhed(@page.body) %>
-	<%= render 'comment_section' if Setting.first.enable_comments_in_pages? %>
+	<%= render 'comments/comment_section', host: @page if Setting.first.enable_comments_in_pages? %>
 
 <% else %>
 
 	<%= content_tag(:h1, @page.title) %>
 	<%= render '/pages/blog_post_meta', post: @page %>
 	<%= raw tkhed(@page.body) %>
-	<%= render 'comment_section' if Setting.first.enable_comments_in_blog? %>
+	<%= render 'comments/comment_section', host: @page if Setting.first.enable_comments_in_blog? %>
   <%= render 'blog/all_tags_list' %>
 
 <% end -%>

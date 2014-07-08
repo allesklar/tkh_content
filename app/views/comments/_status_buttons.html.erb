@@ -1,7 +1,7 @@
 <% if comment.status == 'pending' %>
-	<%= link_to t('comments.moderation.actions.accept'), accept_comment_path(comment), method: :post, class: 'btn btn-xs btn-default' %><%= link_to t('comments.moderation.actions.block'), block_comment_path(comment), method: :post, class: 'btn btn-xs btn-default' %>
+	<%= link_to t('comments.moderation.actions.accept'), accept_comment_path(comment), method: :post, class: 'btn btn-xs btn-success' %><%= link_to t('comments.moderation.actions.block'), block_comment_path(comment), method: :post, class: 'btn btn-xs btn-default' %>
 <% elsif comment.status == 'accepted' %>
 	<%= link_to t('comments.moderation.actions.block'), block_comment_path(comment), method: :post, class: 'btn btn-xs btn-default' %>
 <% elsif comment.status == 'blocked' %>
-	<%= link_to t('comments.moderation.actions.accept'), accept_comment_path(comment), method: :post, class: 'btn btn-xs btn-default' %>
+	<%= link_to t('comments.moderation.actions.accept'), accept_comment_path(comment), method: :post, class: 'btn btn-xs btn-success' %>
 <% end -%>

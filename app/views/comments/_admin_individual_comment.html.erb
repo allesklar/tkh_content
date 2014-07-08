@@ -1,0 +1,13 @@
+<tr>
+  <td class='text-center'>
+    <% model_name = comment.commentable.class.name.underscore %>
+    <% p = model_name.to_s + '_path' %>
+    <%= comment.author.name %> - <%= link_to (comment.commentable.try(:title) || comment.commentable.try(:name)), comment.commentable %> (<%= comment.locale %>). <%= link_to l(comment.created_at, format: :tkh_default), p(comment.commentable, anchor: "comment-#{comment.id}") %>
+    <br /><br />
+    <p class="admin-comment-body"><%= sanitize comment.body.gsub(/\r\n?/, "<br>"), :tags => %w(br), :attributes => %w() %></p>
+    <strong><%= t("comments.status.#{comment.status}") %></strong><br />
+    <%= render 'comments/status_buttons', comment: comment %>
+    <br /><br />
+    <%= link_to t('edit'), edit_comment_path(comment), class: 'btn btn-xs btn-default' %><%= link_to t('delete'), comment, method: :delete, data: { confirm: t('are_you_sure') }, class: 'btn btn-xs btn-danger' %>
+  </td>
+</tr>

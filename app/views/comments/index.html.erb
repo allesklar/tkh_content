@@ -5,24 +5,9 @@
 <%= will_paginate @comments, inner_window: 2 %>
 
 <table class='table table-striped'>
-	<thead>
-  	<tr>
-	    <th><%= t('activerecord.attributes.comments.author') %>, <%= t('activerecord.models.page') %>, <%= t('activerecord.attributes.comments.locale') %><br />
-					<%= t('activerecord.attributes.comments.body') %></th>
-			<th><%= t('activerecord.attributes.comments.status') %></th>
-	    <th><%= t('actions') %></th>
-	  </tr>
-	</thead>
-
 	<tbody>
 		<% @comments.each do |comment| %>
-		  <tr>
-		    <td><%= comment.author.name %> - <%= link_to (comment.commentable.title || comment.commentable.name), comment.commentable %> | <%= comment.locale %><br /><br />
-            <%= sanitize comment.body.gsub(/\r\n?/, "<br>"), :tags => %w(br), :attributes => %w() %></td>
-
-				<td><%= t("comments.status.#{comment.status}") %><%= t 'colon' %><%= render 'comments/status_buttons', comment: comment %></td>
-		    <td><%= link_to t('edit'), edit_comment_path(comment), class: 'btn btn-xs btn-default' %><%= link_to t('delete'), comment, method: :delete, data: { confirm: t('are_you_sure') }, class: 'btn btn-xs btn-danger' %></td>
-		  </tr>
+		  <%= render 'comments/admin_individual_comment', comment: comment %>
 		<% end %>
 	</tbody>
 </table>
