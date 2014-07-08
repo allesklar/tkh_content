@@ -1,6 +1,12 @@
 # TKH Content
 
 
+
+## 0.9.16
+
+* Comments are now polymorphic. rake 'tkh_content:update' and 'rake db:migrate' commands needed.
+
+
 ## 0.9.14-15
 
 * Upgraded Rails and simple_form dependencies.
