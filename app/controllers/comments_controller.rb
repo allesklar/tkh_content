@@ -22,6 +22,7 @@ class CommentsController < ApplicationController
     @comment.locale = I18n.locale.to_s
     @comment.status = 'pending' # translation not done with globalize3 but with locale files upon showing status to user
     if @comment.save
+      Activity.create doer_id: current_user.id, message: "left a comment attached to: #{view_context.link_to (@comment.commentable.name || @comment.commentable.title), @comment.commentable}."
       redirect_to @comment.commentable, notice: t('comments.create.notice')
     else
       flash[:warning] = t('comments.create.warning')
