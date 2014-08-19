@@ -2,6 +2,14 @@
 
 
 
+## 0.9.17
+
+* Log comment creation to activity feed.
+* Little reformating of individual comment partial called from admin panel.
+* Nil proofed the calling of a comment commentable name or title.
+* Debugged comment feed. Was referencing the comment page instead of the polymorphic commentable association.
+
+
 ## 0.9.16
 
 * Comments are now polymorphic. rake 'tkh_content:update' and 'rake db:migrate' commands needed.
