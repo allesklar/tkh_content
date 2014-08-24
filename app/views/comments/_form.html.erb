@@ -1,12 +1,12 @@
-<%= simple_form_for @comment, :html => { class: 'form-horizontal' } do |f| %>
+<h1>Created by <%= link_to @comment.author.name, detail_path(@comment.author) %> and attached to the <%= @comment.commentable.class.to_s.downcase %>: <%= link_to (@comment.commentable.try(:title) || @comment.commentable.try(:name)), @comment.commentable %></h1>
+
+<strong><%= t("comments.status.#{@comment.status}") %></strong> <%= render 'comments/status_buttons', comment: @comment %>
+
+<%= simple_form_for @comment do |f| %>
 	<%= f.error_notification %>
 
-		<%= @comment.author.name %><br />
-		<%= link_to (@comment.commentable.try(:title) || @comment.commentable.try(:name)), @comment.commentable %><br />
-		<%#= f.input :short_title, hint: 'ideally one word only, used for the menu' %><br />
-		<%= render 'comments/status_buttons', comment: @comment %><br />
 	  <%= f.input :body, :input_html => { rows: 3, cols: 55 } %>
-    <br />
+
     <%= f.button :submit, :class => 'btn btn-primary' %>
 
 <% end %>
