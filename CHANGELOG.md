@@ -2,6 +2,11 @@
 
 
 
+## 0.9.18
+
+* Fixed up markup for 3 forms
+
+
 ## 0.9.17
 
 * Log comment creation to activity feed.
