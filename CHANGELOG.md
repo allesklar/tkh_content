@@ -2,6 +2,11 @@
 
 
 
+## 0.9.19
+
+* Fixed up glyphicons in pages index view
+
+
 ## 0.9.18
 
 * Fixed up markup for 3 forms
