@@ -2,6 +2,11 @@
 
 
 
+## 0.9.20
+
+* In comments, author names link to their public profiles
+
+
 ## 0.9.19
 
 * Fixed up glyphicons in pages index view
