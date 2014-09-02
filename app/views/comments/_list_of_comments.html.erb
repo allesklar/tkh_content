@@ -2,7 +2,7 @@
 	<div id="comment-<%= comment.id %>" class="individual-comment<%= " by-page-author" if comment.author_id == comment.commentable.try(:author_id) %>">
 		<p>
 			<span class="comment-index"><%= index + 1 %></span>
-			<span class="comment-author-name"><%= comment.author.name %></span>
+			<span class="comment-author-name"><%= comment.author.present? ? link_to(comment.author.spiritual_name, member_path(comment.author)) : 'anonymous' %></span>
 			<span class="comment-created-date"><%= l comment.created_at, format: :tkh_default %></span>
 			<span class="comment-body"><%= sanitize comment.body.gsub(/\r\n?/, "<br>"), :tags => %w(br), :attributes => %w() %></span>
 		</p>
