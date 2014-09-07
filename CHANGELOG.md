@@ -2,6 +2,11 @@
 
 
 
+## 0.10
+
+* Pages are connected to the tkh_search gem
+
+
 ## 0.9.20
 
 * In comments, author names link to their public profiles
