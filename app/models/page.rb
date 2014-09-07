@@ -1,8 +1,3 @@
-# this is needed for now to make mass assignment security compatible with the translation of globalize3
-# Globalize::ActiveRecord::Translation.class_eval do
-#   attr_accessible :locale
-# end
-
 class Page < ActiveRecord::Base
 
   belongs_to :author, class_name: 'User'
@@ -10,6 +5,15 @@ class Page < ActiveRecord::Base
 
   has_many :taggings, :dependent => :destroy
   has_many :tags, through: :taggings
+
+  tkh_searchable
+  def self.tkh_search_indexable_fields
+    indexable_fields = {
+      title: 8,
+      description: 3,
+      body: 2
+    }
+  end
 
   validates_presence_of :title
   validates_presence_of :description
@@ -35,6 +39,10 @@ class Page < ActiveRecord::Base
 
   def nickname
     @nickname ||= short_title || title
+  end
+
+  def published?
+    published_at.present? ? true : false
   end
 
   ### menu related instance methods
