@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'will_paginate'
   s.add_dependency 'ckeditor_rails', "~> 4.2.2" # after several tries, I settled happily on this one
   s.add_dependency 'tkh_activity_feeds'
+  s.add_dependency 'tkh_search'
 
   s.add_development_dependency "sqlite3"
 end
