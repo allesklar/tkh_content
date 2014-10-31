@@ -2,6 +2,11 @@
 
 
 
+## 0.10.1
+
+* A notice is displayed for draft pages which are not yet published.
+
+
 ## 0.10
 
 * Pages are connected to the tkh_search gem
