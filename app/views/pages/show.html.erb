@@ -2,6 +2,8 @@
 <% content_for :meta_description, @page.description %>
 <% content_for :canonical_link, link_to('', @page, rel: 'canonical') %>
 
+<%= render 'draft_notice' unless @page.published? %>
+
 <% unless @page.for_blog? %>
 
 	<%= raw tkhed(@page.body) %>
