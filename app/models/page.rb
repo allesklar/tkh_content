@@ -97,8 +97,8 @@ class Page < ActiveRecord::Base
       parent.try(:title) unless self.orphan?
     end
   def parent_page_title=(title)
-    if title.present? && Page.find_by_title(title)
-      self.parent_id = Page.find_by_title(title).id
+    if title.present? && Page.where(title: title)
+      self.parent_id = Page.where(title: title).first.id
     else
       self.parent_id = nil
     end
