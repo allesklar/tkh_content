@@ -1,6 +1,12 @@
 # TKH Content
 
 
+
+## 0.10.3
+
+* Debugged page_parent_id attribute in page model
+
+
 ## 0.10.2
 
 * Refactored the tkhed pages helper method. It can render the new DSL syntax for the contact form and enabled the upcoming events generator to work with the tkh_events gem.
