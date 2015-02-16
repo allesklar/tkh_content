@@ -2,6 +2,11 @@
 
 
 
+## 0.10.4
+
+* Deleted the contact form resource. Exported it to the tkh_mailing_list gem.
+
+
 ## 0.10.3
 
 * Debugged page_parent_id attribute in page model
