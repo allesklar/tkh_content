@@ -23,11 +23,6 @@ de:
       tags:
         name: "name"
 
-      contacts:
-        sender_name: "Absender-Name"
-        sender_email: 'Absender-Email'
-        body: 'Nachricht'
-
       comments:
         author: 'Verfasser'
         body: "Haupttext"
@@ -73,20 +68,6 @@ de:
     hint:
       name: 'Lower case only. Multiple words should be joined by a dash (-) and NOT spaces'
 
-  contacts:
-    messages_from_forms: 'Nachrichten vom Kontaktformular'
-    send_message: 'Nachricht senden'
-    sent: 'Gesendet am'
-    create:
-      did_not_reach: 'Etwas ist schief gegangen. Deine Nachricht hat den gewünschten Adressaten nicht erreicht.'
-      invalid_email: 'Deine Emai-Adresse scheint ungültig zu sein!'
-      notice: 'Die Nachricht wurde gesendet.'
-      warning: 'Beim Versenden der Nachricht gab es ein Problem.'
-    mailer:
-      intro: 'Hier ist die Nachricht vom Kontaktformular der Webseite:'
-      sender_name: "Absendername:"
-      sender_email: "Absender-Email:"
-      message: 'Nachricht'
 
   comments:
     login_needed: 'Du must angemeldet sein, um einen Kommentar zu verfassen'

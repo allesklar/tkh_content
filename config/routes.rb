@@ -12,8 +12,6 @@ Rails.application.routes.draw do
       end
     end
 
-    resources :contacts
-
     resources :comments do
       collection do
         get :pending

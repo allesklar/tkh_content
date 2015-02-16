@@ -23,7 +23,6 @@ module TkhContent
         migration_template "add_parent_id_to_pages.rb", "db/migrate/add_parent_id_to_pages.rb"
         migration_template "create_tags.rb", "db/migrate/create_tags.rb"
         migration_template "create_taggings.rb", "db/migrate/create_taggings.rb"
-        migration_template "create_contacts.rb", "db/migrate/create_contacts.rb"
         migration_template "add_various_indices_to_pages.rb", "db/migrate/add_various_indices_to_pages.rb"
         migration_template "create_comments.rb", "db/migrate/create_comments.rb"
         migration_template "make_comments_polymorphic.rb", "db/migrate/make_comments_polymorphic.rb"

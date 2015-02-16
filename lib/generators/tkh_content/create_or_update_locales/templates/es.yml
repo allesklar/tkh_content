@@ -23,11 +23,6 @@ es:
       tags:
         name: "name"
 
-      contacts:
-        sender_name: "nombre del remitente"
-        sender_email: 'correo electrónico del remitente'
-        body: 'mensaje'
-
       comments:
         author: 'author'
         body: "body text"
@@ -72,21 +67,6 @@ es:
       warning: 'There was a problem saving the tag'
     hint:
       name: 'Lower case only. Multiple words should be joined by a dash (-) and NOT spaces'
-
-  contacts:
-    messages_from_forms: 'mensajes del formulario de contacto'
-    send_message: 'enviar el mensaje'
-    sent: 'Enviado a las'
-    create:
-      did_not_reach: 'Something went wrong. Your message did not reach the intended recipient.'
-      invalid_email: 'Your email address does not seem to be valid!'
-      notice: 'Tu mensaje ha sido enviado.'
-      warning: 'Hubo un problema al enviar su mensaje.'
-    mailer:
-      intro: 'Here is the message sent via the contact form on the web site:'
-      sender_name: "Sender's name:"
-      sender_email: "Sender's email:"
-      message: 'Message:'
 
   comments:
     login_needed: 'You need to be logged in to leave a comment'

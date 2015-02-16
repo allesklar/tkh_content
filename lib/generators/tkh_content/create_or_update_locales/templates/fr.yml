@@ -23,11 +23,6 @@ fr:
       tags:
         name: "nom"
 
-      contacts:
-        sender_name: "votre nom"
-        sender_email: "votre adresse email"
-        body: 'contenu du message'
-
       comments:
         author: 'auteur'
         body: "texte"
@@ -73,20 +68,6 @@ fr:
     hint:
       name: 'Pas de majuscules, que des minuscules. Entre les mots multiples, utilisez un tiret ( - ), pas avec un espace.'
 
-  contacts:
-    messages_from_forms: 'messages du formulaire de contact'
-    send_message: 'envoyez le message'
-    sent: 'Envoyé le'
-    create:
-      did_not_reach: "Il y a eu un problem. Le message n'a pas été acheminé a sa destination."
-      invalid_email: 'Votre adresse courriel ne semble pas bonne !'
-      notice: 'Merci. Nous avons bien reçu votre message.'
-      warning: "Il y'a eu un probleme en envoyant votre message."
-    mailer:
-      intro: 'Voici le message envoyé par un visiteur avec le formulaire de contact sur le site web :'
-      sender_name: "Nom de l'auteur :"
-      sender_email: "Adresse courriel de l'auteur :"
-      message: 'Message :'
 
   comments:
     login_needed: 'Vous devez être identifié pour fournir un commentaire'
