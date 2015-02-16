@@ -4,8 +4,6 @@ es:
     models:
       comment: 'comment'
       comments: 'comments'
-      contact: 'contact'
-      contacts: 'contacts'
       page: 'page'
       pages: 'pages'
       tag: 'tag'

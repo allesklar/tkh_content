@@ -4,8 +4,6 @@ de:
     models:
       comment: 'Kommentar'
       comments: 'Kommentare'
-      contact: 'Kontakt'
-      contacts: 'Kontakte'
       page: 'Seite'
       pages: 'Seiten'
       tag: 'Tag'
