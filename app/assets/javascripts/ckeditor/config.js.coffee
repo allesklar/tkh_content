@@ -6,6 +6,8 @@ CKEDITOR.editorConfig = (config) ->
   config.forcePasteAsPlainText = true
   config.allowedContent = true
   # config.extraAllowedContent = true
+  config.htmlEncodeOutput = false;
+  config.entities = false;
 
   config.toolbar_Pure = [
     { name: 'styles',      items: [ 'Format' ] },
