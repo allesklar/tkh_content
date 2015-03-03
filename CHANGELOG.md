@@ -2,7 +2,7 @@
 
 
 
-## 0.10.5
+## 0.10.5.1
 
 * CKeditor won't create junk HTML entities anymore.
 * Debugged the blog#by_tag method.
