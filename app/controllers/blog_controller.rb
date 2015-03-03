@@ -9,7 +9,9 @@ class BlogController < ApplicationController
   end
 
   def by_tag
-    @tag = Tag.where('name = ?', params[:id]).first
+    # this little hack is necessary because globalize won't let me access the tag directly by name
+    tag_id = Tag::Translation.find_by( locale: I18n.locale.to_s, name: params[:id] ).ta g_id
+    @tag = Tag.find(tag_id)
     @posts = @tag.pages.published.order('published_at desc').paginate(:page => params[:page], :per_page => 20)
     render :layout => 'blog'
   end
