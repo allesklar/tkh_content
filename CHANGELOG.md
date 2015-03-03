@@ -2,6 +2,13 @@
 
 
 
+## 0.10.5
+
+* CKeditor won't create junk HTML entities anymore.
+* Debugged the blog#by_tag method.
+* Removed gem dependency versions.
+
+
 ## 0.10.4
 
 * Deleted the contact form resource. Exported it to the tkh_mailing_list gem.
