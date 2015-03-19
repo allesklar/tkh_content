@@ -2,6 +2,11 @@
 
 
 
+## 0.10.6
+
+* Added translation for comments admin digest list.
+
+
 ## 0.10.5.1
 
 * CKeditor won't create junk HTML entities anymore.
