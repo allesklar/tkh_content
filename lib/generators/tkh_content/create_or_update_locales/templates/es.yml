@@ -67,6 +67,7 @@ es:
       name: 'Lower case only. Multiple words should be joined by a dash (-) and NOT spaces'
 
   comments:
+    digest_intro: 'List of non-moderated comments from users:'
     login_needed: 'You need to be logged in to leave a comment'
     sorted_by_oldest: 'This section is sorted by oldest comment first so that they can be moderated from top to bottom.'
     what_do_you_think: 'What do you think?'

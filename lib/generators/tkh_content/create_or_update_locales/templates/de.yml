@@ -68,6 +68,7 @@ de:
 
 
   comments:
+    digest_intro: 'List of non-moderated comments from users:'
     login_needed: 'Du must angemeldet sein, um einen Kommentar zu verfassen'
     sorted_by_oldest: 'Dieser Abschnitt ist nach Datum sortiert, der älteste Kommentar zuerst, sodass sie von oben nach untern bearbeitet werden können.'
     what_do_you_think: 'Was denkst Du?'
