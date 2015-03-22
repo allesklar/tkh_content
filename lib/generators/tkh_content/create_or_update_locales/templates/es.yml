@@ -66,6 +66,9 @@ es:
     hint:
       name: 'Lower case only. Multiple words should be joined by a dash (-) and NOT spaces'
 
+    list_of_posts: List of blog posts with this tag
+    no_posts_to_show: There are no posts with this tag
+
   comments:
     digest_intro: 'List of non-moderated comments from users:'
     login_needed: 'You need to be logged in to leave a comment'

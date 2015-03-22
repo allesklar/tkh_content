@@ -66,6 +66,9 @@ fr:
     hint:
       name: 'Pas de majuscules, que des minuscules. Entre les mots multiples, utilisez un tiret ( - ), pas avec un espace.'
 
+    list_of_posts: Liste des articles avec cette étiquette
+    no_posts_to_show: Il n'y a pas d'articles avec cette étiquette
+
 
   comments:
     digest_intro: 'Liste des commentaires en attente de revue :'

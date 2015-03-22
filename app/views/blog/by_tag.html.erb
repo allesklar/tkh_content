@@ -1,23 +1,23 @@
 <% content_for :meta_title, Setting.first.try(:company_name) %>
-<% content_for :meta_description, "Blog posts with the '#{@tag.name}' tag." %>
+<% content_for :meta_description, "Blog posts with the '#{@tag_name}' tag." %>
 <% content_for :canonical_link, link_to('', blog_path, rel: 'canonical') %>
 
 <div class="panel panel-info">
   <div class="panel-heading">
-    <h3 class="panel-title"><%= "#{@tag.name} (#{@tag.taggings.count})" %></h3>
+    <h3 class="panel-title"><%= "#{@tag_name} (#{@tag.present? ? @tag.taggings.count : '0'})" %></h3>
   </div>
   <div class="panel-body">
-    Liste des articles avec cette étiquette
+    <%= @posts.nil? ? t('tags.no_posts_to_show') : t('tags.list_of_posts') %>
   </div>
 </div>
 
-<%= will_paginate @posts, inner_window: 2 %>
-
-<% for post in @posts %>
-  <%= render '/pages/individual_blog_post_in_list', post: post %>
+<% unless @posts.nil? %>
+  <%= will_paginate @posts, inner_window: 2 %>
+  <% for post in @posts %>
+    <%= render '/pages/individual_blog_post_in_list', post: post %>
+  <% end %>
+  <%= will_paginate @posts, inner_window: 2 %>
 <% end %>
-
-<%= will_paginate @posts, inner_window: 2 %>
 
 <%= render 'all_tags_list' %>
 <%= render( 'admin_context_menu', page: @page) %>
