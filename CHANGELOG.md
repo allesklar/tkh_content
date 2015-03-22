@@ -2,6 +2,11 @@
 
 
 
+## 0.10.7
+
+* Debugged blog#by_tag method and view when there were no posts for a specific tag. Can happen with a non-translated bi-lingual post.
+
+
 ## 0.10.6
 
 * Added translation for comments admin digest list.
