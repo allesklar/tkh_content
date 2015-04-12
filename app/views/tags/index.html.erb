@@ -12,7 +12,7 @@
 		<% @tags.each do |tag| %>
 		  <tr>
 		    <td><%= link_to ("#{tag.name} (#{tag.taggings.count})"), blog_by_tag_path(tag.name) %></td>
-		    <td><%= link_to t('edit'), edit_tag_path(tag), class: 'btn btn-xs btn-default' %><%= link_to( t('delete'), tag, method: :delete, data: { confirm: t('are_you_sure') }, class: 'btn btn-xs btn-danger') if tag.taggings.count == 0 %></td>
+		    <td><%= link_to "<span class='glyphicon glyphicon-pencil'></span> #{t('edit')}".html_safe, edit_tag_path(tag), class: 'btn btn-xs btn-default' %><%= link_to( "<span class='glyphicon glyphicon-trash'></span>".html_safe, tag, method: :delete, data: { confirm: t('are_you_sure') }, class: 'btn btn-xs btn-danger', title: t('delete')) if tag.taggings.count == 0 %></td>
 		  </tr>
 		<% end %>
 	</tbody>
