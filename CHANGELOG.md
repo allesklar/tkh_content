@@ -2,6 +2,12 @@
 
 
 
+## 0.10.8
+
+* Added glyphicons to actions in index views.
+* Removed unnecessary parent_id symbol in pages protected attributes.
+
+
 ## 0.10.7
 
 * Debugged blog#by_tag method and view when there were no posts for a specific tag. Can happen with a non-translated bi-lingual post.

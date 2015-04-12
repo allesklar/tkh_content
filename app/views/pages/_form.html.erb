@@ -30,7 +30,7 @@
 	  <%= f.input :description, label: t('activerecord.attributes.pages.description'), :input_html => { cols: 45, rows: 3 } %>
 		<%= f.input :body, label: t('activerecord.attributes.pages.body'), :input_html => { :rows => 35, :class => 'ckeditor' } %>
 
-		<% if controller.action_name == 'edit' # the current_user is the page creator in create method %>
+		<% if controller.action_name == 'edit' # the current_user is the page creator in create method but can be changed in update method %>
 			<%= f.input :author_name,
 									as: :string,
 									:wrapper_html => { :id => 'author-name' },
@@ -40,7 +40,7 @@
 																	:autocomplete => 'off',
 																	:data => { 	source: User.administrators.alphabetically.map(&:formal_name).to_json }
 																		} %>
-		<% end -%>
+		<% end %>
 
     <%= f.button :submit, :class => 'btn btn-primary' %>
 
