@@ -1,0 +1,13 @@
+<% blog_posts = Page.for_blog.published.by_recent.limit(3) %>
+
+<% unless blog_posts.blank? %>
+  <h2><%= local_assigns[:heading].present? ? heading : 'blog' %></h2>
+  <% blog_posts.each do |blog_post| %>
+    <div class="sidebar-individual-blog-post">
+      <h3><%= link_to blog_post.title, blog_post %></h3>
+        <%= truncate blog_post.description, length: 105, separator: ' ' %><br />
+        <%= link_to 'see full post', blog_post %>
+      </p>
+    </div>
+  <% end %>
+<% end %>
