@@ -2,6 +2,11 @@
 
 
 
+## 0.10.9
+
+* Added sidebar partial for latest blog posts.
+
+
 ## 0.10.8
 
 * Added glyphicons to actions in index views.
