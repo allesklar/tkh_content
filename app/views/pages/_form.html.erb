@@ -3,7 +3,8 @@
 
 		<%= f.input :title,
 								label: t('activerecord.attributes.pages.title'),
-								hint: t('pages.hint.title') %>
+								hint: t('pages.hint.title'),
+								input_html: { size: 45 } %>
 
 		<%= f.input :for_blog,
 								label: t('activerecord.attributes.pages.for_the_blog')
@@ -13,15 +14,20 @@
 								label: t('tags.tag_list'),
 								hint: t('tags.hint.name'),
 								:wrapper_html => { :id => 'page-tag-list' },
-								input_html: { size: 25 } %>
+								input_html: { size: 45 } %>
 
-		<%= f.input :short_title, label: t('activerecord.attributes.pages.short_title'), hint: t('pages.hint.short_title'), :wrapper_html => { :id => 'page-short-title' } %>
+		<%= f.input :short_title,
+								label: t('activerecord.attributes.pages.short_title'),
+								hint: t('pages.hint.short_title'),
+								input_html: { size: 45 },
+								:wrapper_html => { :id => 'page-short-title' } %>
 
 		<%= f.input :parent_page_title,
 								as: :string,
 								:wrapper_html => { :id => 'parent-page-title' },
 								label: t('activerecord.attributes.pages.parent_title'),
 								:input_html => {
+																size: 45,
 																:autocomplete => 'off',
 																:data => { 	provide: 'typeahead',
 																	 					source: Page.not_for_blog.by_title.map(&:title).to_json }
