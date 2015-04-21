@@ -2,6 +2,12 @@
 
 
 
+## 0.10.10
+
+* Equalized size of all string fields in page form partial.
+* Fixed query in latest posts in sidebar partial. Now showing in the right order.
+
+
 ## 0.10.9
 
 * Added sidebar partial for latest blog posts.
