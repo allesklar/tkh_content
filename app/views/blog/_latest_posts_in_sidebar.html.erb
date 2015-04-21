@@ -1,4 +1,4 @@
-<% blog_posts = Page.for_blog.published.by_recent.limit(3) %>
+<% blog_posts = Page.for_blog.published.by_recently_published.limit(3) %>
 
 <% unless blog_posts.blank? %>
   <h2><%= local_assigns[:heading].present? ? heading : 'blog' %></h2>
