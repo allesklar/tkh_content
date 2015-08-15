@@ -17,9 +17,12 @@
 	<%= render 'comments/comment_section', host: @page if Setting.first.enable_comments_in_blog? %>
   <%= render 'blog/all_tags_list' %>
 
-<% end -%>
+<% end %>
 
-<%= render( 'admin_context_menu', page: @page) %>
+<%# partial in tkh_toolbox gem or has to be added in host app %>
+<%= render 'shared/social_sharing', meta_title: @page.title %>
+
+<%= render 'admin_context_menu', page: @page %>
 <%# partial in tkh_menus gem or has to be added in host app %>
 <%= render './shared/menus' %>
 
