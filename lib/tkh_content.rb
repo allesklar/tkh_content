@@ -5,7 +5,6 @@ require 'simple_form'
 require 'stringex'
 require 'globalize'
 require 'will_paginate'
-require 'ckeditor_rails'
 require 'tkh_activity_feeds'
 require 'tkh_search'
 
