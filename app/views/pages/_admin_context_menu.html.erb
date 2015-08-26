@@ -3,11 +3,9 @@
 	<% content_for :admin_context_menu do %>
 
 		<h2><%= t('admin_section') %></h2>
-		<ul class="list-group">
-			<li class="list-group-item"><%= link_to t('admin_panel'), pages_path %></li>
-			<%= content_tag :li, link_to( "#{t('activerecord.models.comments').capitalize} <span class='badge'>#{Comment.pending.count}</span>".html_safe, pending_comments_path ), class: 'list-group-item' if Comment.pending.count > 0 %>
-			<li class="list-group-item"><%= link_to t('pages.edit_this').capitalize, edit_page_path(page) %></li>
-		</ul>
+		<p>
+			<%= link_to "<span class='glyphicon glyphicon-pencil'></span> #{t('pages.edit_this').capitalize}".html_safe, edit_page_path(page), class: "btn btn-sm btn-primary" %><%= link_to "<span class='glyphicon glyphicon-list'></span> all pages".html_safe, pages_path, class: 'btn btn-sm btn-default' %><%= content_tag :li, link_to( "<span class='glyphicon glyphicon-comment'></span> #{t('activerecord.models.comments').capitalize} <span class='badge'>#{Comment.pending.count}</span>".html_safe, pending_comments_path ), class: 'btn btn-sm btn-success' if Comment.pending.count > 0 %>
+		</p>
 
 		<% if Page.not_for_blog.orphans.published.any? %>
 			<h3><%= t('pages.reorder_root_menus') %></h3>
