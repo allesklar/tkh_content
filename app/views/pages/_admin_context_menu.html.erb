@@ -4,7 +4,7 @@
 
 		<h2><%= t('admin_section') %></h2>
 		<p>
-			<%= link_to "<span class='glyphicon glyphicon-pencil'></span> #{t('pages.edit_this').capitalize}".html_safe, edit_page_path(page), class: "btn btn-sm btn-primary" %><%= link_to "<span class='glyphicon glyphicon-list'></span> all pages".html_safe, pages_path, class: 'btn btn-sm btn-default' %><%= content_tag :li, link_to( "<span class='glyphicon glyphicon-comment'></span> #{t('activerecord.models.comments').capitalize} <span class='badge'>#{Comment.pending.count}</span>".html_safe, pending_comments_path ), class: 'btn btn-sm btn-success' if Comment.pending.count > 0 %>
+			<%= link_to "<span class='glyphicon glyphicon-pencil'></span> #{t('pages.edit_this').capitalize}".html_safe, edit_page_path(page), class: "btn btn-sm btn-primary" %><%= link_to "<span class='glyphicon glyphicon-list'></span> all pages".html_safe, pages_path, class: 'btn btn-sm btn-default' %><%= link_to( "<span class='glyphicon glyphicon-comment'></span> #{t('activerecord.models.comments').capitalize} <span class='badge'>#{Comment.pending.count}</span>".html_safe, pending_comments_path, class: 'btn btn-sm btn-success' ) if Comment.pending.count > 0 %>
 		</p>
 
 		<% if Page.not_for_blog.orphans.published.any? %>
