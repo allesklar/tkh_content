@@ -1,6 +1,4 @@
-<% content_for :meta_title, @page.title %>
-<% content_for :meta_description, @page.description %>
-<% content_for :canonical_link, link_to('', @page, rel: 'canonical') %>
+<%= render 'metas', page: @page %>
 
 <%= render 'draft_notice' unless @page.published? %>
 

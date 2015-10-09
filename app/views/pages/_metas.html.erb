@@ -1,0 +1,37 @@
+<% content_for :search_metas do %>
+  <!-- General meta info + SEO -->
+  <title><%= page.title %></title>
+  <meta name="description" content="<%= page.description %>" />
+  <% content_for :canonical_link, link_to('', page, rel: 'canonical') %>
+<% end %>
+
+<% content_for :social_metas do %>
+  <!-- Covering the main social media sites -->
+
+   <!-- Update your html tag to include the itemscope and itemtype attributes. -->
+  <html itemscope itemtype="http://schema.org/WebPage">
+
+  <!-- Schema.org markup for Google+ -->
+  <meta itemprop="name" content="<%= page.title %>">
+  <meta itemprop="description" content="<%= page.description %>">
+
+  <% unless Setting.first.try(:twitter_handle).blank? %>
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@<%= Setting.first.try(:twitter_handle) %>">
+    <meta name="twitter:url" content="<%= page_url(page) %>">
+    <meta name="twitter:title" content="<%= page.title %>">
+    <meta name="twitter:creator" content="@<%= Setting.first.try(:twitter_handle) %>">
+    <meta name="twitter:description" content="<%= page.description %>">
+  <% end %>
+
+  <!-- Open Graph data - Facebook -->
+  <meta property="og:title" content="<%= page.title %>" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="<%= page_url(page) %>" />
+  <meta property="og:description" content="<%= page.description %>" />
+  <meta property="og:site_name" content="<%= Setting.first.try(:site_name) %>" />
+  <meta property="article:published_time" content="<%= page.created_at.iso8601 %>" />
+  <meta property="article:modified_time" content="<%= page.updated_at.iso8601 %>" />
+
+<% end %>
