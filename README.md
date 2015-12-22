@@ -1,6 +1,6 @@
 # TKH Content
 
-This Rails engine puts the C in CMS. It provides the pages and the blog section. 
+This Rails engine puts the C in CMS. It provides the pages and the blog section.
 
 Primarily developed for Ten Thousand Hours but we are happy to share if anybody finds it useful. It's meant primarily to be used with the tkh_cms gem suite but over time we want it to be used individually as well. The latter implementation will be accelerated if some issues and pull requests come in, denoting some interest out there.
 
@@ -21,7 +21,7 @@ The following things are needed:
 
 Add this line to your application's Gemfile:
 
-    gem 'tkh_content', '~> 0.0'
+    gem 'tkh_content', '~> 0.10'
 
 Then execute:
 
@@ -34,7 +34,7 @@ Import migrations and needed files
 Run the migrations
 
 		$ rake db:migrate
-		
+
 And then of course restart your server!
 
 		$ rails s
@@ -49,7 +49,7 @@ Update the gem:
 Update files, migrations, etc. This is not always needed.
 
 		$ rake tkh_content:update
-		
+
 Run migrations if there are new ones
 
 		$ rake db:migrate
