@@ -21,7 +21,7 @@ The following things are needed:
 
 Add this line to your application's Gemfile:
 
-    gem 'tkh_content', '~> 0.10'
+    gem 'tkh_content', '~> 0.13'
 
 Then execute:
 

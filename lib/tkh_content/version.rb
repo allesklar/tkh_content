@@ -1,3 +1,3 @@
 module TkhContent
-  VERSION = "0.10.10"
+  VERSION = "0.13"
 end
