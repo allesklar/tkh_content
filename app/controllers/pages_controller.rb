@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
 
-  before_filter :authenticate,            :except => 'show'
-  before_filter :authenticate_with_admin, :except => 'show'
+  before_filter :authenticate,                          except: [ :show ]
+  before_action -> { require_permission 'write_pages'}, except: [ :show ]
 
   def index
     @pages = Page.by_recent.paginate(:page => params[:page], :per_page => 35)
