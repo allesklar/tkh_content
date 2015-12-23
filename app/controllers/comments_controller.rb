@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
 
   before_filter :authenticate,                              except: [ :for_feed ]
-  before_action -> { require_permission 'write_comments'},  except: [ :create, :for_feed ]
+  before_action -> { require_permission_to 'write_comments'},  except: [ :create, :for_feed ]
 
   def index
     @comments = Comment.by_recent.paginate(:page => params[:page], :per_page => 50)

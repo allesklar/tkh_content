@@ -1,7 +1,7 @@
 class TagsController < ApplicationController
 
   before_filter :authenticate
-  before_action -> { require_permission 'write_pages'}
+  before_action -> { require_permission_to 'write_pages'}
 
   def index
     @tags = Tag.alphabetically
