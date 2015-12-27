@@ -1,0 +1,27 @@
+<%= render 'tab_admin_menu' %>
+
+<%= will_paginate @pages, inner_window: 2 %>
+
+<table class='table table-striped'>
+  <thead>
+    <tr>
+      <th><%= t 'activerecord.attributes.pages.title' %></th>
+      <th><%= t 'pages.author' %></th>
+      <th><%= t 'activerecord.attributes.pages.for_the_blog' %>?</th>
+      <th><%= t 'pages.published' %></th>
+      <th><%= t('actions') %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pages.each do |page| %>
+      <%= render 'individual_page_row', page: page %>
+    <% end %>
+  </tbody>
+</table>
+
+<%= will_paginate @pages, inner_window: 2 %>
+
+<%= link_to t('pages.create_new').capitalize, new_page_path, class: 'btn btn-primary' %>
+
+<%= render 'shared/admin_sidebar' %>

@@ -8,6 +8,8 @@ Rails.application.routes.draw do
         post :toggle_for_blog
       end
       collection do
+        get  :published
+        get  :drafts
         post :sort
       end
     end

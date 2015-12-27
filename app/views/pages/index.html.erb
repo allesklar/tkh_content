@@ -15,27 +15,7 @@
 
 	<tbody>
 		<% @pages.each do |page| %>
-		  <tr>
-		    <td><%= link_to page.title, page %></td>
-				<td><%= page.author.name %></td>
-				<td>
-					<% if page.for_blog? %>
-						<span class="glyphicon glyphicon-ok"></span>
-					<% else %>
-						<span class="glyphicon glyphicon-remove"></span>
-					<% end %>
-				</td>
-				<td>
-					<% if page.published_at %>
-						<span class="glyphicon glyphicon-ok"></span>&nbsp;<%= link_to t('pages.unpublish'), unpublish_page_path(page), class: 'btn btn-xs btn-default', method: :post %>
-					<% else %>
-					  <span class="glyphicon glyphicon-remove"></span>&nbsp;<%= link_to t('pages.publish'), publish_page_path(page), class: 'btn btn-xs btn-default', method: :post %>
-					<% end -%>
-				</td>
-		    <td>
-		    	<%= link_to "<span class='glyphicon glyphicon-pencil'></span> edit".html_safe, edit_page_path(page), class: 'btn btn-xs btn-default', title: t('edit') %><%= link_to "<span class='glyphicon glyphicon-trash'></span> delete".html_safe, page, method: :delete, data: { confirm: t('are_you_sure') }, class: 'btn btn-xs btn-danger', title: t('delete') %>
-		    </td>
-		  </tr>
+			<%= render 'individual_page_row', page: page %>
 		<% end %>
 	</tbody>
 </table>

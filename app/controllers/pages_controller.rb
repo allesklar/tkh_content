@@ -8,6 +8,16 @@ class PagesController < ApplicationController
     switch_to_admin_layout
   end
 
+  def published
+    @pages = Page.published.by_recent.paginate(:page => params[:page], :per_page => 35)
+    switch_to_admin_layout
+  end
+
+  def drafts
+    @pages = Page.drafts.by_recent.paginate(:page => params[:page], :per_page => 35)
+    switch_to_admin_layout
+  end
+
   def show
     @page = Page.find(params[:id])
     render layout: 'blog' if @page.for_blog?

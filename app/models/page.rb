@@ -30,6 +30,7 @@ class Page < ActiveRecord::Base
   scope :for_blog, -> { where('for_blog = ?', true) }
   scope :not_for_blog, -> { where('for_blog = ?', false) }
   scope :published, -> { where('published_at IS NOT ?', nil) }
+  scope :drafts, -> { where('published_at IS ?', nil) }
   scope :by_recently_published, -> { order('published_at desc') }
   # tree scopes
   scope :orphans, -> { where('parent_id IS ?', nil) }
