@@ -11,13 +11,13 @@
 			<h3><%= t('pages.reorder_root_menus') %></h3>
 			<ul class="draggable list-group" data-update-url="<%= sort_pages_path %>">
 			  <% for page in Page.not_for_blog.orphans.published.by_menu_position %>
-					<%= content_tag :li, page, class: 'page list-group-item', id: "page_#{page.id}" do %>
-						<%= image_tag 'admin/drag-handle.gif', class: 'handle' %> <%= page.nickname -%>
-					<% end -%>
+					<%= content_tag :li, page, class: 'handle page list-group-item', id: "page_#{page.id}" do %>
+						<%= image_tag 'admin/drag-handle.gif', class: 'handle' %> <%= page.nickname %>
+					<% end %>
 			  <% end %>
 			</ul>
 		<% end %>
 
-	<% end -%>
+	<% end %>
 
-<% end -%>
+<% end %>
