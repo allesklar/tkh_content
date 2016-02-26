@@ -2,7 +2,7 @@
   <td class='text-center'>
     <% model_name = comment.commentable.class.name.underscore %>
     <% p = model_name.to_s + '_path' %>
-    by <%= link_to comment.author.name, detail_path(comment.author) %><br />
+    by <%= link_to comment.author.name, member_path(comment.author) %><br />
     on <%= link_to (comment.commentable.try(:title) || comment.commentable.try(:name)), comment.commentable %> (<%= comment.locale %>).<br />
     <%= link_to l(comment.created_at, format: :tkh_default), p(comment.commentable, anchor: "comment-#{comment.id}") %>
     <br /><br />

@@ -1,4 +1,4 @@
-<h1>Created by <%= link_to @comment.author.name, detail_path(@comment.author) %> and attached to the <%= @comment.commentable.class.to_s.downcase %>: <%= link_to (@comment.commentable.try(:title) || @comment.commentable.try(:name)), @comment.commentable %></h1>
+<h1>Created by <%= link_to @comment.author.name, member_path(@comment.author) %> and attached to the <%= @comment.commentable.class.to_s.downcase %>: <%= link_to (@comment.commentable.try(:title) || @comment.commentable.try(:name)), @comment.commentable %></h1>
 
 <strong><%= t("comments.status.#{@comment.status}") %></strong> <%= render 'comments/status_buttons', comment: @comment %>
 
