@@ -1,5 +1,5 @@
 <% content_for :all_tags_list do %>
-  <h2>étiquettes</h2>
+  <h2 id="tag-header"><%= t 'blog.tags.header' %></h2>
   <% if Tag.count > 0 %>
     <p class="all-tags-list">
       <%= render :partial => 'blog/individual_tag', collection: Tag.with_taggings, as: :tag %>

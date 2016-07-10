@@ -103,3 +103,5 @@ fr:
     itself: 'blog'
     home: 'accueil du blog'
     official: 'le blog officiel'
+    tags:
+      header: 'étiquettes'

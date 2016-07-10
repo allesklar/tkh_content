@@ -103,3 +103,5 @@ de:
     itself: 'Blog'
     home: 'Home-Blog'
     official: 'Der offizielle Blog'
+    tags:
+      header: 'tags'

@@ -102,3 +102,5 @@ es:
     itself: 'blog'
     home: 'home blog'
     official: 'the official blog'
+    tags:
+      header: 'etiquetas'
