@@ -26,6 +26,7 @@ module TkhContent
         migration_template "add_various_indices_to_pages.rb", "db/migrate/add_various_indices_to_pages.rb"
         migration_template "create_comments.rb", "db/migrate/create_comments.rb"
         migration_template "make_comments_polymorphic.rb", "db/migrate/make_comments_polymorphic.rb"
+        migration_template "create_sidebar_snippets.rb", "db/migrate/create_sidebar_snippets.rb"
       end
 
     end

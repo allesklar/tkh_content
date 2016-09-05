@@ -8,6 +8,8 @@ de:
       pages: 'Seiten'
       tag: 'Tag'
       tags: 'Tags'
+      sidebar_snippet: 'sidebar snippet'
+      sidebar_snippets: 'sidebar snippets'
 
     attributes:
       pages:
@@ -17,15 +19,16 @@ de:
         body: "Haupttext"
         for_the_blog: 'Für den Blog'
         parent_title: 'Seitenüberschrift'
-
       tags:
         name: "name"
-
       comments:
         author: 'Verfasser'
         body: "Haupttext"
         locale: 'Sprache'
         status: 'Status'
+      sidebar_snippets:
+        main_sidebar: 'main sidebar'
+        blog_sidebar: "blog sidebar"
 
   pages:
     author: 'Autor'
@@ -105,3 +108,8 @@ de:
     official: 'Der offizielle Blog'
     tags:
       header: 'tags'
+
+  sidebar_snippets:
+    update:
+      notice: 'The sidebar snippets have been successfully updated.'
+      warning: 'There was a problem saving the sidebar snippets'

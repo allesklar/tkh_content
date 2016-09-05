@@ -13,7 +13,6 @@ Rails.application.routes.draw do
         post :sort
       end
     end
-
     resources :comments do
       collection do
         get :pending
@@ -26,8 +25,8 @@ Rails.application.routes.draw do
         post :block
       end
     end
-
     resources :tags
+    resources :sidebar_snippets
 
     get 'blog' => 'blog#index', as: :blog
     get 'blog_by_tag/:id', :to => 'blog#by_tag', :as => 'blog_by_tag'

@@ -8,6 +8,8 @@ fr:
       pages: 'les pages'
       tag: 'étiquette'
       tags: 'les étiquettes'
+      sidebar_snippet: 'sidebar snippet'
+      sidebar_snippets: 'sidebar snippets'
 
     attributes:
       pages:
@@ -17,15 +19,16 @@ fr:
         body: "texte principal"
         for_the_blog: 'pour le blog'
         parent_title: 'titre de la page maternelle'
-
       tags:
         name: "nom"
-
       comments:
         author: 'auteur'
         body: "texte"
         locale: 'langue'
         status: 'état'
+      sidebar_snippets:
+        main_sidebar: 'main sidebar'
+        blog_sidebar: "blog sidebar"
 
   pages:
     author: 'auteur'
@@ -105,3 +108,8 @@ fr:
     official: 'le blog officiel'
     tags:
       header: 'étiquettes'
+
+  sidebar_snippets:
+    update:
+      notice: 'The sidebar snippets have been successfully updated.'
+      warning: 'There was a problem saving the sidebar snippets'

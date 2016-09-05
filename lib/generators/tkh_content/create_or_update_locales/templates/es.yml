@@ -8,6 +8,8 @@ es:
       pages: 'pages'
       tag: 'tag'
       tags: 'tags'
+      sidebar_snippet: 'sidebar snippet'
+      sidebar_snippets: 'sidebar snippets'
 
     attributes:
       pages:
@@ -17,15 +19,16 @@ es:
         body: "parte principal"
         for_the_blog: 'contraseña'
         parent_title: 'page parent title'
-
       tags:
         name: "name"
-
       comments:
         author: 'author'
         body: "body text"
         locale: 'language'
         status: 'status'
+      sidebar_snippets:
+        main_sidebar: 'main sidebar'
+        blog_sidebar: "blog sidebar"
 
   pages:
     author: 'autor'
@@ -104,3 +107,8 @@ es:
     official: 'the official blog'
     tags:
       header: 'etiquetas'
+
+  sidebar_snippets:
+    update:
+      notice: 'The sidebar snippets have been successfully updated.'
+      warning: 'There was a problem saving the sidebar snippets'

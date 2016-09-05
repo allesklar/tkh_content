@@ -1,0 +1,10 @@
+<%= render 'tab_admin_menu' %>
+
+<h2>Main Sidebar Snippet</h2>
+<%= render 'sidebar_snippets/main', main_sidebar_snippet: @sidebar_snippet.main_sidebar %>
+
+<h2>Blog Sidebar Snippet</h2>
+<%= render 'sidebar_snippets/blog', blog_sidebar_snippet: @sidebar_snippet.blog_sidebar %>
+
+<%= link_to t('edit'), edit_sidebar_snippet_path(@sidebar_snippet), class: 'btn btn-primary' %>
+<%= render 'shared/admin_sidebar' %>
