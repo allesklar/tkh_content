@@ -1,6 +1,9 @@
-<% content_for :meta_title, Setting.first.try(:company_name) %>
-<% content_for :meta_description, "#{Setting.first.try(:blog_tagline)} - #{Setting.first.try(:company_name)}#{t('colon')} #{t('blog.official')}" %>
-<% content_for :canonical_link, link_to('', blog_path, rel: 'canonical') %>
+<% content_for :search_metas do %>
+  <!-- General meta info + SEO -->
+  <title><%= Setting.first.try(:blog_name) %></title>
+  <meta name="description" content="<%= Setting.first.try(:blog_tagline) %>" />
+  <% content_for :canonical_link, link_to('', blog_path, rel: 'canonical') %>
+<% end %>
 
 <%= will_paginate @posts, inner_window: 2 %>
 
