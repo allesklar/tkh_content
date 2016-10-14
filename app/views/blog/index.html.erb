@@ -6,6 +6,7 @@
 
 <% for post in @posts %>
 	<%= render '/pages/individual_blog_post_in_list', post: post %>
+  <hr>
 <% end %>
 
 <%= will_paginate @posts, inner_window: 2 %>
