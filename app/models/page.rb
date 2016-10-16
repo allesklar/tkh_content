@@ -22,6 +22,9 @@ class Page < ActiveRecord::Base
 
   translates :title, :short_title, :description, :body
 
+  # in tkh_illustrations gem
+  mount_uploader :image, ImageUploader
+
   def to_param
     title ? "#{id}-#{title.to_url}" : id
   end

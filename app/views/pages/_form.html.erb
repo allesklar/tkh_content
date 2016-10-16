@@ -1,4 +1,4 @@
-<%= simple_form_for @page, :html => { role: 'form' } do |f| %>
+<%= simple_form_for @page,  html: { role: 'form', multipart: true } do |f| %>
 	<%= f.error_notification %>
 
 		<%= f.input :title,
@@ -47,6 +47,10 @@
 																	:data => { 	source: User.administrators.alphabetically.map(&:formal_name).to_json }
 																		} %>
 		<% end %>
+
+    <%= f.input :image,
+                label: t('activerecord.attributes.illustration.image'),
+                hint: "Ideal ratio: 1.91x1 - between 1.6x1 to 2.25x1 is okay. 400px wide at the very least. 1,200px wide or more recommended." %>
 
     <%= f.button :submit, :class => 'btn btn-primary' %>
 
