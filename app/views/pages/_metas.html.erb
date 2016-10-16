@@ -14,6 +14,8 @@
   <!-- Schema.org markup for Google+ -->
   <meta itemprop="name" content="<%= page.title %>">
   <meta itemprop="description" content="<%= page.description %>">
+  <!-- image at least 401px wide. not wider than 5x2. 600px wide is enough for now -->
+  <meta itemprop="image" content="<%= request.protocol + request.host_with_port + page.image.xl.url unless page.image.blank? %>">
 
   <% unless Setting.first.try(:twitter_handle).blank? %>
     <!-- Twitter Card data -->
@@ -23,12 +25,27 @@
     <meta name="twitter:title" content="<%= page.title %>">
     <meta name="twitter:creator" content="@<%= Setting.first.try(:twitter_handle) %>">
     <meta name="twitter:description" content="<%= page.description %>">
+    <!-- Twitter summary card with large image must be at least 280x150px (Moz) -->
+    <!--
+      Twitter will preserve the ratio and resize the image to the following:
+      Web: maximum height of 375px, maximum width of 435px
+      Mobile (non-retina displays): maximum height of 375px, maximum width of 280px
+      Mobile (retina displays): maximum height of 750px, maximum width of 560px
+    -->
+    <meta name="twitter:image:src" content="<%= request.protocol + request.host_with_port + page.image.xl.url unless page.image.blank? %>">
   <% end %>
 
   <!-- Open Graph data - Facebook -->
   <meta property="og:title" content="<%= page.title %>" />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="<%= page_url(page) %>" />
+  <!-- img should be at minimum 200x200, 600x315 is much better, at least 1200x630 is recommended -->
+  <!-- 1.91 is the optimum ration for open graph stories -->
+  <meta property="og:image" content="<%= request.protocol + request.host_with_port + page.image.giant.url unless page.image.blank? %>" />
+  <!-- TODO -->
+  <!-- these two tags are important to ensure the image is prefetched and shown to first 'sharer' -->
+  <!--   <meta property="og:image:width" content="http://example.com/image.jpg" />
+  <meta property="og:image:height" content="http://example.com/image.jpg" /> -->
   <meta property="og:description" content="<%= page.description %>" />
   <meta property="og:site_name" content="<%= Setting.first.try(:site_name) %>" />
   <meta property="article:published_time" content="<%= page.created_at.iso8601 %>" />
