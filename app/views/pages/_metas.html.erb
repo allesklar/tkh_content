@@ -19,7 +19,7 @@
 
   <% unless Setting.first.try(:twitter_handle).blank? %>
     <!-- Twitter Card data -->
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@<%= Setting.first.try(:twitter_handle) %>">
     <meta name="twitter:url" content="<%= page_url(page) %>">
     <meta name="twitter:title" content="<%= page.title %>">
