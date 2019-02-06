@@ -13,7 +13,7 @@
       <span class="glyphicon glyphicon-ok"></span>&nbsp;<%= link_to t('pages.unpublish'), unpublish_page_path(page), class: 'btn btn-xs btn-default', method: :post %>
     <% else %>
       <span class="glyphicon glyphicon-remove"></span>&nbsp;<%= link_to t('pages.publish'), publish_page_path(page), class: 'btn btn-xs btn-default', method: :post %>
-    <% end %>
+    <% end -%>
   </td>
   <td>
     <%= link_to "<span class='glyphicon glyphicon-pencil'></span> edit".html_safe, edit_page_path(page), class: 'btn btn-xs btn-default', title: t('edit') %><%= link_to "<span class='glyphicon glyphicon-trash'></span> delete".html_safe, page, method: :delete, data: { confirm: t('are_you_sure') }, class: 'btn btn-xs btn-danger', title: t('delete') %>
