@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
 
-  before_filter :authenticate,                              except: [ :for_feed ]
+  before_action :authenticate,                              except: [ :for_feed ]
   before_action -> { require_permission_to 'write_comments'},  except: [ :create, :for_feed ]
 
   def index

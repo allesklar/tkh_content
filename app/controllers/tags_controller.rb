@@ -1,6 +1,6 @@
 class TagsController < ApplicationController
 
-  before_filter :authenticate
+  before_action :authenticate
   before_action -> { require_permission_to 'write_pages'}
 
   def index
