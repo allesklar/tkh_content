@@ -34,7 +34,20 @@
 																	} %>
 
 	  <%= f.input :description, label: t('activerecord.attributes.pages.description'), :input_html => { cols: 45, rows: 3 } %>
-		<%= f.input :body, label: t('activerecord.attributes.pages.body'), :input_html => { :rows => 35, :class => 'ckeditor' } %>
+
+		<%= f.input :body, 
+                label: t('activerecord.attributes.pages.body'), 
+                input_html: { 
+                    rows: 50, 
+                    class: 'tinymce' } %>
+    <%= tinymce selector: 'input.tinymce',
+                branding: false,
+                # context_menu: "link image imagetools table spellchecker",
+                height: 550,
+                menubar: false, # hiding menu items duplicating icons
+                plugins: "lists link image code fullscreen",
+                toolbar: "formatselect bold italic strikethrough | bullist numlist | alignleft aligncenter alignright alignnone | link unlink image | undo redo selectall code fullscreen"
+    %>
 
 		<% if controller.action_name == 'edit' # the current_user is the page creator in create method but can be changed in update method %>
 			<%= f.input :author_name,

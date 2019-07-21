@@ -2,10 +2,10 @@
   <%= f.error_notification %>
 
 <h2>Main Section Sidebar</h2>
-    <%= f.input :main_sidebar, :input_html => { rows: 15, :class => 'ckeditor' } %>
+    <%= f.input :main_sidebar, :input_html => { rows: 15, class: 'tinymce' } %>
 
 <h2>Blog Sidebar</h2>
-    <%= f.input :blog_sidebar, :input_html => { rows: 15, :class => 'ckeditor' } %>
+    <%= f.input :blog_sidebar, :input_html => { rows: 15, class: 'tinymce' } %>
 
     <%= f.button :submit, :class => 'btn btn-primary' %>
 <% end %>
